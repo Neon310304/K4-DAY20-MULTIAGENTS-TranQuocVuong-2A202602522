@@ -1,0 +1,457 @@
+{
+  "baseline": {
+    "learn": {
+      "mean_score": 0.39537037037037037,
+      "mean_tokens": 69251,
+      "tokens_sum": 207753,
+      "mean_seconds": 66.23333333333333,
+      "score_per_10k_tokens": 0.05709236983875617,
+      "read_runs": 0,
+      "subagent_calls": 0,
+      "passed": 11,
+      "total": 27
+    },
+    "eval": {
+      "mean_score": 0.43063973063973066,
+      "mean_tokens": 40212,
+      "tokens_sum": 120636,
+      "mean_seconds": 36.43333333333334,
+      "score_per_10k_tokens": 0.10709234324075664,
+      "read_runs": 0,
+      "subagent_calls": 0,
+      "passed": 13,
+      "total": 30
+    },
+    "all": {
+      "mean_score": 0.4130050505050505,
+      "mean_tokens": 54731.5,
+      "tokens_sum": 328389,
+      "mean_seconds": 51.333333333333336,
+      "score_per_10k_tokens": 0.07546021039164842,
+      "read_runs": 0,
+      "subagent_calls": 0,
+      "passed": 24,
+      "total": 57
+    }
+  },
+  "subagents": {
+    "learn": {
+      "mean_score": 0.312037037037037,
+      "mean_tokens": 52361.666666666664,
+      "tokens_sum": 157085,
+      "mean_seconds": 45.13333333333333,
+      "score_per_10k_tokens": 0.059592648000198055,
+      "read_runs": 0,
+      "subagent_calls": 3,
+      "passed": 9,
+      "total": 27
+    },
+    "eval": {
+      "mean_score": 0.21212121212121213,
+      "mean_tokens": 42265.666666666664,
+      "tokens_sum": 126797,
+      "mean_seconds": 56.9,
+      "score_per_10k_tokens": 0.050187594056928506,
+      "read_runs": 0,
+      "subagent_calls": 2,
+      "passed": 7,
+      "total": 30
+    },
+    "all": {
+      "mean_score": 0.2620791245791246,
+      "mean_tokens": 47313.666666666664,
+      "tokens_sum": 283882,
+      "mean_seconds": 51.016666666666666,
+      "score_per_10k_tokens": 0.055391844057557274,
+      "read_runs": 0,
+      "subagent_calls": 5,
+      "passed": 16,
+      "total": 57
+    }
+  },
+  "skills-auto": {
+    "learn": {
+      "mean_score": 0.39537037037037037,
+      "mean_tokens": 48809,
+      "tokens_sum": 146427,
+      "mean_seconds": 36.733333333333334,
+      "score_per_10k_tokens": 0.08100357933380532,
+      "read_runs": 0,
+      "subagent_calls": 0,
+      "passed": 11,
+      "total": 27
+    },
+    "eval": {
+      "mean_score": 0.5973063973063973,
+      "mean_tokens": 50065.333333333336,
+      "tokens_sum": 150196,
+      "mean_seconds": 38.63333333333333,
+      "score_per_10k_tokens": 0.11930538708881674,
+      "read_runs": 0,
+      "subagent_calls": 0,
+      "passed": 18,
+      "total": 30
+    },
+    "all": {
+      "mean_score": 0.4963383838383838,
+      "mean_tokens": 49437.166666666664,
+      "tokens_sum": 296623,
+      "mean_seconds": 37.68333333333333,
+      "score_per_10k_tokens": 0.1003978215792539,
+      "read_runs": 0,
+      "subagent_calls": 0,
+      "passed": 29,
+      "total": 57
+    }
+  },
+  "runs": [
+    {
+      "condition": "baseline",
+      "task": "code-eval",
+      "passed": 7,
+      "total": 11,
+      "tokens": {
+        "input": 18811,
+        "output": 844,
+        "total": 19655
+      },
+      "seconds": 22.9,
+      "tool_calls": 8,
+      "subagent_calls": 0,
+      "skills_read": 0,
+      "error": null,
+      "skills_modified": false
+    },
+    {
+      "condition": "baseline",
+      "task": "code-learn",
+      "passed": 7,
+      "total": 10,
+      "tokens": {
+        "input": 31895,
+        "output": 931,
+        "total": 32826
+      },
+      "seconds": 40.4,
+      "tool_calls": 12,
+      "subagent_calls": 0,
+      "skills_read": 0,
+      "error": null,
+      "skills_modified": false
+    },
+    {
+      "condition": "baseline",
+      "task": "data-eval",
+      "passed": 5,
+      "total": 9,
+      "tokens": {
+        "input": 76495,
+        "output": 2497,
+        "total": 78992
+      },
+      "seconds": 61.6,
+      "tool_calls": 14,
+      "subagent_calls": 0,
+      "skills_read": 0,
+      "error": null,
+      "skills_modified": false
+    },
+    {
+      "condition": "baseline",
+      "task": "data-learn",
+      "passed": 3,
+      "total": 8,
+      "tokens": {
+        "input": 145550,
+        "output": 4569,
+        "total": 150119
+      },
+      "seconds": 116.8,
+      "tool_calls": 19,
+      "subagent_calls": 0,
+      "skills_read": 0,
+      "error": null,
+      "skills_modified": false
+    },
+    {
+      "condition": "baseline",
+      "task": "logs-eval",
+      "passed": 1,
+      "total": 10,
+      "tokens": {
+        "input": 20630,
+        "output": 1359,
+        "total": 21989
+      },
+      "seconds": 24.8,
+      "tool_calls": 4,
+      "subagent_calls": 0,
+      "skills_read": 0,
+      "error": null,
+      "skills_modified": false
+    },
+    {
+      "condition": "baseline",
+      "task": "logs-learn",
+      "passed": 1,
+      "total": 9,
+      "tokens": {
+        "input": 23185,
+        "output": 1623,
+        "total": 24808
+      },
+      "seconds": 41.5,
+      "tool_calls": 4,
+      "subagent_calls": 0,
+      "skills_read": 0,
+      "error": null,
+      "skills_modified": false
+    },
+    {
+      "condition": "skills-auto",
+      "task": "code-eval",
+      "passed": 7,
+      "total": 11,
+      "tokens": {
+        "input": 65508,
+        "output": 1292,
+        "total": 66800
+      },
+      "seconds": 65.5,
+      "tool_calls": 17,
+      "subagent_calls": 0,
+      "skills_read": 0,
+      "error": null,
+      "skills_modified": false
+    },
+    {
+      "condition": "skills-auto",
+      "task": "code-learn",
+      "passed": 7,
+      "total": 10,
+      "tokens": {
+        "input": 84821,
+        "output": 1840,
+        "total": 86661
+      },
+      "seconds": 52.3,
+      "tool_calls": 18,
+      "subagent_calls": 0,
+      "skills_read": 0,
+      "error": null,
+      "skills_modified": false
+    },
+    {
+      "condition": "skills-auto",
+      "task": "data-eval",
+      "passed": 5,
+      "total": 9,
+      "tokens": {
+        "input": 41283,
+        "output": 863,
+        "total": 42146
+      },
+      "seconds": 20.1,
+      "tool_calls": 6,
+      "subagent_calls": 0,
+      "skills_read": 0,
+      "error": null,
+      "skills_modified": false
+    },
+    {
+      "condition": "skills-auto",
+      "task": "data-learn",
+      "passed": 3,
+      "total": 8,
+      "tokens": {
+        "input": 32267,
+        "output": 1241,
+        "total": 33508
+      },
+      "seconds": 21.4,
+      "tool_calls": 6,
+      "subagent_calls": 0,
+      "skills_read": 0,
+      "error": null,
+      "skills_modified": false
+    },
+    {
+      "condition": "skills-auto",
+      "task": "logs-eval",
+      "passed": 6,
+      "total": 10,
+      "tokens": {
+        "input": 39926,
+        "output": 1324,
+        "total": 41250
+      },
+      "seconds": 30.3,
+      "tool_calls": 7,
+      "subagent_calls": 0,
+      "skills_read": 0,
+      "error": null,
+      "skills_modified": false
+    },
+    {
+      "condition": "skills-auto",
+      "task": "logs-learn",
+      "passed": 1,
+      "total": 9,
+      "tokens": {
+        "input": 25302,
+        "output": 956,
+        "total": 26258
+      },
+      "seconds": 36.5,
+      "tool_calls": 4,
+      "subagent_calls": 0,
+      "skills_read": 0,
+      "error": null,
+      "skills_modified": false
+    },
+    {
+      "condition": "subagents",
+      "task": "code-eval",
+      "passed": 7,
+      "total": 11,
+      "tokens": {
+        "input": 30774,
+        "output": 903,
+        "total": 31677
+      },
+      "seconds": 33.1,
+      "tool_calls": 11,
+      "subagent_calls": 0,
+      "skills_read": 0,
+      "error": null,
+      "skills_modified": false
+    },
+    {
+      "condition": "subagents",
+      "task": "code-learn",
+      "passed": 7,
+      "total": 10,
+      "tokens": {
+        "input": 35216,
+        "output": 655,
+        "total": 35871
+      },
+      "seconds": 23.7,
+      "tool_calls": 11,
+      "subagent_calls": 0,
+      "skills_read": 0,
+      "error": null,
+      "skills_modified": false
+    },
+    {
+      "condition": "subagents",
+      "task": "data-eval",
+      "passed": 0,
+      "total": 9,
+      "tokens": {
+        "input": 69733,
+        "output": 1017,
+        "total": 70750
+      },
+      "seconds": 45.9,
+      "tool_calls": 9,
+      "subagent_calls": 1,
+      "skills_read": 0,
+      "error": null,
+      "skills_modified": false
+    },
+    {
+      "condition": "subagents",
+      "task": "data-learn",
+      "passed": 1,
+      "total": 8,
+      "tokens": {
+        "input": 44072,
+        "output": 3926,
+        "total": 47998
+      },
+      "seconds": 56.9,
+      "tool_calls": 6,
+      "subagent_calls": 1,
+      "skills_read": 0,
+      "error": null,
+      "skills_modified": false
+    },
+    {
+      "condition": "subagents",
+      "task": "logs-eval",
+      "passed": 0,
+      "total": 10,
+      "tokens": {
+        "input": 20484,
+        "output": 3886,
+        "total": 24370
+      },
+      "seconds": 91.7,
+      "tool_calls": 2,
+      "subagent_calls": 1,
+      "skills_read": 0,
+      "error": null,
+      "skills_modified": false
+    },
+    {
+      "condition": "subagents",
+      "task": "logs-learn",
+      "passed": 1,
+      "total": 9,
+      "tokens": {
+        "input": 70585,
+        "output": 2631,
+        "total": 73216
+      },
+      "seconds": 54.8,
+      "tool_calls": 10,
+      "subagent_calls": 2,
+      "skills_read": 0,
+      "error": null,
+      "skills_modified": false
+    }
+  ],
+  "curator_usage": [
+    {
+      "input_tokens": 6417,
+      "output_tokens": 648,
+      "total_tokens": 7065,
+      "input_token_details": {
+        "audio": 0,
+        "cache_read": 0
+      },
+      "output_token_details": {
+        "audio": 0,
+        "reasoning": 0
+      }
+    },
+    {
+      "input_tokens": 6518,
+      "output_tokens": 767,
+      "total_tokens": 7285,
+      "input_token_details": {
+        "audio": 0,
+        "cache_read": 0
+      },
+      "output_token_details": {
+        "audio": 0,
+        "reasoning": 0
+      }
+    },
+    {
+      "input_tokens": 6593,
+      "output_tokens": 971,
+      "total_tokens": 7564,
+      "input_token_details": {
+        "audio": 0,
+        "cache_read": 0
+      },
+      "output_token_details": {
+        "audio": 0,
+        "reasoning": 0
+      }
+    }
+  ],
+  "skill_hash": "9be2711716937db8adb26385ceb3e43c011bfdc7d7e3d243186d420363f20dca"
+}

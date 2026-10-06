@@ -1,0 +1,488 @@
+[
+  {
+    "request_id": "17cebe1d-5f29-4475-86b5-f1a5d87e909b",
+    "status": "success",
+    "data": [
+      "{\"revenue\": 150, \"rows\": 3}"
+    ],
+    "code": [],
+    "evaluation": [],
+    "errors": [],
+    "stages": [
+      {
+        "worker": "data_agent",
+        "status": "success",
+        "seconds": 0.0032530380003663595
+      }
+    ],
+    "checks": {
+      "sources_unchanged": true,
+      "data_numbers": true,
+      "data_tool_evidence": true
+    },
+    "validation_passed": true,
+    "latency_seconds": 0.03431114799968782,
+    "metrics": {
+      "events": [
+        {
+          "kind": "model",
+          "worker": "data_agent",
+          "name": "ainvoke",
+          "status": "success",
+          "seconds": 0.00011271099992882228,
+          "tokens": null
+        },
+        {
+          "kind": "tool",
+          "worker": "data_agent",
+          "name": "query_database",
+          "status": "success",
+          "seconds": 0.0013347550002436037,
+          "tokens": null
+        },
+        {
+          "kind": "model",
+          "worker": "data_agent",
+          "name": "ainvoke",
+          "status": "success",
+          "seconds": 8.79280005392502e-05,
+          "tokens": null
+        }
+      ],
+      "model_calls": 2,
+      "api_calls": 0,
+      "usage_complete": true,
+      "tokens": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0
+      },
+      "known_tokens": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0
+      },
+      "missing_usage_calls": 0
+    }
+  },
+  {
+    "request_id": "1916d1b1-9fcb-450d-8f64-27d9faad98bd",
+    "status": "success",
+    "data": [],
+    "code": [
+      "{\"script\": \"outputs/report.py\", \"answer\": \"outputs/answer.json\", \"chart\": null}"
+    ],
+    "evaluation": [],
+    "errors": [],
+    "stages": [
+      {
+        "worker": "code_agent",
+        "status": "success",
+        "seconds": 0.11917004699989775
+      }
+    ],
+    "checks": {
+      "sources_unchanged": true,
+      "script_exists": true,
+      "code_numbers": true,
+      "script_executed": true
+    },
+    "validation_passed": true,
+    "latency_seconds": 0.13694947899966792,
+    "metrics": {
+      "events": [
+        {
+          "kind": "model",
+          "worker": "code_agent",
+          "name": "ainvoke",
+          "status": "success",
+          "seconds": 8.059799984039273e-05,
+          "tokens": null
+        },
+        {
+          "kind": "tool",
+          "worker": "code_agent",
+          "name": "create_file",
+          "status": "success",
+          "seconds": 0.0010200309998253942,
+          "tokens": null
+        },
+        {
+          "kind": "model",
+          "worker": "code_agent",
+          "name": "ainvoke",
+          "status": "success",
+          "seconds": 8.231599986174842e-05,
+          "tokens": null
+        },
+        {
+          "kind": "tool",
+          "worker": "code_agent",
+          "name": "run_script",
+          "status": "success",
+          "seconds": 0.11613726599989604,
+          "tokens": null
+        },
+        {
+          "kind": "model",
+          "worker": "code_agent",
+          "name": "ainvoke",
+          "status": "success",
+          "seconds": 0.00010052100060420344,
+          "tokens": null
+        }
+      ],
+      "model_calls": 3,
+      "api_calls": 0,
+      "usage_complete": true,
+      "tokens": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0
+      },
+      "known_tokens": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0
+      },
+      "missing_usage_calls": 0
+    }
+  },
+  {
+    "request_id": "813a4c9b-ed8d-459c-af39-09b4a632797b",
+    "status": "success",
+    "data": [
+      "{\"revenue\": 150, \"rows\": 3}"
+    ],
+    "code": [
+      "{\"script\": \"outputs/report.py\", \"answer\": \"outputs/answer.json\", \"chart\": \"outputs/sales_chart.png\"}"
+    ],
+    "evaluation": [
+      {
+        "score": 85.5,
+        "feedback": "Fixture evidence checked",
+        "issues": [],
+        "suggestions": []
+      }
+    ],
+    "errors": [],
+    "stages": [
+      {
+        "worker": "data_agent",
+        "status": "success",
+        "seconds": 0.002919184999882418
+      },
+      {
+        "worker": "code_agent",
+        "status": "success",
+        "seconds": 1.1750641089993223
+      },
+      {
+        "worker": "evaluator_agent",
+        "status": "success",
+        "seconds": 0.0033417730001019663
+      }
+    ],
+    "checks": {
+      "sources_unchanged": true,
+      "data_numbers": true,
+      "data_tool_evidence": true,
+      "script_exists": true,
+      "code_numbers": true,
+      "script_executed": true,
+      "chart_decodes": true,
+      "evaluation_score": true,
+      "report_exists": true,
+      "comparison_executed": true
+    },
+    "validation_passed": true,
+    "latency_seconds": 1.2307464219993562,
+    "metrics": {
+      "events": [
+        {
+          "kind": "model",
+          "worker": "data_agent",
+          "name": "ainvoke",
+          "status": "success",
+          "seconds": 0.00012907299969810992,
+          "tokens": null
+        },
+        {
+          "kind": "tool",
+          "worker": "data_agent",
+          "name": "query_database",
+          "status": "success",
+          "seconds": 0.0007719790000919602,
+          "tokens": null
+        },
+        {
+          "kind": "model",
+          "worker": "data_agent",
+          "name": "ainvoke",
+          "status": "success",
+          "seconds": 0.00011847699988720706,
+          "tokens": null
+        },
+        {
+          "kind": "model",
+          "worker": "code_agent",
+          "name": "ainvoke",
+          "status": "success",
+          "seconds": 0.00010238599952572258,
+          "tokens": null
+        },
+        {
+          "kind": "tool",
+          "worker": "code_agent",
+          "name": "create_file",
+          "status": "success",
+          "seconds": 0.0012262979998922674,
+          "tokens": null
+        },
+        {
+          "kind": "model",
+          "worker": "code_agent",
+          "name": "ainvoke",
+          "status": "success",
+          "seconds": 0.00010650500007614028,
+          "tokens": null
+        },
+        {
+          "kind": "tool",
+          "worker": "code_agent",
+          "name": "run_script",
+          "status": "success",
+          "seconds": 1.171560839000449,
+          "tokens": null
+        },
+        {
+          "kind": "model",
+          "worker": "code_agent",
+          "name": "ainvoke",
+          "status": "success",
+          "seconds": 0.00010202999965258641,
+          "tokens": null
+        },
+        {
+          "kind": "model",
+          "worker": "evaluator_agent",
+          "name": "ainvoke",
+          "status": "success",
+          "seconds": 0.00011882499984494643,
+          "tokens": null
+        },
+        {
+          "kind": "tool",
+          "worker": "evaluator_agent",
+          "name": "comparison",
+          "status": "success",
+          "seconds": 8.001600053830771e-05,
+          "tokens": null
+        },
+        {
+          "kind": "model",
+          "worker": "evaluator_agent",
+          "name": "ainvoke",
+          "status": "success",
+          "seconds": 8.147199969243957e-05,
+          "tokens": null
+        },
+        {
+          "kind": "tool",
+          "worker": "evaluator_agent",
+          "name": "scoring",
+          "status": "success",
+          "seconds": 7.196499973360915e-05,
+          "tokens": null
+        },
+        {
+          "kind": "model",
+          "worker": "evaluator_agent",
+          "name": "ainvoke",
+          "status": "success",
+          "seconds": 8.015999992494471e-05,
+          "tokens": null
+        },
+        {
+          "kind": "tool",
+          "worker": "evaluator_agent",
+          "name": "report_generator",
+          "status": "success",
+          "seconds": 0.0009165910005322075,
+          "tokens": null
+        },
+        {
+          "kind": "model",
+          "worker": "evaluator_agent",
+          "name": "ainvoke",
+          "status": "success",
+          "seconds": 8.156900003086776e-05,
+          "tokens": null
+        }
+      ],
+      "model_calls": 9,
+      "api_calls": 0,
+      "usage_complete": true,
+      "tokens": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0
+      },
+      "known_tokens": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0
+      },
+      "missing_usage_calls": 0
+    }
+  },
+  {
+    "request_id": "fa925bfe-c14a-4e4d-b536-dab866f9ebe0",
+    "status": "success",
+    "data": [
+      "{\"revenue\": 150, \"rows\": 3}"
+    ],
+    "code": [],
+    "evaluation": [],
+    "errors": [],
+    "stages": [
+      {
+        "worker": "data_agent",
+        "status": "success",
+        "seconds": 0.003095772000051511
+      }
+    ],
+    "checks": {
+      "sources_unchanged": true,
+      "data_numbers": true,
+      "data_tool_evidence": true
+    },
+    "validation_passed": true,
+    "latency_seconds": 0.035579340000367665,
+    "metrics": {
+      "events": [
+        {
+          "kind": "model",
+          "worker": "data_agent",
+          "name": "ainvoke",
+          "status": "success",
+          "seconds": 9.943700024450663e-05,
+          "tokens": null
+        },
+        {
+          "kind": "tool",
+          "worker": "data_agent",
+          "name": "query_database",
+          "status": "success",
+          "seconds": 0.0009750859999257955,
+          "tokens": null
+        },
+        {
+          "kind": "model",
+          "worker": "data_agent",
+          "name": "ainvoke",
+          "status": "success",
+          "seconds": 0.00012616599997272715,
+          "tokens": null
+        }
+      ],
+      "model_calls": 2,
+      "api_calls": 0,
+      "usage_complete": true,
+      "tokens": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0
+      },
+      "known_tokens": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0
+      },
+      "missing_usage_calls": 0
+    }
+  },
+  {
+    "request_id": "43b8ebac-6a98-4ef6-8fcf-2cf88184e996",
+    "status": "success",
+    "data": [],
+    "code": [
+      "{\"script\": \"outputs/report.py\", \"answer\": \"outputs/answer.json\", \"chart\": null}"
+    ],
+    "evaluation": [],
+    "errors": [],
+    "stages": [
+      {
+        "worker": "code_agent",
+        "status": "success",
+        "seconds": 0.11887494300026447
+      }
+    ],
+    "checks": {
+      "sources_unchanged": true,
+      "script_exists": true,
+      "code_numbers": true,
+      "script_executed": true
+    },
+    "validation_passed": true,
+    "latency_seconds": 0.1397082630001023,
+    "metrics": {
+      "events": [
+        {
+          "kind": "model",
+          "worker": "code_agent",
+          "name": "ainvoke",
+          "status": "success",
+          "seconds": 9.497100018052151e-05,
+          "tokens": null
+        },
+        {
+          "kind": "tool",
+          "worker": "code_agent",
+          "name": "create_file",
+          "status": "success",
+          "seconds": 0.0008654240000396385,
+          "tokens": null
+        },
+        {
+          "kind": "model",
+          "worker": "code_agent",
+          "name": "ainvoke",
+          "status": "success",
+          "seconds": 7.81560001996695e-05,
+          "tokens": null
+        },
+        {
+          "kind": "tool",
+          "worker": "code_agent",
+          "name": "run_script",
+          "status": "success",
+          "seconds": 0.11611506000008376,
+          "tokens": null
+        },
+        {
+          "kind": "model",
+          "worker": "code_agent",
+          "name": "ainvoke",
+          "status": "success",
+          "seconds": 0.00010500999997020699,
+          "tokens": null
+        }
+      ],
+      "model_calls": 3,
+      "api_calls": 0,
+      "usage_complete": true,
+      "tokens": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0
+      },
+      "known_tokens": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0
+      },
+      "missing_usage_calls": 0
+    }
+  }
+]

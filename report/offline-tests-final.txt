@@ -1,0 +1,5 @@
+$ python -m pytest tests/ -o addopts=-p no:cacheprovider -q
+.............................                                            [100%]
+29 passed in 8.64s
+
+Exit code: 0

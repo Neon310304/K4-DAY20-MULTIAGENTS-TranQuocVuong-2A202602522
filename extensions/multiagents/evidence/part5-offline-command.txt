@@ -1,0 +1,8 @@
+$ /opt/day20-tools-venv/bin/python scripts/benchmark.py --mode offline --output evidence/part5-offline
+Simple data query: 3/3 verified, avg=0.021s p50=0.019s p99=0.023s throughput=2881.03/min tokens={'input_tokens': 0, 'output_tokens': 0, 'total_tokens': 0}
+Code generation: 3/3 verified, avg=0.138s p50=0.137s p99=0.141s throughput=434.99/min tokens={'input_tokens': 0, 'output_tokens': 0, 'total_tokens': 0}
+Complex workflow: 3/3 verified, avg=1.228s p50=1.052s p99=1.608s throughput=48.85/min tokens={'input_tokens': 0, 'output_tokens': 0, 'total_tokens': 0}
+Concurrent data requests: 10/10 verified, avg=0.084s p50=0.086s p99=0.116s throughput=3296.81/min tokens={'input_tokens': 0, 'output_tokens': 0, 'total_tokens': 0}
+Results saved: evidence/part5-offline/benchmark_results.json
+
+Exit code: 0

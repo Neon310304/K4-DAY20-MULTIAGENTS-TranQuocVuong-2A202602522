@@ -1,0 +1,19 @@
+{
+  "response": "OK",
+  "usage_metadata": {
+    "input_tokens": 10,
+    "output_tokens": 1,
+    "total_tokens": 11,
+    "input_token_details": {
+      "audio": 0,
+      "cache_read": 0
+    },
+    "output_token_details": {
+      "audio": 0,
+      "reasoning": 0
+    }
+  },
+  "model": "gpt-4.1-mini",
+  "provider": "YesScale OpenAI-compatible gateway",
+  "timestamp": "2026-10-06T06:24:31.760201+00:00"
+}

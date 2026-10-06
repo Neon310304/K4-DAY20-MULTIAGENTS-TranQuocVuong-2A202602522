@@ -1,0 +1,4 @@
+Command: python -m pytest tests/test_02_agent.py tests/test_03_runner.py -o addopts=-p no:cacheprovider -q
+
+...............                                                          [100%]
+15 passed in 2.84s

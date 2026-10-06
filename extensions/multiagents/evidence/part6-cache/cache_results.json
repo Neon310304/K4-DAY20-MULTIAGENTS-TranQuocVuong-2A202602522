@@ -1,0 +1,2288 @@
+{
+  "timestamp_utc": "2026-10-06T10:31:35.628440+00:00",
+  "mode": "offline",
+  "iterations": 20,
+  "request": {
+    "task_type": "data_analysis",
+    "parameters": {},
+    "content": "Calculate total Q3 revenue from sales data"
+  },
+  "dataset_revision": "9136db79bd9f36f556e70c32adc0eb8603fa5d3ee1c90534b3a0abb293b5ecdb",
+  "cases": [
+    {
+      "summary": {
+        "name": "Uncached",
+        "requests": 20,
+        "successes": 20,
+        "min": 0.014717166000082216,
+        "max": 0.029571724000561517,
+        "avg": 0.017998097600047912,
+        "median": 0.016760874499595957,
+        "p50": 0.016760874499595957,
+        "p99": 0.028005865410596006,
+        "wall_seconds": 0.36096824600008404,
+        "throughput_per_minute": 3324.392140575492,
+        "error_rate": 0.0,
+        "usage_complete": true,
+        "known_tokens": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        },
+        "tokens": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        },
+        "tokens_per_100_requests": 0.0,
+        "model_calls": 40,
+        "api_calls": 0,
+        "worker_utilization": {
+          "data_agent": 0.08318665237726763
+        },
+        "utilization_definition": "sum stage wall-time / (batch wall-time * max_concurrency); includes API waiting, not CPU usage"
+      },
+      "records": [
+        {
+          "request_id": "001a2ebd-a42b-4300-8307-495bc68bc04a",
+          "status": "success",
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "success",
+              "seconds": 0.002098706000651873
+            }
+          ],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "validation_passed": true,
+          "latency_seconds": 0.029571724000561517,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 7.431700032611843e-05,
+                "tokens": null
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "query_database",
+                "status": "success",
+                "seconds": 0.000913173000299139,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 5.92379992667702e-05,
+                "tokens": null
+              }
+            ],
+            "model_calls": 2,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 1
+        },
+        {
+          "request_id": "eaf5a7f2-37ad-4ef3-9e0f-419aa37e92ef",
+          "status": "success",
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "success",
+              "seconds": 0.001289081000322767
+            }
+          ],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "validation_passed": true,
+          "latency_seconds": 0.015105535000657255,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 6.480800038843881e-05,
+                "tokens": null
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "query_database",
+                "status": "success",
+                "seconds": 0.00036448900027608033,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 5.318100011209026e-05,
+                "tokens": null
+              }
+            ],
+            "model_calls": 2,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 2
+        },
+        {
+          "request_id": "ae06dc42-22c5-458b-a9f4-cd3a12d1c1d6",
+          "status": "success",
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "success",
+              "seconds": 0.0009912440000334755
+            }
+          ],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "validation_passed": true,
+          "latency_seconds": 0.014717166000082216,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 4.387699937069556e-05,
+                "tokens": null
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "query_database",
+                "status": "success",
+                "seconds": 0.00026271700062352465,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 4.409600023791427e-05,
+                "tokens": null
+              }
+            ],
+            "model_calls": 2,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 3
+        },
+        {
+          "request_id": "1849b73a-8729-4459-83bc-dfa4c16a5215",
+          "status": "success",
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "success",
+              "seconds": 0.0012428419995558215
+            }
+          ],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "validation_passed": true,
+          "latency_seconds": 0.016255301000455802,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 6.166000002849614e-05,
+                "tokens": null
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "query_database",
+                "status": "success",
+                "seconds": 0.0003838930006168084,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 6.688700068480102e-05,
+                "tokens": null
+              }
+            ],
+            "model_calls": 2,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 4
+        },
+        {
+          "request_id": "d162dd47-af8f-42bc-9c93-6078109c99d1",
+          "status": "success",
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "success",
+              "seconds": 0.002614554000501812
+            }
+          ],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "validation_passed": true,
+          "latency_seconds": 0.01878436100014369,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 0.0012326080004640971,
+                "tokens": null
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "query_database",
+                "status": "success",
+                "seconds": 0.0003567730000213487,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 8.589399931224762e-05,
+                "tokens": null
+              }
+            ],
+            "model_calls": 2,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 5
+        },
+        {
+          "request_id": "10aa5c30-c9d2-4177-ae3a-80c8957a0422",
+          "status": "success",
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "success",
+              "seconds": 0.001148010000179056
+            }
+          ],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "validation_passed": true,
+          "latency_seconds": 0.01634913499947288,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 5.8169000112684444e-05,
+                "tokens": null
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "query_database",
+                "status": "success",
+                "seconds": 0.0003253760005463846,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 5.256300028122496e-05,
+                "tokens": null
+              }
+            ],
+            "model_calls": 2,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 6
+        },
+        {
+          "request_id": "a26ad996-6cc3-49d2-907d-69bf5fd571e9",
+          "status": "success",
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "success",
+              "seconds": 0.0008962720003182767
+            }
+          ],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "validation_passed": true,
+          "latency_seconds": 0.014896165999743971,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 4.520599941315595e-05,
+                "tokens": null
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "query_database",
+                "status": "success",
+                "seconds": 0.000264020999566128,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 3.597899922169745e-05,
+                "tokens": null
+              }
+            ],
+            "model_calls": 2,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 7
+        },
+        {
+          "request_id": "2be88901-d676-439c-a9dd-e27d0a919962",
+          "status": "success",
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "success",
+              "seconds": 0.0012379649997456
+            }
+          ],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "validation_passed": true,
+          "latency_seconds": 0.016687509999428585,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 6.345499969029333e-05,
+                "tokens": null
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "query_database",
+                "status": "success",
+                "seconds": 0.00036517399985314114,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 9.803699958865764e-05,
+                "tokens": null
+              }
+            ],
+            "model_calls": 2,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 8
+        },
+        {
+          "request_id": "2b4e389a-6094-4ddd-bcbf-52a1d6b84f0a",
+          "status": "success",
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "success",
+              "seconds": 0.00140727199959656
+            }
+          ],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "validation_passed": true,
+          "latency_seconds": 0.016443127999991702,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 5.8150999393546954e-05,
+                "tokens": null
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "query_database",
+                "status": "success",
+                "seconds": 0.0005203179998716223,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 4.914599958283361e-05,
+                "tokens": null
+              }
+            ],
+            "model_calls": 2,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 9
+        },
+        {
+          "request_id": "379ea6b3-c37d-4d70-a0f9-4e3d92badfdb",
+          "status": "success",
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "success",
+              "seconds": 0.0010673099995983648
+            }
+          ],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "validation_passed": true,
+          "latency_seconds": 0.016139219000251614,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 5.228400004853029e-05,
+                "tokens": null
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "query_database",
+                "status": "success",
+                "seconds": 0.00031672099976276513,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 8.482400062348461e-05,
+                "tokens": null
+              }
+            ],
+            "model_calls": 2,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 10
+        },
+        {
+          "request_id": "5758141d-f88a-46e2-b381-2d75eed1e2c0",
+          "status": "success",
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "success",
+              "seconds": 0.0010695000000850996
+            }
+          ],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "validation_passed": true,
+          "latency_seconds": 0.016611971999736852,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 5.0892999752250034e-05,
+                "tokens": null
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "query_database",
+                "status": "success",
+                "seconds": 0.0002746050004134304,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 5.364900061977096e-05,
+                "tokens": null
+              }
+            ],
+            "model_calls": 2,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 11
+        },
+        {
+          "request_id": "633b08d3-d02b-4f5a-9147-c69079788079",
+          "status": "success",
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "success",
+              "seconds": 0.0018554130001575686
+            }
+          ],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "validation_passed": true,
+          "latency_seconds": 0.019292854000013904,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 9.45370002227719e-05,
+                "tokens": null
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "query_database",
+                "status": "success",
+                "seconds": 0.0006024869999237126,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 8.23499995021848e-05,
+                "tokens": null
+              }
+            ],
+            "model_calls": 2,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 12
+        },
+        {
+          "request_id": "c1ef87f7-bfc4-4142-a81a-b1b70a206c3b",
+          "status": "success",
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "success",
+              "seconds": 0.0019316930001878063
+            }
+          ],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "validation_passed": true,
+          "latency_seconds": 0.01905132599949866,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 7.751399971311912e-05,
+                "tokens": null
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "query_database",
+                "status": "success",
+                "seconds": 0.000664481999592681,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 5.2192999646649696e-05,
+                "tokens": null
+              }
+            ],
+            "model_calls": 2,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 13
+        },
+        {
+          "request_id": "10ce8466-cd11-4a70-9b2b-11d80bb8f117",
+          "status": "success",
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "success",
+              "seconds": 0.0012761299994963338
+            }
+          ],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "validation_passed": true,
+          "latency_seconds": 0.016566385000260198,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 6.152599962661043e-05,
+                "tokens": null
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "query_database",
+                "status": "success",
+                "seconds": 0.0003563330001270515,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 5.788399994344218e-05,
+                "tokens": null
+              }
+            ],
+            "model_calls": 2,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 14
+        },
+        {
+          "request_id": "509f71e5-7127-471b-8416-da9069b6caa6",
+          "status": "success",
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "success",
+              "seconds": 0.0009944269995685318
+            }
+          ],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "validation_passed": true,
+          "latency_seconds": 0.01770030300031067,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 7.353700038947864e-05,
+                "tokens": null
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "query_database",
+                "status": "success",
+                "seconds": 0.00028188199939904734,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 3.8981999750831164e-05,
+                "tokens": null
+              }
+            ],
+            "model_calls": 2,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 15
+        },
+        {
+          "request_id": "8f53eb98-b5fa-4559-a07b-5e6a4dbfbba5",
+          "status": "success",
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "success",
+              "seconds": 0.0019854969996231375
+            }
+          ],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "validation_passed": true,
+          "latency_seconds": 0.01963752299980115,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 9.661900003266055e-05,
+                "tokens": null
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "query_database",
+                "status": "success",
+                "seconds": 0.0006151329998829169,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 9.81660004981677e-05,
+                "tokens": null
+              }
+            ],
+            "model_calls": 2,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 16
+        },
+        {
+          "request_id": "440cad8c-d349-4e23-b02a-e6bbcf5c723c",
+          "status": "success",
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "success",
+              "seconds": 0.002039722999143123
+            }
+          ],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "validation_passed": true,
+          "latency_seconds": 0.018925626000054763,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 7.313799960684264e-05,
+                "tokens": null
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "query_database",
+                "status": "success",
+                "seconds": 0.0006854789999124478,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 6.983799994486617e-05,
+                "tokens": null
+              }
+            ],
+            "model_calls": 2,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 17
+        },
+        {
+          "request_id": "b1a496eb-768c-4214-9a4e-76f5deec949e",
+          "status": "success",
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "success",
+              "seconds": 0.0011289230005786521
+            }
+          ],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "validation_passed": true,
+          "latency_seconds": 0.019062115999986418,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 6.115599990152987e-05,
+                "tokens": null
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "query_database",
+                "status": "success",
+                "seconds": 0.00034119300016755005,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 4.3683000512828585e-05,
+                "tokens": null
+              }
+            ],
+            "model_calls": 2,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 18
+        },
+        {
+          "request_id": "86d00be4-848c-470f-bdac-92c6724ab2bd",
+          "status": "success",
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "success",
+              "seconds": 0.0015980660000423086
+            }
+          ],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "validation_passed": true,
+          "latency_seconds": 0.01683423899976333,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 8.113900003081653e-05,
+                "tokens": null
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "query_database",
+                "status": "success",
+                "seconds": 0.0004885300004389137,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 8.318300024257042e-05,
+                "tokens": null
+              }
+            ],
+            "model_calls": 2,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 19
+        },
+        {
+          "request_id": "cdf9daaf-5661-4097-906c-e982dc6546fa",
+          "status": "success",
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "success",
+              "seconds": 0.002155111999854853
+            }
+          ],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "validation_passed": true,
+          "latency_seconds": 0.02133036300074309,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 0.0001274719998036744,
+                "tokens": null
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "query_database",
+                "status": "success",
+                "seconds": 0.0006590990005861386,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 8.943600005295593e-05,
+                "tokens": null
+              }
+            ],
+            "model_calls": 2,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 20
+        }
+      ]
+    },
+    {
+      "summary": {
+        "name": "Cached including cold miss",
+        "requests": 20,
+        "successes": 20,
+        "min": 3.833699975075433e-05,
+        "max": 0.017950507000023208,
+        "avg": 0.0009416549499292159,
+        "median": 4.270050021659699e-05,
+        "p50": 4.270050021659699e-05,
+        "p99": 0.014554128939907946,
+        "wall_seconds": 0.01891988500028674,
+        "throughput_per_minute": 63425.33265830175,
+        "error_rate": 0.0,
+        "usage_complete": true,
+        "known_tokens": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        },
+        "tokens": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        },
+        "tokens_per_100_requests": 0.0,
+        "model_calls": 2,
+        "api_calls": 0,
+        "worker_utilization": {
+          "data_agent": 0.08786332476873086
+        },
+        "utilization_definition": "sum stage wall-time / (batch wall-time * max_concurrency); includes API waiting, not CPU usage"
+      },
+      "records": [
+        {
+          "request_id": "59fd5d6a-9f28-42d6-b097-dbd02b235e4b",
+          "status": "success",
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "success",
+              "seconds": 0.0016623640003672335
+            }
+          ],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "validation_passed": true,
+          "latency_seconds": 0.017950507000023208,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 5.811100072605768e-05,
+                "tokens": null
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "query_database",
+                "status": "success",
+                "seconds": 0.00036952600021322723,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 5.687700013368158e-05,
+                "tokens": null
+              }
+            ],
+            "model_calls": 2,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "cache": {
+            "outcome": "miss",
+            "source_request_id": "59fd5d6a-9f28-42d6-b097-dbd02b235e4b"
+          },
+          "iteration": 1
+        },
+        {
+          "request_id": "10a59506-9f29-4b8f-ac01-60d19f9ae879",
+          "status": "success",
+          "validation_passed": true,
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "metrics": {
+            "events": [],
+            "model_calls": 0,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "cache": {
+            "outcome": "hit",
+            "source_request_id": "59fd5d6a-9f28-42d6-b097-dbd02b235e4b",
+            "validation": "reused verified result; no tools executed for this request"
+          },
+          "latency_seconds": 7.48329994166852e-05,
+          "iteration": 2
+        },
+        {
+          "request_id": "9d4832ca-7769-405e-afc5-fd8b327bc1e0",
+          "status": "success",
+          "validation_passed": true,
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "metrics": {
+            "events": [],
+            "model_calls": 0,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "cache": {
+            "outcome": "hit",
+            "source_request_id": "59fd5d6a-9f28-42d6-b097-dbd02b235e4b",
+            "validation": "reused verified result; no tools executed for this request"
+          },
+          "latency_seconds": 5.082600000605453e-05,
+          "iteration": 3
+        },
+        {
+          "request_id": "67485d7b-9620-4fc4-a57a-cb4b13dcd410",
+          "status": "success",
+          "validation_passed": true,
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "metrics": {
+            "events": [],
+            "model_calls": 0,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "cache": {
+            "outcome": "hit",
+            "source_request_id": "59fd5d6a-9f28-42d6-b097-dbd02b235e4b",
+            "validation": "reused verified result; no tools executed for this request"
+          },
+          "latency_seconds": 4.246000025887042e-05,
+          "iteration": 4
+        },
+        {
+          "request_id": "3e64597e-007c-42f8-a624-3a990c7f3245",
+          "status": "success",
+          "validation_passed": true,
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "metrics": {
+            "events": [],
+            "model_calls": 0,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "cache": {
+            "outcome": "hit",
+            "source_request_id": "59fd5d6a-9f28-42d6-b097-dbd02b235e4b",
+            "validation": "reused verified result; no tools executed for this request"
+          },
+          "latency_seconds": 4.294100017432356e-05,
+          "iteration": 5
+        },
+        {
+          "request_id": "38b5e0a8-bb0c-4f3f-9bec-b45b8a6f9f91",
+          "status": "success",
+          "validation_passed": true,
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "metrics": {
+            "events": [],
+            "model_calls": 0,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "cache": {
+            "outcome": "hit",
+            "source_request_id": "59fd5d6a-9f28-42d6-b097-dbd02b235e4b",
+            "validation": "reused verified result; no tools executed for this request"
+          },
+          "latency_seconds": 4.362499930721242e-05,
+          "iteration": 6
+        },
+        {
+          "request_id": "53600508-5df5-4dc8-b112-f3feee861767",
+          "status": "success",
+          "validation_passed": true,
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "metrics": {
+            "events": [],
+            "model_calls": 0,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "cache": {
+            "outcome": "hit",
+            "source_request_id": "59fd5d6a-9f28-42d6-b097-dbd02b235e4b",
+            "validation": "reused verified result; no tools executed for this request"
+          },
+          "latency_seconds": 6.934399971214589e-05,
+          "iteration": 7
+        },
+        {
+          "request_id": "d3f170cb-a604-49c9-92cb-2b3f5ee583e4",
+          "status": "success",
+          "validation_passed": true,
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "metrics": {
+            "events": [],
+            "model_calls": 0,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "cache": {
+            "outcome": "hit",
+            "source_request_id": "59fd5d6a-9f28-42d6-b097-dbd02b235e4b",
+            "validation": "reused verified result; no tools executed for this request"
+          },
+          "latency_seconds": 4.20260003011208e-05,
+          "iteration": 8
+        },
+        {
+          "request_id": "ad362755-1042-41cb-8d07-9e1a5a434ef8",
+          "status": "success",
+          "validation_passed": true,
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "metrics": {
+            "events": [],
+            "model_calls": 0,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "cache": {
+            "outcome": "hit",
+            "source_request_id": "59fd5d6a-9f28-42d6-b097-dbd02b235e4b",
+            "validation": "reused verified result; no tools executed for this request"
+          },
+          "latency_seconds": 4.001700017397525e-05,
+          "iteration": 9
+        },
+        {
+          "request_id": "139f6d47-6765-461f-afc3-6a0cfb435c0b",
+          "status": "success",
+          "validation_passed": true,
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "metrics": {
+            "events": [],
+            "model_calls": 0,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "cache": {
+            "outcome": "hit",
+            "source_request_id": "59fd5d6a-9f28-42d6-b097-dbd02b235e4b",
+            "validation": "reused verified result; no tools executed for this request"
+          },
+          "latency_seconds": 4.035399979329668e-05,
+          "iteration": 10
+        },
+        {
+          "request_id": "28af4954-0c44-4eac-83d4-4e58287b1ee7",
+          "status": "success",
+          "validation_passed": true,
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "metrics": {
+            "events": [],
+            "model_calls": 0,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "cache": {
+            "outcome": "hit",
+            "source_request_id": "59fd5d6a-9f28-42d6-b097-dbd02b235e4b",
+            "validation": "reused verified result; no tools executed for this request"
+          },
+          "latency_seconds": 5.667500045092311e-05,
+          "iteration": 11
+        },
+        {
+          "request_id": "c98e366b-db87-4918-b7a7-e1551c7cbec7",
+          "status": "success",
+          "validation_passed": true,
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "metrics": {
+            "events": [],
+            "model_calls": 0,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "cache": {
+            "outcome": "hit",
+            "source_request_id": "59fd5d6a-9f28-42d6-b097-dbd02b235e4b",
+            "validation": "reused verified result; no tools executed for this request"
+          },
+          "latency_seconds": 4.7960999836504925e-05,
+          "iteration": 12
+        },
+        {
+          "request_id": "461bc4f1-58c6-4e69-b25a-210813a86c0c",
+          "status": "success",
+          "validation_passed": true,
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "metrics": {
+            "events": [],
+            "model_calls": 0,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "cache": {
+            "outcome": "hit",
+            "source_request_id": "59fd5d6a-9f28-42d6-b097-dbd02b235e4b",
+            "validation": "reused verified result; no tools executed for this request"
+          },
+          "latency_seconds": 3.976399966632016e-05,
+          "iteration": 13
+        },
+        {
+          "request_id": "d4be8687-5966-4b38-a460-46066e31bdd4",
+          "status": "success",
+          "validation_passed": true,
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "metrics": {
+            "events": [],
+            "model_calls": 0,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "cache": {
+            "outcome": "hit",
+            "source_request_id": "59fd5d6a-9f28-42d6-b097-dbd02b235e4b",
+            "validation": "reused verified result; no tools executed for this request"
+          },
+          "latency_seconds": 3.8992999179754406e-05,
+          "iteration": 14
+        },
+        {
+          "request_id": "79053deb-5c69-43f7-85fd-dc96646dc0d0",
+          "status": "success",
+          "validation_passed": true,
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "metrics": {
+            "events": [],
+            "model_calls": 0,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "cache": {
+            "outcome": "hit",
+            "source_request_id": "59fd5d6a-9f28-42d6-b097-dbd02b235e4b",
+            "validation": "reused verified result; no tools executed for this request"
+          },
+          "latency_seconds": 3.833699975075433e-05,
+          "iteration": 15
+        },
+        {
+          "request_id": "11f28eec-bd87-41f6-b2b2-8196f3e41d65",
+          "status": "success",
+          "validation_passed": true,
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "metrics": {
+            "events": [],
+            "model_calls": 0,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "cache": {
+            "outcome": "hit",
+            "source_request_id": "59fd5d6a-9f28-42d6-b097-dbd02b235e4b",
+            "validation": "reused verified result; no tools executed for this request"
+          },
+          "latency_seconds": 4.72250003440422e-05,
+          "iteration": 16
+        },
+        {
+          "request_id": "d5d53bd8-310f-4660-963c-b433662db5ca",
+          "status": "success",
+          "validation_passed": true,
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "metrics": {
+            "events": [],
+            "model_calls": 0,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "cache": {
+            "outcome": "hit",
+            "source_request_id": "59fd5d6a-9f28-42d6-b097-dbd02b235e4b",
+            "validation": "reused verified result; no tools executed for this request"
+          },
+          "latency_seconds": 4.546699983620783e-05,
+          "iteration": 17
+        },
+        {
+          "request_id": "5821fb50-4c55-4ff2-b730-0a6cb3bdf15a",
+          "status": "success",
+          "validation_passed": true,
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "metrics": {
+            "events": [],
+            "model_calls": 0,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "cache": {
+            "outcome": "hit",
+            "source_request_id": "59fd5d6a-9f28-42d6-b097-dbd02b235e4b",
+            "validation": "reused verified result; no tools executed for this request"
+          },
+          "latency_seconds": 4.159500076639233e-05,
+          "iteration": 18
+        },
+        {
+          "request_id": "93eb4b83-04c5-493c-b48b-ddc4de415bb8",
+          "status": "success",
+          "validation_passed": true,
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "metrics": {
+            "events": [],
+            "model_calls": 0,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "cache": {
+            "outcome": "hit",
+            "source_request_id": "59fd5d6a-9f28-42d6-b097-dbd02b235e4b",
+            "validation": "reused verified result; no tools executed for this request"
+          },
+          "latency_seconds": 4.079300015291665e-05,
+          "iteration": 19
+        },
+        {
+          "request_id": "3828edf8-2b9b-499b-8c14-b8ead227b13e",
+          "status": "success",
+          "validation_passed": true,
+          "data": [
+            "{\"revenue\": 150, \"rows\": 3}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": true,
+            "data_tool_evidence": true
+          },
+          "metrics": {
+            "events": [],
+            "model_calls": 0,
+            "api_calls": 0,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 0
+          },
+          "cache": {
+            "outcome": "hit",
+            "source_request_id": "59fd5d6a-9f28-42d6-b097-dbd02b235e4b",
+            "validation": "reused verified result; no tools executed for this request"
+          },
+          "latency_seconds": 3.935599943361012e-05,
+          "iteration": 20
+        }
+      ]
+    }
+  ],
+  "cache_statistics": {
+    "hits": 19,
+    "misses": 1,
+    "bypasses": 0,
+    "stores": 1,
+    "evictions": 0,
+    "expirations": 0,
+    "rejections": 0,
+    "entries": 1,
+    "payload_bytes": 195
+  },
+  "cost_usd": null,
+  "note": "Same verified fixture, sequential repeated read-only request; includes first cold miss. No paid API or live latency/cost claim; no single-flight or cross-process cache."
+}

@@ -1,0 +1,153 @@
+{"timestamp": "2026-10-06T10:10:31.105952+00:00", "level": "INFO", "logger": "coordinator", "event": "task_start task_id=0835678f-c4b9-423f-8373-75f5198cedb8:data_agent worker=data_agent"}
+{"timestamp": "2026-10-06T10:10:32.544479+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=csv_parser"}
+{"timestamp": "2026-10-06T10:10:32.545589+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=csv_parser status=success seconds=0.0011"}
+{"timestamp": "2026-10-06T10:10:33.973125+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=pandas_analysis"}
+{"timestamp": "2026-10-06T10:10:33.977115+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=pandas_analysis status=success seconds=0.0040"}
+{"timestamp": "2026-10-06T10:10:36.971449+00:00", "level": "INFO", "logger": "coordinator", "event": "task_end task_id=0835678f-c4b9-423f-8373-75f5198cedb8:data_agent worker=data_agent status=success seconds=5.8655"}
+{"timestamp": "2026-10-06T10:10:36.972704+00:00", "level": "INFO", "logger": "day20_multiagents.system", "event": "request_end request_id=0835678f-c4b9-423f-8373-75f5198cedb8 status=error seconds=6.9008"}
+{"timestamp": "2026-10-06T10:10:37.003826+00:00", "level": "INFO", "logger": "coordinator", "event": "task_start task_id=946c3162-9195-4630-9a94-ee3ca5a51023:data_agent worker=data_agent"}
+{"timestamp": "2026-10-06T10:10:38.554420+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=csv_parser"}
+{"timestamp": "2026-10-06T10:10:38.555180+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=csv_parser status=success seconds=0.0008"}
+{"timestamp": "2026-10-06T10:10:40.565328+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=pandas_analysis"}
+{"timestamp": "2026-10-06T10:10:40.567562+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=pandas_analysis status=success seconds=0.0024"}
+{"timestamp": "2026-10-06T10:10:41.879244+00:00", "level": "INFO", "logger": "coordinator", "event": "task_end task_id=946c3162-9195-4630-9a94-ee3ca5a51023:data_agent worker=data_agent status=success seconds=4.8754"}
+{"timestamp": "2026-10-06T10:10:41.880252+00:00", "level": "INFO", "logger": "day20_multiagents.system", "event": "request_end request_id=946c3162-9195-4630-9a94-ee3ca5a51023 status=error seconds=4.9072"}
+{"timestamp": "2026-10-06T10:10:41.898344+00:00", "level": "INFO", "logger": "coordinator", "event": "task_start task_id=f231169c-c1c0-492b-a53a-a4f52fd6da51:data_agent worker=data_agent"}
+{"timestamp": "2026-10-06T10:10:42.890548+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=csv_parser"}
+{"timestamp": "2026-10-06T10:10:42.891306+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=csv_parser status=success seconds=0.0008"}
+{"timestamp": "2026-10-06T10:10:44.711867+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=pandas_analysis"}
+{"timestamp": "2026-10-06T10:10:44.713623+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=pandas_analysis status=success seconds=0.0018"}
+{"timestamp": "2026-10-06T10:10:46.333224+00:00", "level": "INFO", "logger": "coordinator", "event": "task_end task_id=f231169c-c1c0-492b-a53a-a4f52fd6da51:data_agent worker=data_agent status=success seconds=4.4349"}
+{"timestamp": "2026-10-06T10:10:46.336222+00:00", "level": "INFO", "logger": "day20_multiagents.system", "event": "request_end request_id=f231169c-c1c0-492b-a53a-a4f52fd6da51 status=error seconds=4.4556"}
+{"timestamp": "2026-10-06T10:10:46.366750+00:00", "level": "INFO", "logger": "coordinator", "event": "task_start task_id=f7e4606b-3e42-42b0-a1d5-c488e5738984:code_agent worker=code_agent"}
+{"timestamp": "2026-10-06T10:10:50.612335+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=create_file"}
+{"timestamp": "2026-10-06T10:10:50.614293+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=create_file status=success seconds=0.0021"}
+{"timestamp": "2026-10-06T10:10:53.763064+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=run_script"}
+{"timestamp": "2026-10-06T10:10:53.878751+00:00", "level": "WARNING", "logger": "day20_multiagents.tools", "event": "tool_end tool=run_script status=error error_type=RuntimeError seconds=0.1157"}
+{"timestamp": "2026-10-06T10:10:53.879812+00:00", "level": "WARNING", "logger": "code_agent", "event": "worker_error worker=code_agent error_type=RuntimeError"}
+{"timestamp": "2026-10-06T10:10:53.880225+00:00", "level": "INFO", "logger": "coordinator", "event": "task_end task_id=f7e4606b-3e42-42b0-a1d5-c488e5738984:code_agent worker=code_agent status=error seconds=7.5155"}
+{"timestamp": "2026-10-06T10:10:53.881242+00:00", "level": "INFO", "logger": "day20_multiagents.system", "event": "request_end request_id=f7e4606b-3e42-42b0-a1d5-c488e5738984 status=error seconds=7.5466"}
+{"timestamp": "2026-10-06T10:10:53.901226+00:00", "level": "INFO", "logger": "coordinator", "event": "task_start task_id=4e5ba066-cf68-4fa1-af93-8bf40d8efc71:code_agent worker=code_agent"}
+{"timestamp": "2026-10-06T10:10:58.042849+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=create_file"}
+{"timestamp": "2026-10-06T10:10:58.043603+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=create_file status=success seconds=0.0008"}
+{"timestamp": "2026-10-06T10:10:59.192066+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=run_script"}
+{"timestamp": "2026-10-06T10:10:59.320631+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=run_script status=success seconds=0.1286"}
+{"timestamp": "2026-10-06T10:11:00.967702+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=python_repl"}
+{"timestamp": "2026-10-06T10:11:01.033046+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=python_repl status=success seconds=0.0653"}
+{"timestamp": "2026-10-06T10:11:02.325237+00:00", "level": "INFO", "logger": "coordinator", "event": "task_end task_id=4e5ba066-cf68-4fa1-af93-8bf40d8efc71:code_agent worker=code_agent status=success seconds=8.4241"}
+{"timestamp": "2026-10-06T10:11:02.326374+00:00", "level": "INFO", "logger": "day20_multiagents.system", "event": "request_end request_id=4e5ba066-cf68-4fa1-af93-8bf40d8efc71 status=error seconds=8.4448"}
+{"timestamp": "2026-10-06T10:11:02.344429+00:00", "level": "INFO", "logger": "coordinator", "event": "task_start task_id=c40e5d70-b3b9-4a84-913c-13d97dbc8d03:code_agent worker=code_agent"}
+{"timestamp": "2026-10-06T10:11:04.900744+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=create_file"}
+{"timestamp": "2026-10-06T10:11:04.901537+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=create_file status=success seconds=0.0008"}
+{"timestamp": "2026-10-06T10:11:06.131786+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=run_script"}
+{"timestamp": "2026-10-06T10:11:06.247708+00:00", "level": "WARNING", "logger": "day20_multiagents.tools", "event": "tool_end tool=run_script status=error error_type=RuntimeError seconds=0.1159"}
+{"timestamp": "2026-10-06T10:11:06.248215+00:00", "level": "WARNING", "logger": "code_agent", "event": "worker_error worker=code_agent error_type=RuntimeError"}
+{"timestamp": "2026-10-06T10:11:06.248479+00:00", "level": "INFO", "logger": "coordinator", "event": "task_end task_id=c40e5d70-b3b9-4a84-913c-13d97dbc8d03:code_agent worker=code_agent status=error seconds=3.9041"}
+{"timestamp": "2026-10-06T10:11:06.249170+00:00", "level": "INFO", "logger": "day20_multiagents.system", "event": "request_end request_id=c40e5d70-b3b9-4a84-913c-13d97dbc8d03 status=error seconds=3.9226"}
+{"timestamp": "2026-10-06T10:11:06.268819+00:00", "level": "INFO", "logger": "coordinator", "event": "task_start task_id=34c7de45-0ee8-4c92-a548-907512de9167:data_agent worker=data_agent"}
+{"timestamp": "2026-10-06T10:11:09.037595+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=query_database"}
+{"timestamp": "2026-10-06T10:11:09.040420+00:00", "level": "WARNING", "logger": "day20_multiagents.tools", "event": "tool_end tool=query_database status=error error_type=OperationalError seconds=0.0027"}
+{"timestamp": "2026-10-06T10:11:09.040935+00:00", "level": "WARNING", "logger": "data_agent", "event": "worker_error worker=data_agent error_type=OperationalError"}
+{"timestamp": "2026-10-06T10:11:09.041143+00:00", "level": "INFO", "logger": "coordinator", "event": "task_end task_id=34c7de45-0ee8-4c92-a548-907512de9167:data_agent worker=data_agent status=error seconds=2.7723"}
+{"timestamp": "2026-10-06T10:11:09.041735+00:00", "level": "INFO", "logger": "day20_multiagents.system", "event": "request_end request_id=34c7de45-0ee8-4c92-a548-907512de9167 status=error seconds=2.7923"}
+{"timestamp": "2026-10-06T10:11:09.071804+00:00", "level": "INFO", "logger": "coordinator", "event": "task_start task_id=0b32325e-9075-4f0f-914a-0c9c9979b4a0:data_agent worker=data_agent"}
+{"timestamp": "2026-10-06T10:11:11.288841+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=pandas_analysis"}
+{"timestamp": "2026-10-06T10:11:11.289890+00:00", "level": "WARNING", "logger": "day20_multiagents.tools", "event": "tool_end tool=pandas_analysis status=error error_type=ValueError seconds=0.0012"}
+{"timestamp": "2026-10-06T10:11:11.290183+00:00", "level": "WARNING", "logger": "data_agent", "event": "worker_error worker=data_agent error_type=ValueError"}
+{"timestamp": "2026-10-06T10:11:11.290381+00:00", "level": "INFO", "logger": "coordinator", "event": "task_end task_id=0b32325e-9075-4f0f-914a-0c9c9979b4a0:data_agent worker=data_agent status=error seconds=2.2186"}
+{"timestamp": "2026-10-06T10:11:11.291022+00:00", "level": "INFO", "logger": "day20_multiagents.system", "event": "request_end request_id=0b32325e-9075-4f0f-914a-0c9c9979b4a0 status=error seconds=2.2490"}
+{"timestamp": "2026-10-06T10:11:11.320911+00:00", "level": "INFO", "logger": "coordinator", "event": "task_start task_id=4742a6dd-fcbc-481b-905a-cd6ea7e95cb0:data_agent worker=data_agent"}
+{"timestamp": "2026-10-06T10:11:12.680466+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=data_validation"}
+{"timestamp": "2026-10-06T10:11:12.681416+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=data_validation status=success seconds=0.0010"}
+{"timestamp": "2026-10-06T10:11:14.168546+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=csv_parser"}
+{"timestamp": "2026-10-06T10:11:14.169147+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=csv_parser status=success seconds=0.0006"}
+{"timestamp": "2026-10-06T10:11:15.483880+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=pandas_analysis"}
+{"timestamp": "2026-10-06T10:11:15.485996+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=pandas_analysis status=success seconds=0.0021"}
+{"timestamp": "2026-10-06T10:11:19.239955+00:00", "level": "INFO", "logger": "coordinator", "event": "task_end task_id=4742a6dd-fcbc-481b-905a-cd6ea7e95cb0:data_agent worker=data_agent status=success seconds=7.9191"}
+{"timestamp": "2026-10-06T10:11:19.240658+00:00", "level": "INFO", "logger": "coordinator", "event": "task_start task_id=4742a6dd-fcbc-481b-905a-cd6ea7e95cb0:code_agent worker=code_agent"}
+{"timestamp": "2026-10-06T10:11:27.845798+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=create_file"}
+{"timestamp": "2026-10-06T10:11:27.846732+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=create_file status=success seconds=0.0010"}
+{"timestamp": "2026-10-06T10:11:29.079748+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=run_script"}
+{"timestamp": "2026-10-06T10:11:30.100165+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=run_script status=success seconds=1.0204"}
+{"timestamp": "2026-10-06T10:11:31.473833+00:00", "level": "INFO", "logger": "coordinator", "event": "task_end task_id=4742a6dd-fcbc-481b-905a-cd6ea7e95cb0:code_agent worker=code_agent status=success seconds=12.2363"}
+{"timestamp": "2026-10-06T10:11:31.474887+00:00", "level": "INFO", "logger": "coordinator", "event": "task_start task_id=4742a6dd-fcbc-481b-905a-cd6ea7e95cb0:evaluator_agent worker=evaluator_agent"}
+{"timestamp": "2026-10-06T10:11:34.185555+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=comparison"}
+{"timestamp": "2026-10-06T10:11:34.186185+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=comparison status=success seconds=0.0007"}
+{"timestamp": "2026-10-06T10:11:34.186634+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=scoring"}
+{"timestamp": "2026-10-06T10:11:34.187016+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=scoring status=success seconds=0.0004"}
+{"timestamp": "2026-10-06T10:11:34.187521+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=quality_check"}
+{"timestamp": "2026-10-06T10:11:34.187830+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=quality_check status=success seconds=0.0003"}
+{"timestamp": "2026-10-06T10:11:37.279354+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=report_generator"}
+{"timestamp": "2026-10-06T10:11:37.280689+00:00", "level": "WARNING", "logger": "day20_multiagents.tools", "event": "tool_end tool=report_generator status=error error_type=ValueError seconds=0.0013"}
+{"timestamp": "2026-10-06T10:11:37.281299+00:00", "level": "WARNING", "logger": "evaluator_agent", "event": "worker_error worker=evaluator_agent error_type=ValueError"}
+{"timestamp": "2026-10-06T10:11:37.281538+00:00", "level": "INFO", "logger": "coordinator", "event": "task_end task_id=4742a6dd-fcbc-481b-905a-cd6ea7e95cb0:evaluator_agent worker=evaluator_agent status=error seconds=5.8067"}
+{"timestamp": "2026-10-06T10:11:37.282340+00:00", "level": "INFO", "logger": "day20_multiagents.system", "event": "request_end request_id=4742a6dd-fcbc-481b-905a-cd6ea7e95cb0 status=error seconds=25.9942"}
+{"timestamp": "2026-10-06T10:11:37.359464+00:00", "level": "INFO", "logger": "coordinator", "event": "task_start task_id=e193377f-21d7-45e7-8cb8-046fa03c6b3f:data_agent worker=data_agent"}
+{"timestamp": "2026-10-06T10:11:37.360448+00:00", "level": "INFO", "logger": "coordinator", "event": "task_start task_id=660b96fa-3b7e-4250-a8cd-8d5935353f38:data_agent worker=data_agent"}
+{"timestamp": "2026-10-06T10:11:37.361180+00:00", "level": "INFO", "logger": "coordinator", "event": "task_start task_id=bfe366a2-9927-461d-8e65-4cc95584ddba:data_agent worker=data_agent"}
+{"timestamp": "2026-10-06T10:11:37.361888+00:00", "level": "INFO", "logger": "coordinator", "event": "task_start task_id=f5b90d45-99db-4e9d-9e21-a7b22b59fc76:data_agent worker=data_agent"}
+{"timestamp": "2026-10-06T10:11:38.637968+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=csv_parser"}
+{"timestamp": "2026-10-06T10:11:38.638615+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=csv_parser status=success seconds=0.0007"}
+{"timestamp": "2026-10-06T10:11:38.708172+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=csv_parser"}
+{"timestamp": "2026-10-06T10:11:38.710629+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=csv_parser status=success seconds=0.0025"}
+{"timestamp": "2026-10-06T10:11:38.711202+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=csv_parser"}
+{"timestamp": "2026-10-06T10:11:38.714490+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=csv_parser status=success seconds=0.0033"}
+{"timestamp": "2026-10-06T10:11:39.129840+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=query_database"}
+{"timestamp": "2026-10-06T10:11:39.130838+00:00", "level": "WARNING", "logger": "day20_multiagents.tools", "event": "tool_end tool=query_database status=error error_type=OperationalError seconds=0.0011"}
+{"timestamp": "2026-10-06T10:11:39.131277+00:00", "level": "WARNING", "logger": "data_agent", "event": "worker_error worker=data_agent error_type=OperationalError"}
+{"timestamp": "2026-10-06T10:11:39.131490+00:00", "level": "INFO", "logger": "coordinator", "event": "task_end task_id=e193377f-21d7-45e7-8cb8-046fa03c6b3f:data_agent worker=data_agent status=error seconds=1.7720"}
+{"timestamp": "2026-10-06T10:11:39.132151+00:00", "level": "INFO", "logger": "day20_multiagents.system", "event": "request_end request_id=e193377f-21d7-45e7-8cb8-046fa03c6b3f status=error seconds=1.8494"}
+{"timestamp": "2026-10-06T10:11:39.151764+00:00", "level": "INFO", "logger": "coordinator", "event": "task_start task_id=2ea3c269-be2e-442b-8117-9b5b67e43b19:data_agent worker=data_agent"}
+{"timestamp": "2026-10-06T10:11:40.008729+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=pandas_analysis"}
+{"timestamp": "2026-10-06T10:11:40.011541+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=pandas_analysis status=success seconds=0.0028"}
+{"timestamp": "2026-10-06T10:11:40.210239+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=pandas_analysis"}
+{"timestamp": "2026-10-06T10:11:40.212388+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=pandas_analysis status=success seconds=0.0022"}
+{"timestamp": "2026-10-06T10:11:40.249601+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=pandas_analysis"}
+{"timestamp": "2026-10-06T10:11:40.251252+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=pandas_analysis status=success seconds=0.0017"}
+{"timestamp": "2026-10-06T10:11:40.658393+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=csv_parser"}
+{"timestamp": "2026-10-06T10:11:40.659167+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=csv_parser status=success seconds=0.0008"}
+{"timestamp": "2026-10-06T10:11:41.452472+00:00", "level": "INFO", "logger": "coordinator", "event": "task_end task_id=f5b90d45-99db-4e9d-9e21-a7b22b59fc76:data_agent worker=data_agent status=success seconds=4.0906"}
+{"timestamp": "2026-10-06T10:11:41.453466+00:00", "level": "INFO", "logger": "day20_multiagents.system", "event": "request_end request_id=f5b90d45-99db-4e9d-9e21-a7b22b59fc76 status=error seconds=4.1089"}
+{"timestamp": "2026-10-06T10:11:41.486566+00:00", "level": "INFO", "logger": "coordinator", "event": "task_start task_id=1c4e557e-e8d0-4ccc-a10f-6b8b2c28f5b1:data_agent worker=data_agent"}
+{"timestamp": "2026-10-06T10:11:41.493557+00:00", "level": "INFO", "logger": "coordinator", "event": "task_end task_id=bfe366a2-9927-461d-8e65-4cc95584ddba:data_agent worker=data_agent status=success seconds=4.1324"}
+{"timestamp": "2026-10-06T10:11:41.494633+00:00", "level": "INFO", "logger": "day20_multiagents.system", "event": "request_end request_id=bfe366a2-9927-461d-8e65-4cc95584ddba status=error seconds=4.1662"}
+{"timestamp": "2026-10-06T10:11:41.513448+00:00", "level": "INFO", "logger": "coordinator", "event": "task_start task_id=aae43992-6525-44dd-87f6-a7cbe927dc8b:data_agent worker=data_agent"}
+{"timestamp": "2026-10-06T10:11:41.582507+00:00", "level": "INFO", "logger": "coordinator", "event": "task_end task_id=660b96fa-3b7e-4250-a8cd-8d5935353f38:data_agent worker=data_agent status=success seconds=4.2221"}
+{"timestamp": "2026-10-06T10:11:41.583879+00:00", "level": "INFO", "logger": "day20_multiagents.system", "event": "request_end request_id=660b96fa-3b7e-4250-a8cd-8d5935353f38 status=error seconds=4.2720"}
+{"timestamp": "2026-10-06T10:11:41.602447+00:00", "level": "INFO", "logger": "coordinator", "event": "task_start task_id=c3849ea9-889d-4140-a725-600302dbfdc7:data_agent worker=data_agent"}
+{"timestamp": "2026-10-06T10:11:41.960767+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=pandas_analysis"}
+{"timestamp": "2026-10-06T10:11:41.963552+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=pandas_analysis status=success seconds=0.0028"}
+{"timestamp": "2026-10-06T10:11:42.606478+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=csv_parser"}
+{"timestamp": "2026-10-06T10:11:42.607275+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=csv_parser status=success seconds=0.0008"}
+{"timestamp": "2026-10-06T10:11:42.832557+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=query_database"}
+{"timestamp": "2026-10-06T10:11:42.834361+00:00", "level": "WARNING", "logger": "day20_multiagents.tools", "event": "tool_end tool=query_database status=error error_type=OperationalError seconds=0.0019"}
+{"timestamp": "2026-10-06T10:11:42.834648+00:00", "level": "WARNING", "logger": "data_agent", "event": "worker_error worker=data_agent error_type=OperationalError"}
+{"timestamp": "2026-10-06T10:11:42.834928+00:00", "level": "INFO", "logger": "coordinator", "event": "task_end task_id=1c4e557e-e8d0-4ccc-a10f-6b8b2c28f5b1:data_agent worker=data_agent status=error seconds=1.3484"}
+{"timestamp": "2026-10-06T10:11:42.835508+00:00", "level": "INFO", "logger": "day20_multiagents.system", "event": "request_end request_id=1c4e557e-e8d0-4ccc-a10f-6b8b2c28f5b1 status=error seconds=5.4761"}
+{"timestamp": "2026-10-06T10:11:42.863246+00:00", "level": "INFO", "logger": "coordinator", "event": "task_start task_id=0f991521-4c38-4355-a18b-23853c956dff:data_agent worker=data_agent"}
+{"timestamp": "2026-10-06T10:11:43.029004+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=data_validation"}
+{"timestamp": "2026-10-06T10:11:43.030127+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=data_validation status=success seconds=0.0011"}
+{"timestamp": "2026-10-06T10:11:43.061158+00:00", "level": "INFO", "logger": "coordinator", "event": "task_end task_id=2ea3c269-be2e-442b-8117-9b5b67e43b19:data_agent worker=data_agent status=success seconds=3.9094"}
+{"timestamp": "2026-10-06T10:11:43.062375+00:00", "level": "INFO", "logger": "day20_multiagents.system", "event": "request_end request_id=2ea3c269-be2e-442b-8117-9b5b67e43b19 status=success seconds=5.7030"}
+{"timestamp": "2026-10-06T10:11:43.081535+00:00", "level": "INFO", "logger": "coordinator", "event": "task_start task_id=6eb56736-f96d-4dcd-bb53-129601762b7c:data_agent worker=data_agent"}
+{"timestamp": "2026-10-06T10:11:43.880593+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=pandas_analysis"}
+{"timestamp": "2026-10-06T10:11:43.882965+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=pandas_analysis status=success seconds=0.0024"}
+{"timestamp": "2026-10-06T10:11:44.083437+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=csv_parser"}
+{"timestamp": "2026-10-06T10:11:44.084066+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=csv_parser status=success seconds=0.0006"}
+{"timestamp": "2026-10-06T10:11:44.275187+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=query_database"}
+{"timestamp": "2026-10-06T10:11:44.276088+00:00", "level": "WARNING", "logger": "day20_multiagents.tools", "event": "tool_end tool=query_database status=error error_type=OperationalError seconds=0.0009"}
+{"timestamp": "2026-10-06T10:11:44.276742+00:00", "level": "WARNING", "logger": "data_agent", "event": "worker_error worker=data_agent error_type=OperationalError"}
+{"timestamp": "2026-10-06T10:11:44.276985+00:00", "level": "INFO", "logger": "coordinator", "event": "task_end task_id=0f991521-4c38-4355-a18b-23853c956dff:data_agent worker=data_agent status=error seconds=1.4137"}
+{"timestamp": "2026-10-06T10:11:44.277627+00:00", "level": "INFO", "logger": "day20_multiagents.system", "event": "request_end request_id=0f991521-4c38-4355-a18b-23853c956dff status=error seconds=6.9182"}
+{"timestamp": "2026-10-06T10:11:44.513085+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=csv_parser"}
+{"timestamp": "2026-10-06T10:11:44.514101+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=csv_parser status=success seconds=0.0010"}
+{"timestamp": "2026-10-06T10:11:45.417226+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=pandas_analysis"}
+{"timestamp": "2026-10-06T10:11:45.420242+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=pandas_analysis status=success seconds=0.0031"}
+{"timestamp": "2026-10-06T10:11:45.882418+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_start tool=pandas_analysis"}
+{"timestamp": "2026-10-06T10:11:45.885402+00:00", "level": "INFO", "logger": "day20_multiagents.tools", "event": "tool_end tool=pandas_analysis status=success seconds=0.0030"}
+{"timestamp": "2026-10-06T10:11:46.324067+00:00", "level": "INFO", "logger": "coordinator", "event": "task_end task_id=c3849ea9-889d-4140-a725-600302dbfdc7:data_agent worker=data_agent status=success seconds=4.7216"}
+{"timestamp": "2026-10-06T10:11:46.326058+00:00", "level": "INFO", "logger": "day20_multiagents.system", "event": "request_end request_id=c3849ea9-889d-4140-a725-600302dbfdc7 status=success seconds=8.9666"}
+{"timestamp": "2026-10-06T10:11:46.609721+00:00", "level": "INFO", "logger": "coordinator", "event": "task_end task_id=6eb56736-f96d-4dcd-bb53-129601762b7c:data_agent worker=data_agent status=success seconds=3.5282"}
+{"timestamp": "2026-10-06T10:11:46.610838+00:00", "level": "INFO", "logger": "day20_multiagents.system", "event": "request_end request_id=6eb56736-f96d-4dcd-bb53-129601762b7c status=success seconds=9.2513"}
+{"timestamp": "2026-10-06T10:11:46.893711+00:00", "level": "INFO", "logger": "coordinator", "event": "task_end task_id=aae43992-6525-44dd-87f6-a7cbe927dc8b:data_agent worker=data_agent status=success seconds=5.3802"}
+{"timestamp": "2026-10-06T10:11:46.894898+00:00", "level": "INFO", "logger": "day20_multiagents.system", "event": "request_end request_id=aae43992-6525-44dd-87f6-a7cbe927dc8b status=success seconds=9.5354"}

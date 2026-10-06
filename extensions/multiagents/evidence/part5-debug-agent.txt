@@ -1,0 +1,15 @@
+$ /opt/day20-tools-venv/bin/python scripts/debug_agent.py --agent data_agent
+{
+  "status": "success",
+  "result": "{\"revenue\": 150, \"rows\": 3}",
+  "metadata": {
+    "tools_used": 1,
+    "tool_names": [
+      "query_database"
+    ],
+    "iterations": 2,
+    "seconds": 0.0023
+  }
+}
+
+Exit code: 0

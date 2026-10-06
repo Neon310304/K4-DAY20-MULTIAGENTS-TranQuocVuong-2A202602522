@@ -1,0 +1,9 @@
+{
+  "offline_fake_model": true,
+  "skill_names": [
+    "code-changes-with-testing-and-changelog",
+    "structured-log-parsing-and-normalization"
+  ],
+  "all_names_in_system_prompt": true,
+  "first_action_note_present": true
+}

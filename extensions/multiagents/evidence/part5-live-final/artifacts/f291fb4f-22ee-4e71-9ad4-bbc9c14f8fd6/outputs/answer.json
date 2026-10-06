@@ -1,0 +1,17 @@
+{
+    "revenue": 150,
+    "rows": [
+        {
+            "quarter": "3",
+            "amount": "40"
+        },
+        {
+            "quarter": "3",
+            "amount": "50"
+        },
+        {
+            "quarter": "3",
+            "amount": "60"
+        }
+    ]
+}

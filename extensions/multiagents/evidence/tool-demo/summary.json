@@ -1,0 +1,12 @@
+{
+  "database_rows": 50,
+  "sql_total": 1275,
+  "code_total": 1275,
+  "score_from_supplied_ratings": 85.5,
+  "grade": "B",
+  "messages": 6,
+  "chart_bytes": 11765,
+  "chart_sha256": "e7a8d7369e793a5fa870e418e364a2887e5c11750bbabadd349f090f7a4c29d7",
+  "offline_scripted_models": true,
+  "api_calls": 0
+}

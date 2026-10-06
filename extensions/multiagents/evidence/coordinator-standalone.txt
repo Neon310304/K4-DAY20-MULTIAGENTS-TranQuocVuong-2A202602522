@@ -1,0 +1,11 @@
+$ /opt/day20-tools-venv/bin/python scripts/test_coordinator_standalone.py
+Test 1: simple task - PASS
+Test 2: multiple workers via correlated queue - PASS
+Test 3: timeout cancellation, explicit failure (no fabricated fallback) - PASS
+All coordinator standalone tests passed! (3/3; mock workers, no API)
+
+STDERR:
+task_timeout task_id=9b7a268c-c8c0-4068-827b-3c33f6bad208 worker=data_agent
+task_cancelled task_id=9b7a268c-c8c0-4068-827b-3c33f6bad208 worker=data_agent seconds=0.0204
+
+Exit code: 0

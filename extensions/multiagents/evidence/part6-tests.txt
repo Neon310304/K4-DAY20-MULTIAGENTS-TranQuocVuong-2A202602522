@@ -1,0 +1,115 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.15, pytest-9.1.1, pluggy-1.6.0 -- /opt/day20-tools-venv/bin/python
+rootdir: /lab
+configfile: pyproject.toml
+plugins: cov-7.1.0, anyio-4.15.1, langsmith-0.14.4
+collecting ... collected 68 items
+
+tests/test_02_coordinator.py::test_coordinator_init PASSED               [  1%]
+tests/test_02_coordinator.py::test_parse_request PASSED                  [  2%]
+tests/test_02_coordinator.py::test_route_task PASSED                     [  4%]
+tests/test_02_coordinator.py::test_execute_tasks_parallel_and_correlated PASSED [  5%]
+tests/test_02_coordinator.py::test_aggregate_results PASSED              [  7%]
+tests/test_02_coordinator.py::test_timeout_cancels_pending_and_preserves_completed PASSED [  8%]
+tests/test_02_coordinator.py::test_worker_failure_and_same_worker_tasks PASSED [ 10%]
+tests/test_02_coordinator.py::test_retry_only_explicitly_idempotent_tasks PASSED [ 11%]
+tests/test_02_coordinator.py::test_invalid_tasks_and_resource_limits PASSED [ 13%]
+tests/test_02_coordinator.py::test_caller_cancellation_and_reuse_with_stale_messages PASSED [ 14%]
+tests/test_03_workers.py::test_data_agent_init PASSED                    [ 16%]
+tests/test_03_workers.py::test_data_agent_process PASSED                 [ 17%]
+tests/test_03_workers.py::test_code_agent_process PASSED                 [ 19%]
+tests/test_03_workers.py::test_evaluator_agent PASSED                    [ 20%]
+tests/test_03_workers.py::test_multiple_tool_calls_keep_conversation PASSED [ 22%]
+tests/test_03_workers.py::test_unknown_tool_and_model_error_are_structured PASSED [ 23%]
+tests/test_03_workers.py::test_iteration_limit_and_request_local_counts PASSED [ 25%]
+tests/test_03_workers.py::test_invalid_input_and_evaluation_schema PASSED [ 26%]
+tests/test_04_tools.py::test_query_database_tool PASSED                  [ 27%]
+tests/test_04_tools.py::test_python_repl_tool PASSED                     [ 29%]
+tests/test_04_tools.py::test_create_file_tool PASSED                     [ 30%]
+tests/test_04_tools.py::test_scoring_tool PASSED                         [ 32%]
+tests/test_05_integration.py::test_user_request_to_data_result PASSED    [ 33%]
+tests/test_05_integration.py::test_full_pipeline_orders_handoffs_and_verifies_files PASSED [ 35%]
+tests/test_05_integration.py::test_ten_concurrent_requests_are_isolated PASSED [ 36%]
+tests/test_05_integration.py::test_deadline_cancels_model_and_system_can_be_reused PASSED [ 38%]
+tests/test_05_integration.py::test_caller_cancellation_propagates PASSED [ 39%]
+tests/test_05_integration.py::test_worker_failures_and_empty_request_are_not_success PASSED [ 41%]
+tests/test_05_integration.py::test_fluent_wrong_data_is_rejected PASSED  [ 42%]
+tests/test_05_integration.py::test_usage_measurement_does_not_fabricate_missing_tokens PASSED [ 44%]
+tests/test_05_integration.py::test_statistics_use_even_median_percentiles_and_actual_failures PASSED [ 45%]
+tests/test_05_integration.py::test_benchmark_runs_three_iterations_and_keeps_failures PASSED [ 47%]
+tests/test_05_integration.py::test_json_logs_do_not_capture_payload_or_environment PASSED [ 48%]
+tests/test_05_integration.py::test_live_config_requires_credentials_without_calling_network PASSED [ 50%]
+tests/test_05_integration.py::test_docker_quoted_environment_is_normalized_without_exposing_key PASSED [ 51%]
+tests/test_05_integration.py::test_artifacts_are_verified_before_temporary_workspace_cleanup PASSED [ 52%]
+tests/test_06_caching.py::test_cache_hit_has_new_identity_zero_work_and_no_previous_trace PASSED [ 54%]
+tests/test_06_caching.py::test_real_readonly_workflow_is_cached_after_independent_checks PASSED [ 55%]
+tests/test_06_caching.py::test_scope_revision_and_request_are_separate_keys PASSED [ 57%]
+tests/test_06_caching.py::test_expiry_and_clear_require_fresh_execution PASSED [ 58%]
+tests/test_06_caching.py::test_lru_limit_preserves_recently_used_result PASSED [ 60%]
+tests/test_06_caching.py::test_side_effects_parameters_strings_and_debug_bypass_cache PASSED [ 61%]
+tests/test_06_caching.py::test_failures_invalid_results_and_artifacts_are_not_cached PASSED [ 63%]
+tests/test_06_caching.py::test_payload_limit_prevents_oversized_cache_entries PASSED [ 64%]
+tests/test_06_caching.py::test_cancellation_is_not_cached_and_wrapper_can_be_reused PASSED [ 66%]
+tests/test_06_caching.py::test_simultaneous_cold_misses_are_independent_not_single_flight PASSED [ 67%]
+tests/test_06_caching.py::test_configuration_and_hit_timeout_are_validated PASSED [ 69%]
+tests/test_communication.py::test_message_round_trip_and_immutable_log PASSED [ 70%]
+tests/test_communication.py::test_unknown_agents_invalid_payload_and_timeout PASSED [ 72%]
+tests/test_communication.py::test_bounded_queue_backpressure_and_log PASSED [ 73%]
+tests/test_communication.py::test_message_size_limit PASSED              [ 75%]
+tests/test_integration.py::test_real_workers_and_tools_through_queue PASSED [ 76%]
+tests/test_tool_collaboration.py::test_sql_chart_evaluation_collaboration PASSED [ 77%]
+tests/test_tool_guardrails.py::test_tool_contract_and_payload_free_logging PASSED [ 79%]
+tests/test_tool_guardrails.py::test_sql_limits_authorizer_and_connection_recovery PASSED [ 80%]
+tests/test_tool_guardrails.py::test_cached_sql_connection_serializes_async_calls PASSED [ 82%]
+tests/test_tool_guardrails.py::test_aggregation_and_comparison_require_real_reference_values PASSED [ 83%]
+tests/test_tool_guardrails.py::test_report_schema_path_validation_and_worker_integration PASSED [ 85%]
+tests/test_tool_guardrails.py::test_new_tool_failures_are_worker_errors PASSED [ 86%]
+tests/test_tool_guardrails.py::test_python_resource_configuration_and_bounded_output PASSED [ 88%]
+tests/test_tool_guardrails.py::test_run_script_preserves_file_main_and_sibling_imports PASSED [ 89%]
+tests/test_tools.py::test_csv_preview_validation_and_grouped_aggregate PASSED [ 91%]
+tests/test_tools.py::test_csv_and_tool_argument_limits PASSED            [ 92%]
+tests/test_tools.py::test_sql_is_read_only_and_bounded PASSED            [ 94%]
+tests/test_tools.py::test_file_tools_reject_escape_symlink_and_overwrite PASSED [ 95%]
+tests/test_tools.py::test_edit_matches_once PASSED                       [ 97%]
+tests/test_tools.py::test_python_limits_and_secret_environment PASSED    [ 98%]
+tests/test_tools.py::test_evaluation_score_and_validation PASSED         [100%]
+
+================================ tests coverage ================================
+_______________ coverage: platform linux, python 3.12.15-final-0 _______________
+
+Name                                                   Stmts   Miss  Cover   Missing
+------------------------------------------------------------------------------------
+src/day20_multiagents/__init__.py                          0      0   100%
+src/day20_multiagents/agents/__init__.py                   5      0   100%
+src/day20_multiagents/agents/base_worker.py               77      7    91%   15, 17, 59, 80, 83, 88, 93
+src/day20_multiagents/agents/code_agent.py                10      0   100%
+src/day20_multiagents/agents/data_agent.py                58      6    90%   45, 50, 66, 72, 75, 85
+src/day20_multiagents/agents/evaluator_agent.py           39      1    97%   37
+src/day20_multiagents/benchmarking.py                     49      9    82%   24, 33, 50, 52, 65-70
+src/day20_multiagents/caching.py                          91      2    98%   45, 47
+src/day20_multiagents/communication/__init__.py            2      0   100%
+src/day20_multiagents/communication/message_queue.py      60      5    92%   15, 17, 19, 27, 47
+src/day20_multiagents/coordinator.py                     191     23    88%   20, 23, 27, 32, 59, 62, 68, 70, 72, 92, 98, 100, 116, 119, 139, 141, 150, 190, 206, 216, 224-227
+src/day20_multiagents/observability.py                    95      7    93%   62-64, 89, 96-98
+src/day20_multiagents/runtime.py                          56      1    98%   81
+src/day20_multiagents/system.py                          143      2    99%   51, 153
+src/day20_multiagents/toolkits/__init__.py                 4      0   100%
+src/day20_multiagents/toolkits/code_tools.py              65      3    95%   60, 66, 86
+src/day20_multiagents/toolkits/database_tools.py          84      6    93%   14, 40, 42, 100, 106, 108
+src/day20_multiagents/toolkits/evaluation_tools.py        74      7    91%   16, 18, 34, 56, 58, 71, 95
+src/day20_multiagents/tools.py                           124     11    91%   18, 30, 34, 50, 70, 92, 117, 124, 126, 149-150
+------------------------------------------------------------------------------------
+TOTAL                                                   1227     90    93%
+Coverage JSON written to file evidence/part6-coverage.json
+============================= slowest 10 durations =============================
+1.58s call     extensions/multiagents/tests/test_05_integration.py::test_live_config_requires_credentials_without_calling_network
+1.34s call     extensions/multiagents/tests/test_05_integration.py::test_full_pipeline_orders_handoffs_and_verifies_files
+1.04s call     extensions/multiagents/tests/test_04_tools.py::test_python_repl_tool
+1.02s call     extensions/multiagents/tests/test_tool_collaboration.py::test_sql_chart_evaluation_collaboration
+0.38s call     extensions/multiagents/tests/test_tools.py::test_python_limits_and_secret_environment
+0.20s call     extensions/multiagents/tests/test_05_integration.py::test_ten_concurrent_requests_are_isolated
+0.15s call     extensions/multiagents/tests/test_05_integration.py::test_artifacts_are_verified_before_temporary_workspace_cleanup
+0.14s call     extensions/multiagents/tests/test_tool_guardrails.py::test_python_resource_configuration_and_bounded_output
+0.13s call     extensions/multiagents/tests/test_integration.py::test_real_workers_and_tools_through_queue
+0.12s call     extensions/multiagents/tests/test_03_workers.py::test_code_agent_process
+============================= 68 passed in 12.79s ==============================

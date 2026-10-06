@@ -1,0 +1,35 @@
+$ /opt/day20-tools-venv/bin/python scripts/debug_system.py --output evidence/part5-debug-final
+{
+  "status": "success",
+  "checks": {
+    "sources_unchanged": true,
+    "data_numbers": true,
+    "data_tool_evidence": true,
+    "script_exists": true,
+    "code_numbers": true,
+    "script_executed": true,
+    "chart_decodes": true,
+    "evaluation_score": true,
+    "report_exists": true,
+    "comparison_executed": true
+  },
+  "stages": [
+    {
+      "worker": "data_agent",
+      "status": "success",
+      "seconds": 0.003897808999681729
+    },
+    {
+      "worker": "code_agent",
+      "status": "success",
+      "seconds": 0.9739354839994121
+    },
+    {
+      "worker": "evaluator_agent",
+      "status": "success",
+      "seconds": 0.005567498999880627
+    }
+  ]
+}
+
+Exit code: 0

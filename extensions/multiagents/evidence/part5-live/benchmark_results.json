@@ -1,0 +1,1710 @@
+{
+  "mode": "live",
+  "iterations": 3,
+  "max_concurrency": 4,
+  "cases": [
+    {
+      "summary": {
+        "name": "Simple data query",
+        "requests": 3,
+        "successes": 0,
+        "min": 1.191610715999559,
+        "max": 3.4314664300000004,
+        "avg": 2.005139840333262,
+        "median": 1.3923423750002257,
+        "p50": 1.3923423750002257,
+        "p99": 3.390683948900005,
+        "wall_seconds": 6.016783277000286,
+        "throughput_per_minute": 29.91631769222381,
+        "error_rate": 1.0,
+        "usage_complete": false,
+        "known_tokens": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        },
+        "tokens": null,
+        "tokens_per_100_requests": null,
+        "model_calls": 3,
+        "api_calls": 3,
+        "worker_utilization": {
+          "data_agent": 0.6623438486199702
+        },
+        "utilization_definition": "sum stage wall-time / (batch wall-time * max_concurrency); includes API waiting, not CPU usage"
+      },
+      "records": [
+        {
+          "request_id": "9c1bba29-6b0d-414e-bee4-7619c54376ef",
+          "status": "error",
+          "data": [],
+          "code": [],
+          "evaluation": [],
+          "errors": [
+            {
+              "worker": "data_agent",
+              "status": "error",
+              "error": "OpenAIConnectionError: Connection error."
+            }
+          ],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "error",
+              "seconds": 1.4423144729998967
+            }
+          ],
+          "checks": {},
+          "validation_passed": false,
+          "communication": [
+            {
+              "type": "task",
+              "task_id": "9c1bba29-6b0d-414e-bee4-7619c54376ef:data_agent",
+              "run_id": "88913e1a-4964-4213-b6e9-a9280f84f75f",
+              "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+              "parameters": {
+                "database": "sales.db",
+                "csv": "sales.csv",
+                "chart": false
+              },
+              "from": "coordinator",
+              "to": "data_agent",
+              "timestamp": "2026-10-06T10:08:39.474912+00:00",
+              "id": "9a976b75-e1b6-4636-a422-ded1792e3af8"
+            },
+            {
+              "status": "error",
+              "error": "OpenAIConnectionError: Connection error.",
+              "result": null,
+              "metadata": {
+                "tools_used": 0,
+                "tool_names": [],
+                "seconds": 1.4405
+              },
+              "type": "result",
+              "task_id": "9c1bba29-6b0d-414e-bee4-7619c54376ef:data_agent",
+              "run_id": "88913e1a-4964-4213-b6e9-a9280f84f75f",
+              "worker": "data_agent",
+              "from": "data_agent",
+              "to": "coordinator:88913e1a-4964-4213-b6e9-a9280f84f75f",
+              "timestamp": "2026-10-06T10:08:40.916798+00:00",
+              "id": "2e6851c6-e823-4236-b020-46aa791961ee"
+            }
+          ],
+          "latency_seconds": 3.4314664300000004,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "error",
+                "seconds": 1.439962929000103,
+                "tokens": null
+              }
+            ],
+            "model_calls": 1,
+            "api_calls": 1,
+            "usage_complete": false,
+            "tokens": null,
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 1
+          },
+          "iteration": 1,
+          "capacity": 1
+        },
+        {
+          "request_id": "966786c2-4a6b-466e-b24e-be2fa5bc1868",
+          "status": "error",
+          "data": [],
+          "code": [],
+          "evaluation": [],
+          "errors": [
+            {
+              "worker": "data_agent",
+              "status": "error",
+              "error": "OpenAIConnectionError: Connection error."
+            }
+          ],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "error",
+              "seconds": 1.3714359340001465
+            }
+          ],
+          "checks": {},
+          "validation_passed": false,
+          "communication": [
+            {
+              "type": "task",
+              "task_id": "966786c2-4a6b-466e-b24e-be2fa5bc1868:data_agent",
+              "run_id": "52ec30ac-dcf9-4575-a5c8-461451909cbb",
+              "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+              "parameters": {
+                "database": "sales.db",
+                "csv": "sales.csv",
+                "chart": false
+              },
+              "from": "coordinator",
+              "to": "data_agent",
+              "timestamp": "2026-10-06T10:08:40.938452+00:00",
+              "id": "25a6d24c-0e22-486b-b3de-8466224cdab3"
+            },
+            {
+              "status": "error",
+              "error": "OpenAIConnectionError: Connection error.",
+              "result": null,
+              "metadata": {
+                "tools_used": 0,
+                "tool_names": [],
+                "seconds": 1.37
+              },
+              "type": "result",
+              "task_id": "966786c2-4a6b-466e-b24e-be2fa5bc1868:data_agent",
+              "run_id": "52ec30ac-dcf9-4575-a5c8-461451909cbb",
+              "worker": "data_agent",
+              "from": "data_agent",
+              "to": "coordinator:52ec30ac-dcf9-4575-a5c8-461451909cbb",
+              "timestamp": "2026-10-06T10:08:42.309523+00:00",
+              "id": "47aad311-191e-4465-a0ea-bbb7f6a568b1"
+            }
+          ],
+          "latency_seconds": 1.3923423750002257,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "error",
+                "seconds": 1.3694595039996784,
+                "tokens": null
+              }
+            ],
+            "model_calls": 1,
+            "api_calls": 1,
+            "usage_complete": false,
+            "tokens": null,
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 1
+          },
+          "iteration": 2,
+          "capacity": 1
+        },
+        {
+          "request_id": "ae577ed6-8028-440b-950a-1ff9da408846",
+          "status": "error",
+          "data": [],
+          "code": [],
+          "evaluation": [],
+          "errors": [
+            {
+              "worker": "data_agent",
+              "status": "error",
+              "error": "OpenAIConnectionError: Connection error."
+            }
+          ],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "error",
+              "seconds": 1.1714289850006026
+            }
+          ],
+          "checks": {},
+          "validation_passed": false,
+          "communication": [
+            {
+              "type": "task",
+              "task_id": "ae577ed6-8028-440b-950a-1ff9da408846:data_agent",
+              "run_id": "87308308-cbdc-42e5-9fb5-27ba85f63a8c",
+              "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+              "parameters": {
+                "database": "sales.db",
+                "csv": "sales.csv",
+                "chart": false
+              },
+              "from": "coordinator",
+              "to": "data_agent",
+              "timestamp": "2026-10-06T10:08:42.330411+00:00",
+              "id": "64923bb1-3fd4-40d3-b7fd-f59213946655"
+            },
+            {
+              "status": "error",
+              "error": "OpenAIConnectionError: Connection error.",
+              "result": null,
+              "metadata": {
+                "tools_used": 0,
+                "tool_names": [],
+                "seconds": 1.1697
+              },
+              "type": "result",
+              "task_id": "ae577ed6-8028-440b-950a-1ff9da408846:data_agent",
+              "run_id": "87308308-cbdc-42e5-9fb5-27ba85f63a8c",
+              "worker": "data_agent",
+              "from": "data_agent",
+              "to": "coordinator:87308308-cbdc-42e5-9fb5-27ba85f63a8c",
+              "timestamp": "2026-10-06T10:08:43.501206+00:00",
+              "id": "8c274d46-c02f-4e28-98e3-380cdd7c26da"
+            }
+          ],
+          "latency_seconds": 1.191610715999559,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "error",
+                "seconds": 1.1693261310001617,
+                "tokens": null
+              }
+            ],
+            "model_calls": 1,
+            "api_calls": 1,
+            "usage_complete": false,
+            "tokens": null,
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 1
+          },
+          "iteration": 3,
+          "capacity": 1
+        }
+      ]
+    },
+    {
+      "summary": {
+        "name": "Code generation",
+        "requests": 3,
+        "successes": 0,
+        "min": 1.185806080000475,
+        "max": 1.377998990999913,
+        "avg": 1.2729532736669473,
+        "median": 1.255054750000454,
+        "p50": 1.255054750000454,
+        "p99": 1.375540106179924,
+        "wall_seconds": 3.819838442999753,
+        "throughput_per_minute": 47.1224117684528,
+        "error_rate": 1.0,
+        "usage_complete": false,
+        "known_tokens": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        },
+        "tokens": null,
+        "tokens_per_100_requests": null,
+        "model_calls": 3,
+        "api_calls": 3,
+        "worker_utilization": {
+          "code_agent": 0.9812538181739774
+        },
+        "utilization_definition": "sum stage wall-time / (batch wall-time * max_concurrency); includes API waiting, not CPU usage"
+      },
+      "records": [
+        {
+          "request_id": "badea511-8fa3-45eb-95a2-c91bc42ba1bd",
+          "status": "error",
+          "data": [],
+          "code": [],
+          "evaluation": [],
+          "errors": [
+            {
+              "worker": "code_agent",
+              "status": "error",
+              "error": "OpenAIConnectionError: Connection error."
+            }
+          ],
+          "stages": [
+            {
+              "worker": "code_agent",
+              "status": "error",
+              "seconds": 1.15510071800054
+            }
+          ],
+          "checks": {},
+          "validation_passed": false,
+          "communication": [
+            {
+              "type": "task",
+              "task_id": "badea511-8fa3-45eb-95a2-c91bc42ba1bd:code_agent",
+              "run_id": "a4f0cfa4-c22d-40a1-8498-a2099af65ca5",
+              "content": "Write a Python script to read CSV and save a report Create outputs/report.py, run it using run_script, read sales.csv with csv (quarter == 3), and write outputs/answer.json with revenue and rows. Return JSON with script, answer, chart paths. Do not change source files, access secrets or network. No chart is needed. ",
+              "parameters": {
+                "database": "sales.db",
+                "csv": "sales.csv",
+                "chart": false,
+                "data_result": []
+              },
+              "from": "coordinator",
+              "to": "code_agent",
+              "timestamp": "2026-10-06T10:08:43.533344+00:00",
+              "id": "685d2bd5-047f-46d1-9f60-5bd296dfbc53"
+            },
+            {
+              "status": "error",
+              "error": "OpenAIConnectionError: Connection error.",
+              "result": null,
+              "metadata": {
+                "tools_used": 0,
+                "tool_names": [],
+                "seconds": 1.1539
+              },
+              "type": "result",
+              "task_id": "badea511-8fa3-45eb-95a2-c91bc42ba1bd:code_agent",
+              "run_id": "a4f0cfa4-c22d-40a1-8498-a2099af65ca5",
+              "worker": "code_agent",
+              "from": "code_agent",
+              "to": "coordinator:a4f0cfa4-c22d-40a1-8498-a2099af65ca5",
+              "timestamp": "2026-10-06T10:08:44.688123+00:00",
+              "id": "e64dae29-56fe-43bc-9096-5c91c7518917"
+            }
+          ],
+          "latency_seconds": 1.185806080000475,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "code_agent",
+                "name": "ainvoke",
+                "status": "error",
+                "seconds": 1.1534289070004888,
+                "tokens": null
+              }
+            ],
+            "model_calls": 1,
+            "api_calls": 1,
+            "usage_complete": false,
+            "tokens": null,
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 1
+          },
+          "iteration": 1,
+          "capacity": 1
+        },
+        {
+          "request_id": "b8265ba3-611b-4fbf-830d-02a3dd223e09",
+          "status": "error",
+          "data": [],
+          "code": [],
+          "evaluation": [],
+          "errors": [
+            {
+              "worker": "code_agent",
+              "status": "error",
+              "error": "OpenAIConnectionError: Connection error."
+            }
+          ],
+          "stages": [
+            {
+              "worker": "code_agent",
+              "status": "error",
+              "seconds": 1.357592449000549
+            }
+          ],
+          "checks": {},
+          "validation_passed": false,
+          "communication": [
+            {
+              "type": "task",
+              "task_id": "b8265ba3-611b-4fbf-830d-02a3dd223e09:code_agent",
+              "run_id": "62a92440-c41a-44d9-ba25-5546437a9d73",
+              "content": "Write a Python script to read CSV and save a report Create outputs/report.py, run it using run_script, read sales.csv with csv (quarter == 3), and write outputs/answer.json with revenue and rows. Return JSON with script, answer, chart paths. Do not change source files, access secrets or network. No chart is needed. ",
+              "parameters": {
+                "database": "sales.db",
+                "csv": "sales.csv",
+                "chart": false,
+                "data_result": []
+              },
+              "from": "coordinator",
+              "to": "code_agent",
+              "timestamp": "2026-10-06T10:08:44.709059+00:00",
+              "id": "1e3129f4-7b95-44c5-aa2a-39d5488978b9"
+            },
+            {
+              "status": "error",
+              "error": "OpenAIConnectionError: Connection error.",
+              "result": null,
+              "metadata": {
+                "tools_used": 0,
+                "tool_names": [],
+                "seconds": 1.3561
+              },
+              "type": "result",
+              "task_id": "b8265ba3-611b-4fbf-830d-02a3dd223e09:code_agent",
+              "run_id": "62a92440-c41a-44d9-ba25-5546437a9d73",
+              "worker": "code_agent",
+              "from": "code_agent",
+              "to": "coordinator:62a92440-c41a-44d9-ba25-5546437a9d73",
+              "timestamp": "2026-10-06T10:08:46.066258+00:00",
+              "id": "8341f7b3-172c-4034-a933-6079bb719753"
+            }
+          ],
+          "latency_seconds": 1.377998990999913,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "code_agent",
+                "name": "ainvoke",
+                "status": "error",
+                "seconds": 1.3554685849994712,
+                "tokens": null
+              }
+            ],
+            "model_calls": 1,
+            "api_calls": 1,
+            "usage_complete": false,
+            "tokens": null,
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 1
+          },
+          "iteration": 2,
+          "capacity": 1
+        },
+        {
+          "request_id": "4c17220e-9955-4148-bc53-82c2b2f8bfea",
+          "status": "error",
+          "data": [],
+          "code": [],
+          "evaluation": [],
+          "errors": [
+            {
+              "worker": "code_agent",
+              "status": "error",
+              "error": "OpenAIConnectionError: Connection error."
+            }
+          ],
+          "stages": [
+            {
+              "worker": "code_agent",
+              "status": "error",
+              "seconds": 1.2355378900001597
+            }
+          ],
+          "checks": {},
+          "validation_passed": false,
+          "communication": [
+            {
+              "type": "task",
+              "task_id": "4c17220e-9955-4148-bc53-82c2b2f8bfea:code_agent",
+              "run_id": "d2e53c9b-ee26-4502-b4e3-8a489da9a5b3",
+              "content": "Write a Python script to read CSV and save a report Create outputs/report.py, run it using run_script, read sales.csv with csv (quarter == 3), and write outputs/answer.json with revenue and rows. Return JSON with script, answer, chart paths. Do not change source files, access secrets or network. No chart is needed. ",
+              "parameters": {
+                "database": "sales.db",
+                "csv": "sales.csv",
+                "chart": false,
+                "data_result": []
+              },
+              "from": "coordinator",
+              "to": "code_agent",
+              "timestamp": "2026-10-06T10:08:46.086292+00:00",
+              "id": "7c61c45e-980f-48ff-836c-02319cd9987b"
+            },
+            {
+              "status": "error",
+              "error": "OpenAIConnectionError: Connection error.",
+              "result": null,
+              "metadata": {
+                "tools_used": 0,
+                "tool_names": [],
+                "seconds": 1.2335
+              },
+              "type": "result",
+              "task_id": "4c17220e-9955-4148-bc53-82c2b2f8bfea:code_agent",
+              "run_id": "d2e53c9b-ee26-4502-b4e3-8a489da9a5b3",
+              "worker": "code_agent",
+              "from": "code_agent",
+              "to": "coordinator:d2e53c9b-ee26-4502-b4e3-8a489da9a5b3",
+              "timestamp": "2026-10-06T10:08:47.321226+00:00",
+              "id": "6d0ef4f3-57cd-42a6-b0e5-afc96b6d1ccf"
+            }
+          ],
+          "latency_seconds": 1.255054750000454,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "code_agent",
+                "name": "ainvoke",
+                "status": "error",
+                "seconds": 1.232870066999567,
+                "tokens": null
+              }
+            ],
+            "model_calls": 1,
+            "api_calls": 1,
+            "usage_complete": false,
+            "tokens": null,
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 1
+          },
+          "iteration": 3,
+          "capacity": 1
+        }
+      ]
+    },
+    {
+      "summary": {
+        "name": "Complex workflow",
+        "requests": 3,
+        "successes": 0,
+        "min": 1.2050006909994408,
+        "max": 1.3899597439994977,
+        "avg": 1.3248202839995429,
+        "median": 1.37950041699969,
+        "p50": 1.37950041699969,
+        "p99": 1.3897505574595015,
+        "wall_seconds": 3.975557466000282,
+        "throughput_per_minute": 45.27666913115808,
+        "error_rate": 1.0,
+        "usage_complete": false,
+        "known_tokens": {
+          "input_tokens": 0,
+          "output_tokens": 0,
+          "total_tokens": 0
+        },
+        "tokens": null,
+        "tokens_per_100_requests": null,
+        "model_calls": 3,
+        "api_calls": 3,
+        "worker_utilization": {
+          "data_agent": 0.982082292958863
+        },
+        "utilization_definition": "sum stage wall-time / (batch wall-time * max_concurrency); includes API waiting, not CPU usage"
+      },
+      "records": [
+        {
+          "request_id": "00ecd44f-260d-4ca8-a3d8-2dfb0ed049f9",
+          "status": "error",
+          "data": [],
+          "code": [],
+          "evaluation": [],
+          "errors": [
+            {
+              "worker": "data_agent",
+              "status": "error",
+              "error": "OpenAIConnectionError: Connection error."
+            }
+          ],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "error",
+              "seconds": 1.1839790399999401
+            }
+          ],
+          "checks": {},
+          "validation_passed": false,
+          "communication": [
+            {
+              "type": "task",
+              "task_id": "00ecd44f-260d-4ca8-a3d8-2dfb0ed049f9:data_agent",
+              "run_id": "2e259f37-17f2-41c1-9b00-085b5897d9eb",
+              "content": "Analyze Q3 sales data and create chart and evaluate result Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+              "parameters": {
+                "database": "sales.db",
+                "csv": "sales.csv",
+                "chart": true
+              },
+              "from": "coordinator",
+              "to": "data_agent",
+              "timestamp": "2026-10-06T10:08:47.343616+00:00",
+              "id": "eae2d9ae-e515-4692-ac41-2c72d6cf10a9"
+            },
+            {
+              "status": "error",
+              "error": "OpenAIConnectionError: Connection error.",
+              "result": null,
+              "metadata": {
+                "tools_used": 0,
+                "tool_names": [],
+                "seconds": 1.1826
+              },
+              "type": "result",
+              "task_id": "00ecd44f-260d-4ca8-a3d8-2dfb0ed049f9:data_agent",
+              "run_id": "2e259f37-17f2-41c1-9b00-085b5897d9eb",
+              "worker": "data_agent",
+              "from": "data_agent",
+              "to": "coordinator:2e259f37-17f2-41c1-9b00-085b5897d9eb",
+              "timestamp": "2026-10-06T10:08:48.527238+00:00",
+              "id": "6e60aa41-af3f-45fc-a39b-f05db69dc905"
+            }
+          ],
+          "latency_seconds": 1.2050006909994408,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "error",
+                "seconds": 1.1819975180005713,
+                "tokens": null
+              }
+            ],
+            "model_calls": 1,
+            "api_calls": 1,
+            "usage_complete": false,
+            "tokens": null,
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 1
+          },
+          "iteration": 1,
+          "capacity": 1
+        },
+        {
+          "request_id": "67ae8348-6eee-41e6-a161-228d612f4934",
+          "status": "error",
+          "data": [],
+          "code": [],
+          "evaluation": [],
+          "errors": [
+            {
+              "worker": "data_agent",
+              "status": "error",
+              "error": "OpenAIConnectionError: Connection error."
+            }
+          ],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "error",
+              "seconds": 1.3595843989996865
+            }
+          ],
+          "checks": {},
+          "validation_passed": false,
+          "communication": [
+            {
+              "type": "task",
+              "task_id": "67ae8348-6eee-41e6-a161-228d612f4934:data_agent",
+              "run_id": "b61996eb-6069-42b7-9b58-839f35feb6a1",
+              "content": "Analyze Q3 sales data and create chart and evaluate result Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+              "parameters": {
+                "database": "sales.db",
+                "csv": "sales.csv",
+                "chart": true
+              },
+              "from": "coordinator",
+              "to": "data_agent",
+              "timestamp": "2026-10-06T10:08:48.558378+00:00",
+              "id": "b0b76a78-2a11-4d2c-b9b1-4a8b8b0e9e19"
+            },
+            {
+              "status": "error",
+              "error": "OpenAIConnectionError: Connection error.",
+              "result": null,
+              "metadata": {
+                "tools_used": 0,
+                "tool_names": [],
+                "seconds": 1.3579
+              },
+              "type": "result",
+              "task_id": "67ae8348-6eee-41e6-a161-228d612f4934:data_agent",
+              "run_id": "b61996eb-6069-42b7-9b58-839f35feb6a1",
+              "worker": "data_agent",
+              "from": "data_agent",
+              "to": "coordinator:b61996eb-6069-42b7-9b58-839f35feb6a1",
+              "timestamp": "2026-10-06T10:08:49.917515+00:00",
+              "id": "60782f7a-b319-4d53-8ead-bd583c7a6518"
+            }
+          ],
+          "latency_seconds": 1.3899597439994977,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "error",
+                "seconds": 1.3572650420001082,
+                "tokens": null
+              }
+            ],
+            "model_calls": 1,
+            "api_calls": 1,
+            "usage_complete": false,
+            "tokens": null,
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 1
+          },
+          "iteration": 2,
+          "capacity": 1
+        },
+        {
+          "request_id": "1d3bf611-f18b-4a69-b195-057ff7c20c82",
+          "status": "error",
+          "data": [],
+          "code": [],
+          "evaluation": [],
+          "errors": [
+            {
+              "worker": "data_agent",
+              "status": "error",
+              "error": "OpenAIConnectionError: Connection error."
+            }
+          ],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "error",
+              "seconds": 1.3607611529996575
+            }
+          ],
+          "checks": {},
+          "validation_passed": false,
+          "communication": [
+            {
+              "type": "task",
+              "task_id": "1d3bf611-f18b-4a69-b195-057ff7c20c82:data_agent",
+              "run_id": "1e291d5f-2fab-4734-8d01-b0faa9fc87ce",
+              "content": "Analyze Q3 sales data and create chart and evaluate result Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+              "parameters": {
+                "database": "sales.db",
+                "csv": "sales.csv",
+                "chart": true
+              },
+              "from": "coordinator",
+              "to": "data_agent",
+              "timestamp": "2026-10-06T10:08:49.936938+00:00",
+              "id": "39b8d090-9fe2-4d39-9432-6746adc8610d"
+            },
+            {
+              "status": "error",
+              "error": "OpenAIConnectionError: Connection error.",
+              "result": null,
+              "metadata": {
+                "tools_used": 0,
+                "tool_names": [],
+                "seconds": 1.3593
+              },
+              "type": "result",
+              "task_id": "1d3bf611-f18b-4a69-b195-057ff7c20c82:data_agent",
+              "run_id": "1e291d5f-2fab-4734-8d01-b0faa9fc87ce",
+              "worker": "data_agent",
+              "from": "data_agent",
+              "to": "coordinator:1e291d5f-2fab-4734-8d01-b0faa9fc87ce",
+              "timestamp": "2026-10-06T10:08:51.297339+00:00",
+              "id": "abb6e40f-f4da-4452-920b-2e6ae50f3a73"
+            }
+          ],
+          "latency_seconds": 1.37950041699969,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "error",
+                "seconds": 1.3586812280000231,
+                "tokens": null
+              }
+            ],
+            "model_calls": 1,
+            "api_calls": 1,
+            "usage_complete": false,
+            "tokens": null,
+            "known_tokens": {
+              "input_tokens": 0,
+              "output_tokens": 0,
+              "total_tokens": 0
+            },
+            "missing_usage_calls": 1
+          },
+          "iteration": 3,
+          "capacity": 1
+        }
+      ]
+    }
+  ],
+  "load": {
+    "summary": {
+      "name": "Concurrent data requests",
+      "requests": 10,
+      "successes": 0,
+      "min": 1.333232264999424,
+      "max": 4.007947711999805,
+      "avg": 2.4538174058997355,
+      "median": 2.657884264999666,
+      "p50": 2.657884264999666,
+      "p99": 3.994764697669816,
+      "wall_seconds": 4.079810283999905,
+      "throughput_per_minute": 147.06566193851333,
+      "error_rate": 1.0,
+      "usage_complete": false,
+      "known_tokens": {
+        "input_tokens": 0,
+        "output_tokens": 0,
+        "total_tokens": 0
+      },
+      "tokens": null,
+      "tokens_per_100_requests": null,
+      "model_calls": 10,
+      "api_calls": 10,
+      "worker_utilization": {
+        "data_agent": 0.8245525563267353
+      },
+      "utilization_definition": "sum stage wall-time / (batch wall-time * max_concurrency); includes API waiting, not CPU usage"
+    },
+    "records": [
+      {
+        "request_id": "853cb17a-6edb-4956-9a38-56cbfbafb788",
+        "status": "error",
+        "data": [],
+        "code": [],
+        "evaluation": [],
+        "errors": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "error": "OpenAIConnectionError: Connection error."
+          }
+        ],
+        "stages": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "seconds": 1.4182206890000089
+          }
+        ],
+        "checks": {},
+        "validation_passed": false,
+        "communication": [
+          {
+            "type": "task",
+            "task_id": "853cb17a-6edb-4956-9a38-56cbfbafb788:data_agent",
+            "run_id": "06357d22-34a2-4465-a307-f2226cfe8063",
+            "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+            "parameters": {
+              "database": "sales.db",
+              "csv": "sales.csv",
+              "chart": false
+            },
+            "from": "coordinator",
+            "to": "data_agent",
+            "timestamp": "2026-10-06T10:08:51.316305+00:00",
+            "id": "75854d9e-cfc8-4c1b-8f1f-38ff2112c55f"
+          },
+          {
+            "status": "error",
+            "error": "OpenAIConnectionError: Connection error.",
+            "result": null,
+            "metadata": {
+              "tools_used": 0,
+              "tool_names": [],
+              "seconds": 1.3634
+            },
+            "type": "result",
+            "task_id": "853cb17a-6edb-4956-9a38-56cbfbafb788:data_agent",
+            "run_id": "06357d22-34a2-4465-a307-f2226cfe8063",
+            "worker": "data_agent",
+            "from": "data_agent",
+            "to": "coordinator:06357d22-34a2-4465-a307-f2226cfe8063",
+            "timestamp": "2026-10-06T10:08:52.732283+00:00",
+            "id": "4af2c8e4-ad07-4f9b-b5fb-67b1dc9317d1"
+          }
+        ],
+        "latency_seconds": 1.4357044869993842,
+        "metrics": {
+          "events": [
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "error",
+              "seconds": 1.3628180019995852,
+              "tokens": null
+            }
+          ],
+          "model_calls": 1,
+          "api_calls": 1,
+          "usage_complete": false,
+          "tokens": null,
+          "known_tokens": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0
+          },
+          "missing_usage_calls": 1
+        },
+        "capacity": 4
+      },
+      {
+        "request_id": "5b1e736b-97b5-4905-a065-e7da4a65aa8a",
+        "status": "error",
+        "data": [],
+        "code": [],
+        "evaluation": [],
+        "errors": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "error": "OpenAIConnectionError: Connection error."
+          }
+        ],
+        "stages": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "seconds": 1.4274931620002462
+          }
+        ],
+        "checks": {},
+        "validation_passed": false,
+        "communication": [
+          {
+            "type": "task",
+            "task_id": "5b1e736b-97b5-4905-a065-e7da4a65aa8a:data_agent",
+            "run_id": "ab7b3130-d898-42a6-9a9e-51a4d63b1396",
+            "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+            "parameters": {
+              "database": "sales.db",
+              "csv": "sales.csv",
+              "chart": false
+            },
+            "from": "coordinator",
+            "to": "data_agent",
+            "timestamp": "2026-10-06T10:08:51.334789+00:00",
+            "id": "028f948b-9fa3-44af-8830-21ac840aaa59"
+          },
+          {
+            "status": "error",
+            "error": "OpenAIConnectionError: Connection error.",
+            "result": null,
+            "metadata": {
+              "tools_used": 0,
+              "tool_names": [],
+              "seconds": 1.3896
+            },
+            "type": "result",
+            "task_id": "5b1e736b-97b5-4905-a065-e7da4a65aa8a:data_agent",
+            "run_id": "ab7b3130-d898-42a6-9a9e-51a4d63b1396",
+            "worker": "data_agent",
+            "from": "data_agent",
+            "to": "coordinator:ab7b3130-d898-42a6-9a9e-51a4d63b1396",
+            "timestamp": "2026-10-06T10:08:52.759209+00:00",
+            "id": "33f2ba3b-1c0a-4f30-9736-4a85ca1295c0"
+          }
+        ],
+        "latency_seconds": 1.4460070009999981,
+        "metrics": {
+          "events": [
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "error",
+              "seconds": 1.3891928140001255,
+              "tokens": null
+            }
+          ],
+          "model_calls": 1,
+          "api_calls": 1,
+          "usage_complete": false,
+          "tokens": null,
+          "known_tokens": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0
+          },
+          "missing_usage_calls": 1
+        },
+        "capacity": 4
+      },
+      {
+        "request_id": "1443c8ad-65a8-4d51-a16b-b1917c149e67",
+        "status": "error",
+        "data": [],
+        "code": [],
+        "evaluation": [],
+        "errors": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "error": "OpenAIConnectionError: Connection error."
+          }
+        ],
+        "stages": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "seconds": 1.3153194710002936
+          }
+        ],
+        "checks": {},
+        "validation_passed": false,
+        "communication": [
+          {
+            "type": "task",
+            "task_id": "1443c8ad-65a8-4d51-a16b-b1917c149e67:data_agent",
+            "run_id": "ba704125-ce5b-4763-98c5-7050821afcc9",
+            "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+            "parameters": {
+              "database": "sales.db",
+              "csv": "sales.csv",
+              "chart": false
+            },
+            "from": "coordinator",
+            "to": "data_agent",
+            "timestamp": "2026-10-06T10:08:51.352667+00:00",
+            "id": "85dfd54d-33fa-48de-9a01-19af59b03913"
+          },
+          {
+            "status": "error",
+            "error": "OpenAIConnectionError: Connection error.",
+            "result": null,
+            "metadata": {
+              "tools_used": 0,
+              "tool_names": [],
+              "seconds": 1.2952
+            },
+            "type": "result",
+            "task_id": "1443c8ad-65a8-4d51-a16b-b1917c149e67:data_agent",
+            "run_id": "ba704125-ce5b-4763-98c5-7050821afcc9",
+            "worker": "data_agent",
+            "from": "data_agent",
+            "to": "coordinator:ba704125-ce5b-4763-98c5-7050821afcc9",
+            "timestamp": "2026-10-06T10:08:52.665793+00:00",
+            "id": "6f401bff-29f5-4caf-a38c-1c388e1bdfc0"
+          }
+        ],
+        "latency_seconds": 1.333232264999424,
+        "metrics": {
+          "events": [
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "error",
+              "seconds": 1.2948604490002253,
+              "tokens": null
+            }
+          ],
+          "model_calls": 1,
+          "api_calls": 1,
+          "usage_complete": false,
+          "tokens": null,
+          "known_tokens": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0
+          },
+          "missing_usage_calls": 1
+        },
+        "capacity": 4
+      },
+      {
+        "request_id": "6dbf6180-a53e-4c24-8c64-a1b5efb97b91",
+        "status": "error",
+        "data": [],
+        "code": [],
+        "evaluation": [],
+        "errors": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "error": "OpenAIConnectionError: Connection error."
+          }
+        ],
+        "stages": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "seconds": 1.490091475000554
+          }
+        ],
+        "checks": {},
+        "validation_passed": false,
+        "communication": [
+          {
+            "type": "task",
+            "task_id": "6dbf6180-a53e-4c24-8c64-a1b5efb97b91:data_agent",
+            "run_id": "96838ded-134c-4c21-b714-58b91af5930c",
+            "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+            "parameters": {
+              "database": "sales.db",
+              "csv": "sales.csv",
+              "chart": false
+            },
+            "from": "coordinator",
+            "to": "data_agent",
+            "timestamp": "2026-10-06T10:08:51.369541+00:00",
+            "id": "8bab931e-1ed3-4005-8dff-1157cefebe9e"
+          },
+          {
+            "status": "error",
+            "error": "OpenAIConnectionError: Connection error.",
+            "result": null,
+            "metadata": {
+              "tools_used": 0,
+              "tool_names": [],
+              "seconds": 1.4858
+            },
+            "type": "result",
+            "task_id": "6dbf6180-a53e-4c24-8c64-a1b5efb97b91:data_agent",
+            "run_id": "96838ded-134c-4c21-b714-58b91af5930c",
+            "worker": "data_agent",
+            "from": "data_agent",
+            "to": "coordinator:96838ded-134c-4c21-b714-58b91af5930c",
+            "timestamp": "2026-10-06T10:08:52.857342+00:00",
+            "id": "53730599-de20-40a9-b813-c6138893ee8b"
+          }
+        ],
+        "latency_seconds": 1.5071291009999186,
+        "metrics": {
+          "events": [
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "error",
+              "seconds": 1.4853254110003036,
+              "tokens": null
+            }
+          ],
+          "model_calls": 1,
+          "api_calls": 1,
+          "usage_complete": false,
+          "tokens": null,
+          "known_tokens": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0
+          },
+          "missing_usage_calls": 1
+        },
+        "capacity": 4
+      },
+      {
+        "request_id": "fb2d0886-a280-44d2-848c-baff0c8af3d6",
+        "status": "error",
+        "data": [],
+        "code": [],
+        "evaluation": [],
+        "errors": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "error": "OpenAIConnectionError: Connection error."
+          }
+        ],
+        "stages": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "seconds": 1.3626204689999213
+          }
+        ],
+        "checks": {},
+        "validation_passed": false,
+        "communication": [
+          {
+            "type": "task",
+            "task_id": "fb2d0886-a280-44d2-848c-baff0c8af3d6:data_agent",
+            "run_id": "24d8a702-47db-4e79-b6c6-d0fd67a6f7b6",
+            "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+            "parameters": {
+              "database": "sales.db",
+              "csv": "sales.csv",
+              "chart": false
+            },
+            "from": "coordinator",
+            "to": "data_agent",
+            "timestamp": "2026-10-06T10:08:52.698511+00:00",
+            "id": "75fea23b-069c-4c77-84ba-bf66591c7b17"
+          },
+          {
+            "status": "error",
+            "error": "OpenAIConnectionError: Connection error.",
+            "result": null,
+            "metadata": {
+              "tools_used": 0,
+              "tool_names": [],
+              "seconds": 1.3611
+            },
+            "type": "result",
+            "task_id": "fb2d0886-a280-44d2-848c-baff0c8af3d6:data_agent",
+            "run_id": "24d8a702-47db-4e79-b6c6-d0fd67a6f7b6",
+            "worker": "data_agent",
+            "from": "data_agent",
+            "to": "coordinator:24d8a702-47db-4e79-b6c6-d0fd67a6f7b6",
+            "timestamp": "2026-10-06T10:08:54.060409+00:00",
+            "id": "0b09f826-761a-422f-a85b-92220200b7f9"
+          }
+        ],
+        "latency_seconds": 2.6929954179995548,
+        "metrics": {
+          "events": [
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "error",
+              "seconds": 1.3607133149998845,
+              "tokens": null
+            }
+          ],
+          "model_calls": 1,
+          "api_calls": 1,
+          "usage_complete": false,
+          "tokens": null,
+          "known_tokens": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0
+          },
+          "missing_usage_calls": 1
+        },
+        "capacity": 4
+      },
+      {
+        "request_id": "4fb306ca-a88c-4ee2-b6d3-b17f444e20c5",
+        "status": "error",
+        "data": [],
+        "code": [],
+        "evaluation": [],
+        "errors": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "error": "OpenAIConnectionError: Connection error."
+          }
+        ],
+        "stages": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "seconds": 1.2364297690000967
+          }
+        ],
+        "checks": {},
+        "validation_passed": false,
+        "communication": [
+          {
+            "type": "task",
+            "task_id": "4fb306ca-a88c-4ee2-b6d3-b17f444e20c5:data_agent",
+            "run_id": "50ae90bb-bdd1-4524-b73d-730a5cec942f",
+            "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+            "parameters": {
+              "database": "sales.db",
+              "csv": "sales.csv",
+              "chart": false
+            },
+            "from": "coordinator",
+            "to": "data_agent",
+            "timestamp": "2026-10-06T10:08:52.754026+00:00",
+            "id": "cd0840fd-79bf-4c4c-bea5-1abb245d8817"
+          },
+          {
+            "status": "error",
+            "error": "OpenAIConnectionError: Connection error.",
+            "result": null,
+            "metadata": {
+              "tools_used": 0,
+              "tool_names": [],
+              "seconds": 1.2351
+            },
+            "type": "result",
+            "task_id": "4fb306ca-a88c-4ee2-b6d3-b17f444e20c5:data_agent",
+            "run_id": "50ae90bb-bdd1-4524-b73d-730a5cec942f",
+            "worker": "data_agent",
+            "from": "data_agent",
+            "to": "coordinator:50ae90bb-bdd1-4524-b73d-730a5cec942f",
+            "timestamp": "2026-10-06T10:08:53.990110+00:00",
+            "id": "f1e8cd24-1910-4329-acd6-9d8a7e3ff55e"
+          }
+        ],
+        "latency_seconds": 2.622773111999777,
+        "metrics": {
+          "events": [
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "error",
+              "seconds": 1.2345714180000869,
+              "tokens": null
+            }
+          ],
+          "model_calls": 1,
+          "api_calls": 1,
+          "usage_complete": false,
+          "tokens": null,
+          "known_tokens": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0
+          },
+          "missing_usage_calls": 1
+        },
+        "capacity": 4
+      },
+      {
+        "request_id": "141ea82b-ab62-4630-9778-1a71125c135f",
+        "status": "error",
+        "data": [],
+        "code": [],
+        "evaluation": [],
+        "errors": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "error": "OpenAIConnectionError: Connection error."
+          }
+        ],
+        "stages": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "seconds": 1.3763090849997752
+          }
+        ],
+        "checks": {},
+        "validation_passed": false,
+        "communication": [
+          {
+            "type": "task",
+            "task_id": "141ea82b-ab62-4630-9778-1a71125c135f:data_agent",
+            "run_id": "1e4197ef-a243-41a3-b755-670992562786",
+            "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+            "parameters": {
+              "database": "sales.db",
+              "csv": "sales.csv",
+              "chart": false
+            },
+            "from": "coordinator",
+            "to": "data_agent",
+            "timestamp": "2026-10-06T10:08:52.783805+00:00",
+            "id": "c50af1aa-2869-4444-b40b-72735f18cec5"
+          },
+          {
+            "status": "error",
+            "error": "OpenAIConnectionError: Connection error.",
+            "result": null,
+            "metadata": {
+              "tools_used": 0,
+              "tool_names": [],
+              "seconds": 1.3752
+            },
+            "type": "result",
+            "task_id": "141ea82b-ab62-4630-9778-1a71125c135f:data_agent",
+            "run_id": "1e4197ef-a243-41a3-b755-670992562786",
+            "worker": "data_agent",
+            "from": "data_agent",
+            "to": "coordinator:1e4197ef-a243-41a3-b755-670992562786",
+            "timestamp": "2026-10-06T10:08:54.159808+00:00",
+            "id": "7fdd2a25-bc25-437d-9d04-3fdffa9f0fe3"
+          }
+        ],
+        "latency_seconds": 2.792362719999801,
+        "metrics": {
+          "events": [
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "error",
+              "seconds": 1.374828752999747,
+              "tokens": null
+            }
+          ],
+          "model_calls": 1,
+          "api_calls": 1,
+          "usage_complete": false,
+          "tokens": null,
+          "known_tokens": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0
+          },
+          "missing_usage_calls": 1
+        },
+        "capacity": 4
+      },
+      {
+        "request_id": "f207a41d-d394-4694-8375-1a24bcbeee7a",
+        "status": "error",
+        "data": [],
+        "code": [],
+        "evaluation": [],
+        "errors": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "error": "OpenAIConnectionError: Connection error."
+          }
+        ],
+        "stages": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "seconds": 1.3279777210000248
+          }
+        ],
+        "checks": {},
+        "validation_passed": false,
+        "communication": [
+          {
+            "type": "task",
+            "task_id": "f207a41d-d394-4694-8375-1a24bcbeee7a:data_agent",
+            "run_id": "88b1c616-da6c-4317-9ba8-f98a57996c4f",
+            "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+            "parameters": {
+              "database": "sales.db",
+              "csv": "sales.csv",
+              "chart": false
+            },
+            "from": "coordinator",
+            "to": "data_agent",
+            "timestamp": "2026-10-06T10:08:52.878426+00:00",
+            "id": "ada65241-c63d-40ae-a9a6-ac8ed0aed45d"
+          },
+          {
+            "status": "error",
+            "error": "OpenAIConnectionError: Connection error.",
+            "result": null,
+            "metadata": {
+              "tools_used": 0,
+              "tool_names": [],
+              "seconds": 1.3263
+            },
+            "type": "result",
+            "task_id": "f207a41d-d394-4694-8375-1a24bcbeee7a:data_agent",
+            "run_id": "88b1c616-da6c-4317-9ba8-f98a57996c4f",
+            "worker": "data_agent",
+            "from": "data_agent",
+            "to": "coordinator:88b1c616-da6c-4317-9ba8-f98a57996c4f",
+            "timestamp": "2026-10-06T10:08:54.205916+00:00",
+            "id": "e1a7fef7-f7b1-4b9f-8d56-7a0457ddbedf"
+          }
+        ],
+        "latency_seconds": 2.8385524679997616,
+        "metrics": {
+          "events": [
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "error",
+              "seconds": 1.3257311299994399,
+              "tokens": null
+            }
+          ],
+          "model_calls": 1,
+          "api_calls": 1,
+          "usage_complete": false,
+          "tokens": null,
+          "known_tokens": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0
+          },
+          "missing_usage_calls": 1
+        },
+        "capacity": 4
+      },
+      {
+        "request_id": "a4206f66-fe78-48a2-bcf3-572f92a54353",
+        "status": "error",
+        "data": [],
+        "code": [],
+        "evaluation": [],
+        "errors": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "error": "OpenAIConnectionError: Connection error."
+          }
+        ],
+        "stages": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "seconds": 1.2064343140000346
+          }
+        ],
+        "checks": {},
+        "validation_passed": false,
+        "communication": [
+          {
+            "type": "task",
+            "task_id": "a4206f66-fe78-48a2-bcf3-572f92a54353:data_agent",
+            "run_id": "3fe1f099-9c56-48fe-9bab-b9c079605abd",
+            "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+            "parameters": {
+              "database": "sales.db",
+              "csv": "sales.csv",
+              "chart": false
+            },
+            "from": "coordinator",
+            "to": "data_agent",
+            "timestamp": "2026-10-06T10:08:54.022762+00:00",
+            "id": "0abf7230-853e-4005-a212-2a65188ee0d4"
+          },
+          {
+            "status": "error",
+            "error": "OpenAIConnectionError: Connection error.",
+            "result": null,
+            "metadata": {
+              "tools_used": 0,
+              "tool_names": [],
+              "seconds": 1.205
+            },
+            "type": "result",
+            "task_id": "a4206f66-fe78-48a2-bcf3-572f92a54353:data_agent",
+            "run_id": "3fe1f099-9c56-48fe-9bab-b9c079605abd",
+            "worker": "data_agent",
+            "from": "data_agent",
+            "to": "coordinator:3fe1f099-9c56-48fe-9bab-b9c079605abd",
+            "timestamp": "2026-10-06T10:08:55.228863+00:00",
+            "id": "48efbda5-0394-40c1-b4b9-61f73e003b97"
+          }
+        ],
+        "latency_seconds": 3.8614697749999323,
+        "metrics": {
+          "events": [
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "error",
+              "seconds": 1.204373451999345,
+              "tokens": null
+            }
+          ],
+          "model_calls": 1,
+          "api_calls": 1,
+          "usage_complete": false,
+          "tokens": null,
+          "known_tokens": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0
+          },
+          "missing_usage_calls": 1
+        },
+        "capacity": 4
+      },
+      {
+        "request_id": "2bf5776a-17f3-4f2e-a31e-746204dadd13",
+        "status": "error",
+        "data": [],
+        "code": [],
+        "evaluation": [],
+        "errors": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "error": "OpenAIConnectionError: Connection error."
+          }
+        ],
+        "stages": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "seconds": 1.2951758409999456
+          }
+        ],
+        "checks": {},
+        "validation_passed": false,
+        "communication": [
+          {
+            "type": "task",
+            "task_id": "2bf5776a-17f3-4f2e-a31e-746204dadd13:data_agent",
+            "run_id": "8293b02a-1051-4894-8c44-c4aa33fc7c52",
+            "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+            "parameters": {
+              "database": "sales.db",
+              "csv": "sales.csv",
+              "chart": false
+            },
+            "from": "coordinator",
+            "to": "data_agent",
+            "timestamp": "2026-10-06T10:08:54.080336+00:00",
+            "id": "77912eb4-b3cc-4a68-8cee-3195cf3ab8b2"
+          },
+          {
+            "status": "error",
+            "error": "OpenAIConnectionError: Connection error.",
+            "result": null,
+            "metadata": {
+              "tools_used": 0,
+              "tool_names": [],
+              "seconds": 1.2938
+            },
+            "type": "result",
+            "task_id": "2bf5776a-17f3-4f2e-a31e-746204dadd13:data_agent",
+            "run_id": "8293b02a-1051-4894-8c44-c4aa33fc7c52",
+            "worker": "data_agent",
+            "from": "data_agent",
+            "to": "coordinator:8293b02a-1051-4894-8c44-c4aa33fc7c52",
+            "timestamp": "2026-10-06T10:08:55.375109+00:00",
+            "id": "3d592a2e-dd8a-48c0-be3e-14a6ea234983"
+          }
+        ],
+        "latency_seconds": 4.007947711999805,
+        "metrics": {
+          "events": [
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "error",
+              "seconds": 1.2930367029994159,
+              "tokens": null
+            }
+          ],
+          "model_calls": 1,
+          "api_calls": 1,
+          "usage_complete": false,
+          "tokens": null,
+          "known_tokens": {
+            "input_tokens": 0,
+            "output_tokens": 0,
+            "total_tokens": 0
+          },
+          "missing_usage_calls": 1
+        },
+        "capacity": 4
+      }
+    ]
+  },
+  "cost_usd": null,
+  "cost_note": "No verified YesScale tariff/invoice; no fabricated USD. API counts are logical model invocations, not SDK retries.",
+  "percentile_method": "linear interpolation at (n-1)*fraction; 3 iterations are not a reliable tail/SLO estimate",
+  "timestamp_utc": "2026-10-06T10:08:55.378854+00:00",
+  "model": "gpt-4.1-mini"
+}

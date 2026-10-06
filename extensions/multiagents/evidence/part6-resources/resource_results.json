@@ -1,0 +1,215 @@
+{
+  "timestamp_utc": "2026-10-06T10:31:39.869646+00:00",
+  "python": "3.12.15",
+  "platform": "Linux-5.15.167.4-microsoft-standard-WSL2-x86_64-with-glibc2.41",
+  "mode": "offline",
+  "max_concurrency": 4,
+  "phases": [
+    {
+      "name": "Simple data query",
+      "requests": 1,
+      "successes": 1,
+      "wall_seconds": 0.02605831799974112,
+      "before": {
+        "parent_rss_kib": 93200,
+        "parent_peak_rss_kib": 93200,
+        "children_max_peak_rss_kib": 0,
+        "parent_user_seconds": 2.861077,
+        "parent_system_seconds": 0.13050499999999998,
+        "children_user_seconds": 0.0,
+        "children_system_seconds": 0.0
+      },
+      "after": {
+        "parent_rss_kib": 94272,
+        "parent_peak_rss_kib": 94272,
+        "children_max_peak_rss_kib": 0,
+        "parent_user_seconds": 2.861077,
+        "parent_system_seconds": 0.14047199999999999,
+        "children_user_seconds": 0.0,
+        "children_system_seconds": 0.0
+      },
+      "cpu_delta_seconds": {
+        "parent_user_seconds": 0.0,
+        "parent_system_seconds": 0.009967000000000004,
+        "children_user_seconds": 0.0,
+        "children_system_seconds": 0.0
+      },
+      "parent_cpu_percent_one_core": 38.248823274391775,
+      "sampled_parent_peak_rss_kib": 94272,
+      "rss_samples": 3,
+      "records": [
+        {
+          "request_id": "d85ca49e-6bab-45fa-9749-bcd097a5898c",
+          "status": "success",
+          "latency_seconds": 0.025749077999535075
+        }
+      ]
+    },
+    {
+      "name": "Code generation",
+      "requests": 1,
+      "successes": 1,
+      "wall_seconds": 0.24362972299968533,
+      "before": {
+        "parent_rss_kib": 94272,
+        "parent_peak_rss_kib": 94272,
+        "children_max_peak_rss_kib": 0,
+        "parent_user_seconds": 2.861123,
+        "parent_system_seconds": 0.140546,
+        "children_user_seconds": 0.0,
+        "children_system_seconds": 0.0
+      },
+      "after": {
+        "parent_rss_kib": 94272,
+        "parent_peak_rss_kib": 94272,
+        "children_max_peak_rss_kib": 94272,
+        "parent_user_seconds": 2.874842,
+        "parent_system_seconds": 0.150253,
+        "children_user_seconds": 0.12642699999999998,
+        "children_system_seconds": 0.010535
+      },
+      "cpu_delta_seconds": {
+        "parent_user_seconds": 0.013719000000000037,
+        "parent_system_seconds": 0.009706999999999993,
+        "children_user_seconds": 0.12642699999999998,
+        "children_system_seconds": 0.010535
+      },
+      "parent_cpu_percent_one_core": 9.615411334695926,
+      "sampled_parent_peak_rss_kib": 94272,
+      "rss_samples": 43,
+      "records": [
+        {
+          "request_id": "f947731c-13f2-4f02-9514-53d53783a87c",
+          "status": "success",
+          "latency_seconds": 0.24327125099989644
+        }
+      ]
+    },
+    {
+      "name": "Complex workflow",
+      "requests": 1,
+      "successes": 1,
+      "wall_seconds": 1.5719424850003634,
+      "before": {
+        "parent_rss_kib": 94272,
+        "parent_peak_rss_kib": 94272,
+        "children_max_peak_rss_kib": 94272,
+        "parent_user_seconds": 2.875287,
+        "parent_system_seconds": 0.150276,
+        "children_user_seconds": 0.12642699999999998,
+        "children_system_seconds": 0.010535
+      },
+      "after": {
+        "parent_rss_kib": 96360,
+        "parent_peak_rss_kib": 96360,
+        "children_max_peak_rss_kib": 94528,
+        "parent_user_seconds": 2.974548,
+        "parent_system_seconds": 0.150276,
+        "children_user_seconds": 1.19577,
+        "children_system_seconds": 0.15637299999999998
+      },
+      "cpu_delta_seconds": {
+        "parent_user_seconds": 0.09926099999999982,
+        "parent_system_seconds": 0.0,
+        "children_user_seconds": 1.069343,
+        "children_system_seconds": 0.145838
+      },
+      "parent_cpu_percent_one_core": 6.314544008267381,
+      "sampled_parent_peak_rss_kib": 96360,
+      "rss_samples": 288,
+      "records": [
+        {
+          "request_id": "a0795ffe-c036-4ff1-8c34-00054050ddd5",
+          "status": "success",
+          "latency_seconds": 1.5715108760005023
+        }
+      ]
+    },
+    {
+      "name": "Concurrent data",
+      "requests": 10,
+      "successes": 10,
+      "wall_seconds": 0.17775266300031944,
+      "before": {
+        "parent_rss_kib": 96360,
+        "parent_peak_rss_kib": 96360,
+        "children_max_peak_rss_kib": 94528,
+        "parent_user_seconds": 2.9747149999999998,
+        "parent_system_seconds": 0.150276,
+        "children_user_seconds": 1.19577,
+        "children_system_seconds": 0.15637299999999998
+      },
+      "after": {
+        "parent_rss_kib": 98932,
+        "parent_peak_rss_kib": 98932,
+        "children_max_peak_rss_kib": 94528,
+        "parent_user_seconds": 3.004498,
+        "parent_system_seconds": 0.160239,
+        "children_user_seconds": 1.19577,
+        "children_system_seconds": 0.15637299999999998
+      },
+      "cpu_delta_seconds": {
+        "parent_user_seconds": 0.029783000000000115,
+        "parent_system_seconds": 0.009963,
+        "children_user_seconds": 0.0,
+        "children_system_seconds": 0.0
+      },
+      "parent_cpu_percent_one_core": 22.360283851234726,
+      "sampled_parent_peak_rss_kib": 98932,
+      "rss_samples": 6,
+      "records": [
+        {
+          "request_id": "0177826a-9cd0-4c8d-a291-290365118833",
+          "status": "success",
+          "latency_seconds": 0.07057571600034862
+        },
+        {
+          "request_id": "a947d143-9918-4b91-9c0f-5fdfc524e7e2",
+          "status": "success",
+          "latency_seconds": 0.053467063000425696
+        },
+        {
+          "request_id": "ff3b77b0-9df2-464f-b3db-bd56aebd30fd",
+          "status": "success",
+          "latency_seconds": 0.0374950160003209
+        },
+        {
+          "request_id": "f9334663-3c7c-4e8a-b563-c12a9db5ba2d",
+          "status": "success",
+          "latency_seconds": 0.07210412899985386
+        },
+        {
+          "request_id": "61e1693d-929e-43cb-8592-544793e42224",
+          "status": "success",
+          "latency_seconds": 0.07438284300042142
+        },
+        {
+          "request_id": "b0e3163c-e542-4ac6-951c-b10bbaeb541b",
+          "status": "success",
+          "latency_seconds": 0.07491661299991392
+        },
+        {
+          "request_id": "eb25cfaf-4a40-4900-92a0-77f2399dc411",
+          "status": "success",
+          "latency_seconds": 0.07520051800020155
+        },
+        {
+          "request_id": "7870ed18-6965-42d8-9669-23dc26eb21c6",
+          "status": "success",
+          "latency_seconds": 0.11262007400000584
+        },
+        {
+          "request_id": "3728cebb-da5a-4836-af39-f6702216b0c5",
+          "status": "success",
+          "latency_seconds": 0.11341423700014275
+        },
+        {
+          "request_id": "0653d5e6-3760-41d3-9170-a7ef3ebce11f",
+          "status": "success",
+          "latency_seconds": 0.11367824700027995
+        }
+      ]
+    }
+  ],
+  "method": "Linux /proc/self/status VmRSS sampled every 5ms; getrusage self/terminated children CPU deltas. ru_maxrss is a process-lifetime high-water mark; children value is max, not sum or concurrent peak. Sampling misses sub-5ms peaks, excludes child RSS; parent baseline includes imported packages. CPU percent uses one-core wall normalization, includes worker threads; no LLM service/container-wide measurement."
+}

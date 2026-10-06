@@ -1,0 +1,35 @@
+$ /opt/day20-tools-venv/bin/python scripts/test_tool_integration.py
+Test: Data Agent queries database
+  SQL: SELECT id, amount FROM sales WHERE year=2026 ORDER BY id
+  Result: 50 rows; total=1275 - PASS
+Test: Code Agent creates visualization
+  Artifact: outputs/sales_chart.png (11765 bytes)
+  Verified total=1275 - PASS
+Test: Evaluator compares and writes report
+  Score from supplied ratings: 85.5/100 (B)
+  SQL/code comparison: matches; outputs/evaluation.md verified - PASS
+All tool integration tests passed! (3/3; real local tools, scripted models, no API)
+
+STDERR:
+INFO coordinator task_start task_id=data worker=data_agent
+INFO day20_multiagents.tools tool_start tool=query_database
+INFO day20_multiagents.tools tool_end tool=query_database status=success seconds=0.0008
+INFO coordinator task_end task_id=data worker=data_agent status=success seconds=0.0019
+INFO coordinator task_start task_id=chart worker=code_agent
+INFO day20_multiagents.tools tool_start tool=create_file
+INFO day20_multiagents.tools tool_end tool=create_file status=success seconds=0.0005
+INFO day20_multiagents.tools tool_start tool=run_script
+INFO day20_multiagents.tools tool_end tool=run_script status=success seconds=1.0699
+INFO coordinator task_end task_id=chart worker=code_agent status=success seconds=1.0715
+INFO coordinator task_start task_id=evaluation worker=evaluator_agent
+INFO day20_multiagents.tools tool_start tool=scoring
+INFO day20_multiagents.tools tool_end tool=scoring status=success seconds=0.0002
+INFO day20_multiagents.tools tool_start tool=comparison
+INFO day20_multiagents.tools tool_end tool=comparison status=success seconds=0.0002
+INFO day20_multiagents.tools tool_start tool=report_generator
+INFO day20_multiagents.tools tool_start tool=create_file
+INFO day20_multiagents.tools tool_end tool=create_file status=success seconds=0.0008
+INFO day20_multiagents.tools tool_end tool=report_generator status=success seconds=0.0021
+INFO coordinator task_end task_id=evaluation worker=evaluator_agent status=success seconds=0.0049
+
+Exit code: 0

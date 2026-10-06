@@ -1,0 +1,16 @@
+$ /opt/day20-tools-venv/bin/python -m pytest tests/test_03_workers.py -o addopts=-p no:cacheprovider -v -k test_data_agent_init or test_data_agent_process or test_code_agent_process or test_evaluator_agent
+============================= test session starts ==============================
+platform linux -- Python 3.12.15, pytest-9.1.1, pluggy-1.6.0 -- /opt/day20-tools-venv/bin/python
+rootdir: /lab
+configfile: pyproject.toml
+plugins: anyio-4.15.1, langsmith-0.14.4
+collecting ... collected 8 items / 4 deselected / 4 selected
+
+tests/test_03_workers.py::test_data_agent_init PASSED                    [ 25%]
+tests/test_03_workers.py::test_data_agent_process PASSED                 [ 50%]
+tests/test_03_workers.py::test_code_agent_process PASSED                 [ 75%]
+tests/test_03_workers.py::test_evaluator_agent PASSED                    [100%]
+
+======================= 4 passed, 4 deselected in 0.81s ========================
+
+Exit code: 0

@@ -1,0 +1,8 @@
+$ /opt/day20-tools-venv/bin/python scripts/benchmark.py --mode live --output evidence/part5-live
+Simple data query: 0/3 verified, avg=2.005s p50=1.392s p99=3.391s throughput=29.92/min tokens=None
+Code generation: 0/3 verified, avg=1.273s p50=1.255s p99=1.376s throughput=47.12/min tokens=None
+Complex workflow: 0/3 verified, avg=1.325s p50=1.380s p99=1.390s throughput=45.28/min tokens=None
+Concurrent data requests: 0/10 verified, avg=2.454s p50=2.658s p99=3.995s throughput=147.07/min tokens=None
+Results saved: evidence/part5-live/benchmark_results.json
+
+Exit code: 0

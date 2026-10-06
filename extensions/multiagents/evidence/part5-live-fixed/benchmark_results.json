@@ -1,0 +1,2821 @@
+{
+  "mode": "live",
+  "iterations": 3,
+  "max_concurrency": 4,
+  "cases": [
+    {
+      "summary": {
+        "name": "Simple data query",
+        "requests": 3,
+        "successes": 0,
+        "min": 4.455565778000164,
+        "max": 6.90081290299986,
+        "avg": 5.421182630000051,
+        "median": 4.907169209000131,
+        "p50": 4.907169209000131,
+        "p99": 6.860940029119865,
+        "wall_seconds": 16.26479420400028,
+        "throughput_per_minute": 11.066847679863635,
+        "error_rate": 1.0,
+        "usage_complete": true,
+        "known_tokens": {
+          "input_tokens": 4128,
+          "output_tokens": 186,
+          "total_tokens": 4314
+        },
+        "tokens": {
+          "input_tokens": 4128,
+          "output_tokens": 186,
+          "total_tokens": 4314
+        },
+        "tokens_per_100_requests": 143800.0,
+        "model_calls": 9,
+        "api_calls": 9,
+        "worker_utilization": {
+          "data_agent": 0.933267008276482
+        },
+        "utilization_definition": "sum stage wall-time / (batch wall-time * max_concurrency); includes API waiting, not CPU usage"
+      },
+      "records": [
+        {
+          "request_id": "0835678f-c4b9-423f-8373-75f5198cedb8",
+          "status": "error",
+          "data": [
+            "{\"revenue\": 150, \"rows\": 4}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "success",
+              "seconds": 5.866496542000277
+            }
+          ],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": false,
+            "data_tool_evidence": true
+          },
+          "validation_passed": false,
+          "communication": [
+            {
+              "type": "task",
+              "task_id": "0835678f-c4b9-423f-8373-75f5198cedb8:data_agent",
+              "run_id": "4bf88b0d-2733-4342-b5db-b9a167892fb4",
+              "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+              "parameters": {
+                "database": "sales.db",
+                "csv": "sales.csv",
+                "chart": false
+              },
+              "from": "coordinator",
+              "to": "data_agent",
+              "timestamp": "2026-10-06T10:10:31.105738+00:00",
+              "id": "9254eefe-e2d0-4915-88c5-472bb4ade9d0"
+            },
+            {
+              "status": "success",
+              "result": "{\"revenue\": 150, \"rows\": 4}",
+              "metadata": {
+                "tools_used": 2,
+                "tool_names": [
+                  "csv_parser",
+                  "pandas_analysis"
+                ],
+                "iterations": 3,
+                "seconds": 5.865
+              },
+              "type": "result",
+              "task_id": "0835678f-c4b9-423f-8373-75f5198cedb8:data_agent",
+              "run_id": "4bf88b0d-2733-4342-b5db-b9a167892fb4",
+              "worker": "data_agent",
+              "from": "data_agent",
+              "to": "coordinator:4bf88b0d-2733-4342-b5db-b9a167892fb4",
+              "timestamp": "2026-10-06T10:10:36.971880+00:00",
+              "id": "20aceb37-21d0-450e-8fc7-421dc16c3177"
+            }
+          ],
+          "latency_seconds": 6.90081290299986,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 1.4378428580002947,
+                "tokens": {
+                  "input_tokens": 371,
+                  "output_tokens": 19,
+                  "total_tokens": 390
+                }
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "csv_parser",
+                "status": "success",
+                "seconds": 0.0015917330001684604,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 1.4267173620000904,
+                "tokens": {
+                  "input_tokens": 473,
+                  "output_tokens": 29,
+                  "total_tokens": 502
+                }
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "pandas_analysis",
+                "status": "success",
+                "seconds": 0.004695904000072915,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 2.993192872000691,
+                "tokens": {
+                  "input_tokens": 532,
+                  "output_tokens": 14,
+                  "total_tokens": 546
+                }
+              }
+            ],
+            "model_calls": 3,
+            "api_calls": 3,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 1376,
+              "output_tokens": 62,
+              "total_tokens": 1438
+            },
+            "known_tokens": {
+              "input_tokens": 1376,
+              "output_tokens": 62,
+              "total_tokens": 1438
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 1,
+          "capacity": 1
+        },
+        {
+          "request_id": "946c3162-9195-4630-9a94-ee3ca5a51023",
+          "status": "error",
+          "data": [
+            "{\"revenue\": 150, \"rows\": 4}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "success",
+              "seconds": 4.876192972999888
+            }
+          ],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": false,
+            "data_tool_evidence": true
+          },
+          "validation_passed": false,
+          "communication": [
+            {
+              "type": "task",
+              "task_id": "946c3162-9195-4630-9a94-ee3ca5a51023:data_agent",
+              "run_id": "63ba1dd2-8b7d-4a12-a59f-15aaa1213c35",
+              "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+              "parameters": {
+                "database": "sales.db",
+                "csv": "sales.csv",
+                "chart": false
+              },
+              "from": "coordinator",
+              "to": "data_agent",
+              "timestamp": "2026-10-06T10:10:37.003703+00:00",
+              "id": "a7f37ba1-6560-4bb4-b9bb-16a3afbe40c4"
+            },
+            {
+              "status": "success",
+              "result": "{\"revenue\": 150, \"rows\": 4}",
+              "metadata": {
+                "tools_used": 2,
+                "tool_names": [
+                  "csv_parser",
+                  "pandas_analysis"
+                ],
+                "iterations": 3,
+                "seconds": 4.8751
+              },
+              "type": "result",
+              "task_id": "946c3162-9195-4630-9a94-ee3ca5a51023:data_agent",
+              "run_id": "63ba1dd2-8b7d-4a12-a59f-15aaa1213c35",
+              "worker": "data_agent",
+              "from": "data_agent",
+              "to": "coordinator:63ba1dd2-8b7d-4a12-a59f-15aaa1213c35",
+              "timestamp": "2026-10-06T10:10:41.879667+00:00",
+              "id": "5262595d-d31f-417d-9792-d6fefd577df7"
+            }
+          ],
+          "latency_seconds": 4.907169209000131,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 1.5501826879999498,
+                "tokens": {
+                  "input_tokens": 371,
+                  "output_tokens": 19,
+                  "total_tokens": 390
+                }
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "csv_parser",
+                "status": "success",
+                "seconds": 0.0011424899994381121,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 2.009191977000228,
+                "tokens": {
+                  "input_tokens": 473,
+                  "output_tokens": 29,
+                  "total_tokens": 502
+                }
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "pandas_analysis",
+                "status": "success",
+                "seconds": 0.002684637999664119,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 1.3111614379995444,
+                "tokens": {
+                  "input_tokens": 532,
+                  "output_tokens": 14,
+                  "total_tokens": 546
+                }
+              }
+            ],
+            "model_calls": 3,
+            "api_calls": 3,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 1376,
+              "output_tokens": 62,
+              "total_tokens": 1438
+            },
+            "known_tokens": {
+              "input_tokens": 1376,
+              "output_tokens": 62,
+              "total_tokens": 1438
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 2,
+          "capacity": 1
+        },
+        {
+          "request_id": "f231169c-c1c0-492b-a53a-a4f52fd6da51",
+          "status": "error",
+          "data": [
+            "{\"revenue\": 150, \"rows\": 4}"
+          ],
+          "code": [],
+          "evaluation": [],
+          "errors": [],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "success",
+              "seconds": 4.436706311999842
+            }
+          ],
+          "checks": {
+            "sources_unchanged": true,
+            "data_numbers": false,
+            "data_tool_evidence": true
+          },
+          "validation_passed": false,
+          "communication": [
+            {
+              "type": "task",
+              "task_id": "f231169c-c1c0-492b-a53a-a4f52fd6da51:data_agent",
+              "run_id": "401f630b-1014-4ad4-8e8a-7a89f0b5fcdd",
+              "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+              "parameters": {
+                "database": "sales.db",
+                "csv": "sales.csv",
+                "chart": false
+              },
+              "from": "coordinator",
+              "to": "data_agent",
+              "timestamp": "2026-10-06T10:10:41.898214+00:00",
+              "id": "fa624fe4-3e14-46ff-9c80-493795ae5c1d"
+            },
+            {
+              "status": "success",
+              "result": "{\"revenue\": 150, \"rows\": 4}",
+              "metadata": {
+                "tools_used": 2,
+                "tool_names": [
+                  "csv_parser",
+                  "pandas_analysis"
+                ],
+                "iterations": 3,
+                "seconds": 4.4346
+              },
+              "type": "result",
+              "task_id": "f231169c-c1c0-492b-a53a-a4f52fd6da51:data_agent",
+              "run_id": "401f630b-1014-4ad4-8e8a-7a89f0b5fcdd",
+              "worker": "data_agent",
+              "from": "data_agent",
+              "to": "coordinator:401f630b-1014-4ad4-8e8a-7a89f0b5fcdd",
+              "timestamp": "2026-10-06T10:10:46.334275+00:00",
+              "id": "57f0e606-d6fb-4440-9748-86fbd180c0b1"
+            }
+          ],
+          "latency_seconds": 4.455565778000164,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 0.9917275739999241,
+                "tokens": {
+                  "input_tokens": 371,
+                  "output_tokens": 19,
+                  "total_tokens": 390
+                }
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "csv_parser",
+                "status": "success",
+                "seconds": 0.001197921999846585,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 1.819857372000115,
+                "tokens": {
+                  "input_tokens": 473,
+                  "output_tokens": 29,
+                  "total_tokens": 502
+                }
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "pandas_analysis",
+                "status": "success",
+                "seconds": 0.002094413000122586,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 1.6189252700005454,
+                "tokens": {
+                  "input_tokens": 532,
+                  "output_tokens": 14,
+                  "total_tokens": 546
+                }
+              }
+            ],
+            "model_calls": 3,
+            "api_calls": 3,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 1376,
+              "output_tokens": 62,
+              "total_tokens": 1438
+            },
+            "known_tokens": {
+              "input_tokens": 1376,
+              "output_tokens": 62,
+              "total_tokens": 1438
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 3,
+          "capacity": 1
+        }
+      ]
+    },
+    {
+      "summary": {
+        "name": "Code generation",
+        "requests": 3,
+        "successes": 0,
+        "min": 3.9225564610005677,
+        "max": 8.444809061999877,
+        "avg": 6.637980466333526,
+        "median": 7.546575876000134,
+        "p50": 7.546575876000134,
+        "p99": 8.426844398279881,
+        "wall_seconds": 19.91479019000053,
+        "throughput_per_minute": 9.038508479510886,
+        "error_rate": 1.0,
+        "usage_complete": true,
+        "known_tokens": {
+          "input_tokens": 3824,
+          "output_tokens": 628,
+          "total_tokens": 4452
+        },
+        "tokens": {
+          "input_tokens": 3824,
+          "output_tokens": 628,
+          "total_tokens": 4452
+        },
+        "tokens_per_100_requests": 148400.0,
+        "model_calls": 8,
+        "api_calls": 8,
+        "worker_utilization": {
+          "code_agent": 0.9965389331575513
+        },
+        "utilization_definition": "sum stage wall-time / (batch wall-time * max_concurrency); includes API waiting, not CPU usage"
+      },
+      "records": [
+        {
+          "request_id": "f7e4606b-3e42-42b0-a1d5-c488e5738984",
+          "status": "error",
+          "data": [],
+          "code": [],
+          "evaluation": [],
+          "errors": [
+            {
+              "worker": "code_agent",
+              "status": "error",
+              "error": "RuntimeError: Python exited 1: Traceback (most recent call last):\n  File \"<string>\", line 6, in <module>\n  File \"<worker>\", line 4, in <module>\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/tmp/day20-request-zjow9scl/outputs/report.py\", line 14, in <module>\n    revenue += float(row['revenue'])\n                     ~~~^^^^^^^^^^^\nKeyError: 'revenue'\n"
+            }
+          ],
+          "stages": [
+            {
+              "worker": "code_agent",
+              "status": "error",
+              "seconds": 7.516312232999553
+            }
+          ],
+          "checks": {},
+          "validation_passed": false,
+          "communication": [
+            {
+              "type": "task",
+              "task_id": "f7e4606b-3e42-42b0-a1d5-c488e5738984:code_agent",
+              "run_id": "b98cb5c7-a4ef-40b1-a042-8e9747dae5de",
+              "content": "Write a Python script to read CSV and save a report Create outputs/report.py, run it using run_script, read sales.csv with csv (quarter == 3), and write outputs/answer.json with revenue and rows. Return JSON with script, answer, chart paths. Do not change source files, access secrets or network. No chart is needed. ",
+              "parameters": {
+                "database": "sales.db",
+                "csv": "sales.csv",
+                "chart": false,
+                "data_result": []
+              },
+              "from": "coordinator",
+              "to": "code_agent",
+              "timestamp": "2026-10-06T10:10:46.366618+00:00",
+              "id": "c1cba888-7515-4148-b1b7-e4382f155f89"
+            },
+            {
+              "status": "error",
+              "error": "RuntimeError: Python exited 1: Traceback (most recent call last):\n  File \"<string>\", line 6, in <module>\n  File \"<worker>\", line 4, in <module>\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/tmp/day20-request-zjow9scl/outputs/report.py\", line 14, in <module>\n    revenue += float(row['revenue'])\n                     ~~~^^^^^^^^^^^\nKeyError: 'revenue'\n",
+              "result": null,
+              "metadata": {
+                "tools_used": 1,
+                "tool_names": [
+                  "create_file"
+                ],
+                "seconds": 7.5151
+              },
+              "type": "result",
+              "task_id": "f7e4606b-3e42-42b0-a1d5-c488e5738984:code_agent",
+              "run_id": "b98cb5c7-a4ef-40b1-a042-8e9747dae5de",
+              "worker": "code_agent",
+              "from": "code_agent",
+              "to": "coordinator:b98cb5c7-a4ef-40b1-a042-8e9747dae5de",
+              "timestamp": "2026-10-06T10:10:53.880505+00:00",
+              "id": "d057739f-50d4-4559-b03e-5abb3c3360f6"
+            }
+          ],
+          "latency_seconds": 7.546575876000134,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "code_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 4.24482841400004,
+                "tokens": {
+                  "input_tokens": 328,
+                  "output_tokens": 165,
+                  "total_tokens": 493
+                }
+              },
+              {
+                "kind": "tool",
+                "worker": "code_agent",
+                "name": "create_file",
+                "status": "success",
+                "seconds": 0.002598955999928876,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "code_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 3.149997546999657,
+                "tokens": {
+                  "input_tokens": 515,
+                  "output_tokens": 16,
+                  "total_tokens": 531
+                }
+              },
+              {
+                "kind": "tool",
+                "worker": "code_agent",
+                "name": "run_script",
+                "status": "error",
+                "seconds": 0.11632385000029899,
+                "tokens": null
+              }
+            ],
+            "model_calls": 2,
+            "api_calls": 2,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 843,
+              "output_tokens": 181,
+              "total_tokens": 1024
+            },
+            "known_tokens": {
+              "input_tokens": 843,
+              "output_tokens": 181,
+              "total_tokens": 1024
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 1,
+          "capacity": 1
+        },
+        {
+          "request_id": "4e5ba066-cf68-4fa1-af93-8bf40d8efc71",
+          "status": "error",
+          "data": [],
+          "code": [
+            "{\n  \"script\": \"outputs/report.py\",\n  \"answer\": \"outputs/answer.json\",\n  \"chart\": null\n}"
+          ],
+          "evaluation": [],
+          "errors": [],
+          "stages": [
+            {
+              "worker": "code_agent",
+              "status": "success",
+              "seconds": 8.424780287999965
+            }
+          ],
+          "checks": {
+            "sources_unchanged": true,
+            "script_exists": true,
+            "code_numbers": false,
+            "script_executed": true
+          },
+          "validation_passed": false,
+          "communication": [
+            {
+              "type": "task",
+              "task_id": "4e5ba066-cf68-4fa1-af93-8bf40d8efc71:code_agent",
+              "run_id": "8383dd48-a009-47a5-bd22-e934cef0e305",
+              "content": "Write a Python script to read CSV and save a report Create outputs/report.py, run it using run_script, read sales.csv with csv (quarter == 3), and write outputs/answer.json with revenue and rows. Return JSON with script, answer, chart paths. Do not change source files, access secrets or network. No chart is needed. ",
+              "parameters": {
+                "database": "sales.db",
+                "csv": "sales.csv",
+                "chart": false,
+                "data_result": []
+              },
+              "from": "coordinator",
+              "to": "code_agent",
+              "timestamp": "2026-10-06T10:10:53.901032+00:00",
+              "id": "6cdc938e-9128-41ff-a839-f4e6c6f323a4"
+            },
+            {
+              "status": "success",
+              "result": "{\n  \"script\": \"outputs/report.py\",\n  \"answer\": \"outputs/answer.json\",\n  \"chart\": null\n}",
+              "metadata": {
+                "tools_used": 3,
+                "tool_names": [
+                  "create_file",
+                  "run_script",
+                  "python_repl"
+                ],
+                "iterations": 4,
+                "seconds": 8.4237
+              },
+              "type": "result",
+              "task_id": "4e5ba066-cf68-4fa1-af93-8bf40d8efc71:code_agent",
+              "run_id": "8383dd48-a009-47a5-bd22-e934cef0e305",
+              "worker": "code_agent",
+              "from": "code_agent",
+              "to": "coordinator:8383dd48-a009-47a5-bd22-e934cef0e305",
+              "timestamp": "2026-10-06T10:11:02.325546+00:00",
+              "id": "b14d2338-2102-4a04-b211-8d511e15eca6"
+            }
+          ],
+          "latency_seconds": 8.444809061999877,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "code_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 4.141152371000317,
+                "tokens": {
+                  "input_tokens": 328,
+                  "output_tokens": 184,
+                  "total_tokens": 512
+                }
+              },
+              {
+                "kind": "tool",
+                "worker": "code_agent",
+                "name": "create_file",
+                "status": "success",
+                "seconds": 0.0010108520000358112,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "code_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 1.147859552999762,
+                "tokens": {
+                  "input_tokens": 534,
+                  "output_tokens": 16,
+                  "total_tokens": 550
+                }
+              },
+              {
+                "kind": "tool",
+                "worker": "code_agent",
+                "name": "run_script",
+                "status": "success",
+                "seconds": 0.12902541100083909,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "code_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 1.6463300790001085,
+                "tokens": {
+                  "input_tokens": 600,
+                  "output_tokens": 38,
+                  "total_tokens": 638
+                }
+              },
+              {
+                "kind": "tool",
+                "worker": "code_agent",
+                "name": "python_repl",
+                "status": "success",
+                "seconds": 0.06577079499948013,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "code_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 1.2915290390001246,
+                "tokens": {
+                  "input_tokens": 676,
+                  "output_tokens": 28,
+                  "total_tokens": 704
+                }
+              }
+            ],
+            "model_calls": 4,
+            "api_calls": 4,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 2138,
+              "output_tokens": 266,
+              "total_tokens": 2404
+            },
+            "known_tokens": {
+              "input_tokens": 2138,
+              "output_tokens": 266,
+              "total_tokens": 2404
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 2,
+          "capacity": 1
+        },
+        {
+          "request_id": "c40e5d70-b3b9-4a84-913c-13d97dbc8d03",
+          "status": "error",
+          "data": [],
+          "code": [],
+          "evaluation": [],
+          "errors": [
+            {
+              "worker": "code_agent",
+              "status": "error",
+              "error": "RuntimeError: Python exited 1: Traceback (most recent call last):\n  File \"<string>\", line 6, in <module>\n  File \"<worker>\", line 4, in <module>\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/tmp/day20-request-q6jk6tgd/outputs/report.py\", line 14, in <module>\n    revenue += float(row['revenue'])\n                     ~~~^^^^^^^^^^^\nKeyError: 'revenue'\n"
+            }
+          ],
+          "stages": [
+            {
+              "worker": "code_agent",
+              "status": "error",
+              "seconds": 3.9047712490000777
+            }
+          ],
+          "checks": {},
+          "validation_passed": false,
+          "communication": [
+            {
+              "type": "task",
+              "task_id": "c40e5d70-b3b9-4a84-913c-13d97dbc8d03:code_agent",
+              "run_id": "cf9d6981-a5d6-4c14-b4d4-9df0a3d9eb02",
+              "content": "Write a Python script to read CSV and save a report Create outputs/report.py, run it using run_script, read sales.csv with csv (quarter == 3), and write outputs/answer.json with revenue and rows. Return JSON with script, answer, chart paths. Do not change source files, access secrets or network. No chart is needed. ",
+              "parameters": {
+                "database": "sales.db",
+                "csv": "sales.csv",
+                "chart": false,
+                "data_result": []
+              },
+              "from": "coordinator",
+              "to": "code_agent",
+              "timestamp": "2026-10-06T10:11:02.344249+00:00",
+              "id": "521146d1-73de-460f-b0f5-4b1cf7392583"
+            },
+            {
+              "status": "error",
+              "error": "RuntimeError: Python exited 1: Traceback (most recent call last):\n  File \"<string>\", line 6, in <module>\n  File \"<worker>\", line 4, in <module>\n  File \"<frozen runpy>\", line 287, in run_path\n  File \"<frozen runpy>\", line 98, in _run_module_code\n  File \"<frozen runpy>\", line 88, in _run_code\n  File \"/tmp/day20-request-q6jk6tgd/outputs/report.py\", line 14, in <module>\n    revenue += float(row['revenue'])\n                     ~~~^^^^^^^^^^^\nKeyError: 'revenue'\n",
+              "result": null,
+              "metadata": {
+                "tools_used": 1,
+                "tool_names": [
+                  "create_file"
+                ],
+                "seconds": 3.9037
+              },
+              "type": "result",
+              "task_id": "c40e5d70-b3b9-4a84-913c-13d97dbc8d03:code_agent",
+              "run_id": "cf9d6981-a5d6-4c14-b4d4-9df0a3d9eb02",
+              "worker": "code_agent",
+              "from": "code_agent",
+              "to": "coordinator:cf9d6981-a5d6-4c14-b4d4-9df0a3d9eb02",
+              "timestamp": "2026-10-06T10:11:06.248718+00:00",
+              "id": "3234e85b-9bf1-45de-8d7c-2d691645fe93"
+            }
+          ],
+          "latency_seconds": 3.9225564610005677,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "code_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 2.5557835480003632,
+                "tokens": {
+                  "input_tokens": 328,
+                  "output_tokens": 165,
+                  "total_tokens": 493
+                }
+              },
+              {
+                "kind": "tool",
+                "worker": "code_agent",
+                "name": "create_file",
+                "status": "success",
+                "seconds": 0.0012145549999331706,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "code_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 1.229617641999539,
+                "tokens": {
+                  "input_tokens": 515,
+                  "output_tokens": 16,
+                  "total_tokens": 531
+                }
+              },
+              {
+                "kind": "tool",
+                "worker": "code_agent",
+                "name": "run_script",
+                "status": "error",
+                "seconds": 0.11625782000010076,
+                "tokens": null
+              }
+            ],
+            "model_calls": 2,
+            "api_calls": 2,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 843,
+              "output_tokens": 181,
+              "total_tokens": 1024
+            },
+            "known_tokens": {
+              "input_tokens": 843,
+              "output_tokens": 181,
+              "total_tokens": 1024
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 3,
+          "capacity": 1
+        }
+      ]
+    },
+    {
+      "summary": {
+        "name": "Complex workflow",
+        "requests": 3,
+        "successes": 0,
+        "min": 2.2490068719998817,
+        "max": 25.994169622999834,
+        "avg": 10.345142630666487,
+        "median": 2.7922513969997453,
+        "p50": 2.7922513969997453,
+        "p99": 25.53013125847983,
+        "wall_seconds": 31.036227417999726,
+        "throughput_per_minute": 5.7996739608760395,
+        "error_rate": 1.0,
+        "usage_complete": true,
+        "known_tokens": {
+          "input_tokens": 7486,
+          "output_tokens": 1397,
+          "total_tokens": 8883
+        },
+        "tokens": {
+          "input_tokens": 7486,
+          "output_tokens": 1397,
+          "total_tokens": 8883
+        },
+        "tokens_per_100_requests": 296100.0,
+        "model_calls": 11,
+        "api_calls": 11,
+        "worker_utilization": {
+          "data_agent": 0.4160268410236032,
+          "code_agent": 0.3942805801810448,
+          "evaluator_agent": 0.18711232869212704
+        },
+        "utilization_definition": "sum stage wall-time / (batch wall-time * max_concurrency); includes API waiting, not CPU usage"
+      },
+      "records": [
+        {
+          "request_id": "34c7de45-0ee8-4c92-a548-907512de9167",
+          "status": "error",
+          "data": [],
+          "code": [],
+          "evaluation": [],
+          "errors": [
+            {
+              "worker": "data_agent",
+              "status": "error",
+              "error": "OperationalError: no such column: date"
+            }
+          ],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "error",
+              "seconds": 2.7728650750004817
+            }
+          ],
+          "checks": {},
+          "validation_passed": false,
+          "communication": [
+            {
+              "type": "task",
+              "task_id": "34c7de45-0ee8-4c92-a548-907512de9167:data_agent",
+              "run_id": "113fc4a0-1017-4542-b7ef-cee5a419b0ce",
+              "content": "Analyze Q3 sales data and create chart and evaluate result Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+              "parameters": {
+                "database": "sales.db",
+                "csv": "sales.csv",
+                "chart": true
+              },
+              "from": "coordinator",
+              "to": "data_agent",
+              "timestamp": "2026-10-06T10:11:06.268723+00:00",
+              "id": "0fc796fd-5d0f-461f-bf86-aa2944b1977e"
+            },
+            {
+              "status": "error",
+              "error": "OperationalError: no such column: date",
+              "result": null,
+              "metadata": {
+                "tools_used": 0,
+                "tool_names": [],
+                "seconds": 2.7721
+              },
+              "type": "result",
+              "task_id": "34c7de45-0ee8-4c92-a548-907512de9167:data_agent",
+              "run_id": "113fc4a0-1017-4542-b7ef-cee5a419b0ce",
+              "worker": "data_agent",
+              "from": "data_agent",
+              "to": "coordinator:113fc4a0-1017-4542-b7ef-cee5a419b0ce",
+              "timestamp": "2026-10-06T10:11:09.041344+00:00",
+              "id": "d5738ed1-f49b-4317-9057-fc0ed3af47a6"
+            }
+          ],
+          "latency_seconds": 2.7922513969997453,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 2.7684246669996355,
+                "tokens": {
+                  "input_tokens": 374,
+                  "output_tokens": 80,
+                  "total_tokens": 454
+                }
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "query_database",
+                "status": "error",
+                "seconds": 0.003236456999729853,
+                "tokens": null
+              }
+            ],
+            "model_calls": 1,
+            "api_calls": 1,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 374,
+              "output_tokens": 80,
+              "total_tokens": 454
+            },
+            "known_tokens": {
+              "input_tokens": 374,
+              "output_tokens": 80,
+              "total_tokens": 454
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 1,
+          "capacity": 1
+        },
+        {
+          "request_id": "0b32325e-9075-4f0f-914a-0c9c9979b4a0",
+          "status": "error",
+          "data": [],
+          "code": [],
+          "evaluation": [],
+          "errors": [
+            {
+              "worker": "data_agent",
+              "status": "error",
+              "error": "ValueError: Unknown column"
+            }
+          ],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "error",
+              "seconds": 2.219207281999843
+            }
+          ],
+          "checks": {},
+          "validation_passed": false,
+          "communication": [
+            {
+              "type": "task",
+              "task_id": "0b32325e-9075-4f0f-914a-0c9c9979b4a0:data_agent",
+              "run_id": "f9584b18-87f4-44d8-8cb5-1e9814ade8f4",
+              "content": "Analyze Q3 sales data and create chart and evaluate result Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+              "parameters": {
+                "database": "sales.db",
+                "csv": "sales.csv",
+                "chart": true
+              },
+              "from": "coordinator",
+              "to": "data_agent",
+              "timestamp": "2026-10-06T10:11:09.071674+00:00",
+              "id": "06aac2e8-1630-47bd-8d88-c7d384dd2db0"
+            },
+            {
+              "status": "error",
+              "error": "ValueError: Unknown column",
+              "result": null,
+              "metadata": {
+                "tools_used": 0,
+                "tool_names": [],
+                "seconds": 2.2181
+              },
+              "type": "result",
+              "task_id": "0b32325e-9075-4f0f-914a-0c9c9979b4a0:data_agent",
+              "run_id": "f9584b18-87f4-44d8-8cb5-1e9814ade8f4",
+              "worker": "data_agent",
+              "from": "data_agent",
+              "to": "coordinator:f9584b18-87f4-44d8-8cb5-1e9814ade8f4",
+              "timestamp": "2026-10-06T10:11:11.290646+00:00",
+              "id": "0f06ac54-6ce8-432e-9d94-51a7562e38be"
+            }
+          ],
+          "latency_seconds": 2.2490068719998817,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 2.216310295999392,
+                "tokens": {
+                  "input_tokens": 374,
+                  "output_tokens": 66,
+                  "total_tokens": 440
+                }
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "pandas_analysis",
+                "status": "error",
+                "seconds": 0.001344716999483353,
+                "tokens": null
+              }
+            ],
+            "model_calls": 1,
+            "api_calls": 1,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 374,
+              "output_tokens": 66,
+              "total_tokens": 440
+            },
+            "known_tokens": {
+              "input_tokens": 374,
+              "output_tokens": 66,
+              "total_tokens": 440
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 2,
+          "capacity": 1
+        },
+        {
+          "request_id": "4742a6dd-fcbc-481b-905a-cd6ea7e95cb0",
+          "status": "error",
+          "data": [
+            "{\n  \"revenue\": 150,\n  \"rows\": [\n    {\"quarter\": \"3\", \"amount\": 40},\n    {\"quarter\": \"3\", \"amount\": 50},\n    {\"quarter\": \"3\", \"amount\": 60}\n  ],\n  \"chart\": {\n    \"type\": \"bar\",\n    \"data\": {\n      \"labels\": [\"Q3-1\", \"Q3-2\", \"Q3-3\"],\n      \"datasets\": [{\n        \"label\": \"Q3 Sales Amount\",\n        \"data\": [40, 50, 60]\n      }]\n    },\n    \"options\": {\n      \"title\": {\n        \"display\": true,\n        \"text\": \"Q3 Sales Amount Distribution\"\n      },\n      \"scales\": {\n        \"yAxes\": [{\n          \"ticks\": {\n            \"beginAtZero\": true\n          }\n        }]\n      }\n    }\n  },\n  \"insights\": \"Q3 sales revenue totals 150 units from 3 transactions. The amounts are fairly distributed with a slight increase from 40 to 60 units. This indicates steady sales performance in Q3.\"\n}"
+          ],
+          "code": [
+            "{\"script\":\"outputs/report.py\",\"answer\":\"outputs/answer.json\",\"chart\":\"outputs/sales_chart.png\"}"
+          ],
+          "evaluation": [],
+          "errors": [
+            {
+              "worker": "evaluator_agent",
+              "status": "error",
+              "error": "ValueError: Invalid evaluator fields"
+            }
+          ],
+          "stages": [
+            {
+              "worker": "data_agent",
+              "status": "success",
+              "seconds": 7.919831293000243
+            },
+            {
+              "worker": "code_agent",
+              "status": "success",
+              "seconds": 12.236981752999782
+            },
+            {
+              "worker": "evaluator_agent",
+              "status": "error",
+              "seconds": 5.80726078600037
+            }
+          ],
+          "checks": {},
+          "validation_passed": false,
+          "communication": [
+            {
+              "type": "task",
+              "task_id": "4742a6dd-fcbc-481b-905a-cd6ea7e95cb0:data_agent",
+              "run_id": "00679ee5-f19b-4087-aa2f-519e4d18f2f9",
+              "content": "Analyze Q3 sales data and create chart and evaluate result Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+              "parameters": {
+                "database": "sales.db",
+                "csv": "sales.csv",
+                "chart": true
+              },
+              "from": "coordinator",
+              "to": "data_agent",
+              "timestamp": "2026-10-06T10:11:11.320774+00:00",
+              "id": "bb65d2f1-ebf3-41e4-81cd-c72bb2425e1d"
+            },
+            {
+              "status": "success",
+              "result": "{\n  \"revenue\": 150,\n  \"rows\": [\n    {\"quarter\": \"3\", \"amount\": 40},\n    {\"quarter\": \"3\", \"amount\": 50},\n    {\"quarter\": \"3\", \"amount\": 60}\n  ],\n  \"chart\": {\n    \"type\": \"bar\",\n    \"data\": {\n      \"labels\": [\"Q3-1\", \"Q3-2\", \"Q3-3\"],\n      \"datasets\": [{\n        \"label\": \"Q3 Sales Amount\",\n        \"data\": [40, 50, 60]\n      }]\n    },\n    \"options\": {\n      \"title\": {\n        \"display\": true,\n        \"text\": \"Q3 Sales Amount Distribution\"\n      },\n      \"scales\": {\n        \"yAxes\": [{\n          \"ticks\": {\n            \"beginAtZero\": true\n          }\n        }]\n      }\n    }\n  },\n  \"insights\": \"Q3 sales revenue totals 150 units from 3 transactions. The amounts are fairly distributed with a slight increase from 40 to 60 units. This indicates steady sales performance in Q3.\"\n}",
+              "metadata": {
+                "tools_used": 3,
+                "tool_names": [
+                  "data_validation",
+                  "csv_parser",
+                  "pandas_analysis"
+                ],
+                "iterations": 4,
+                "seconds": 7.9187
+              },
+              "type": "result",
+              "task_id": "4742a6dd-fcbc-481b-905a-cd6ea7e95cb0:data_agent",
+              "run_id": "00679ee5-f19b-4087-aa2f-519e4d18f2f9",
+              "worker": "data_agent",
+              "from": "data_agent",
+              "to": "coordinator:00679ee5-f19b-4087-aa2f-519e4d18f2f9",
+              "timestamp": "2026-10-06T10:11:19.240363+00:00",
+              "id": "20fa8877-76da-43fc-8adb-091589dc4ed4"
+            },
+            {
+              "type": "task",
+              "task_id": "4742a6dd-fcbc-481b-905a-cd6ea7e95cb0:code_agent",
+              "run_id": "d5460c1d-e700-42f5-945e-5b0a49317bae",
+              "content": "Analyze Q3 sales data and create chart and evaluate result Create outputs/report.py, run it using run_script, read sales.csv with csv (quarter == 3), and write outputs/answer.json with revenue and rows. Return JSON with script, answer, chart paths. Do not change source files, access secrets or network. Also create outputs/sales_chart.png with matplotlib Agg, small figure. ",
+              "parameters": {
+                "database": "sales.db",
+                "csv": "sales.csv",
+                "chart": true,
+                "data_result": [
+                  "{\n  \"revenue\": 150,\n  \"rows\": [\n    {\"quarter\": \"3\", \"amount\": 40},\n    {\"quarter\": \"3\", \"amount\": 50},\n    {\"quarter\": \"3\", \"amount\": 60}\n  ],\n  \"chart\": {\n    \"type\": \"bar\",\n    \"data\": {\n      \"labels\": [\"Q3-1\", \"Q3-2\", \"Q3-3\"],\n      \"datasets\": [{\n        \"label\": \"Q3 Sales Amount\",\n        \"data\": [40, 50, 60]\n      }]\n    },\n    \"options\": {\n      \"title\": {\n        \"display\": true,\n        \"text\": \"Q3 Sales Amount Distribution\"\n      },\n      \"scales\": {\n        \"yAxes\": [{\n          \"ticks\": {\n            \"beginAtZero\": true\n          }\n        }]\n      }\n    }\n  },\n  \"insights\": \"Q3 sales revenue totals 150 units from 3 transactions. The amounts are fairly distributed with a slight increase from 40 to 60 units. This indicates steady sales performance in Q3.\"\n}"
+                ]
+              },
+              "from": "coordinator",
+              "to": "code_agent",
+              "timestamp": "2026-10-06T10:11:19.240576+00:00",
+              "id": "eed147ca-8660-4e17-88e2-232e441c4feb"
+            },
+            {
+              "status": "success",
+              "result": "{\"script\":\"outputs/report.py\",\"answer\":\"outputs/answer.json\",\"chart\":\"outputs/sales_chart.png\"}",
+              "metadata": {
+                "tools_used": 2,
+                "tool_names": [
+                  "create_file",
+                  "run_script"
+                ],
+                "iterations": 3,
+                "seconds": 12.236
+              },
+              "type": "result",
+              "task_id": "4742a6dd-fcbc-481b-905a-cd6ea7e95cb0:code_agent",
+              "run_id": "d5460c1d-e700-42f5-945e-5b0a49317bae",
+              "worker": "code_agent",
+              "from": "code_agent",
+              "to": "coordinator:d5460c1d-e700-42f5-945e-5b0a49317bae",
+              "timestamp": "2026-10-06T10:11:31.474170+00:00",
+              "id": "e6b90c1f-e7ef-41a4-b7e1-ebf2005aed31"
+            },
+            {
+              "type": "task",
+              "task_id": "4742a6dd-fcbc-481b-905a-cd6ea7e95cb0:evaluator_agent",
+              "run_id": "8d251632-f2b0-495f-823a-d8d0cd138dac",
+              "content": "Analyze Q3 sales data and create chart and evaluate result Use comparison with actual and expected parameters, scoring with supplied ratings, and report_generator to write outputs/evaluation.md with evidence before returning exact evaluation JSON. Supplied ratings test the formula, not measured model quality.",
+              "parameters": {
+                "database": "sales.db",
+                "csv": "sales.csv",
+                "chart": true,
+                "actual": {
+                  "revenue": 150,
+                  "rows": [
+                    {
+                      "quarter": "3",
+                      "amount": 40
+                    },
+                    {
+                      "quarter": "3",
+                      "amount": 50
+                    },
+                    {
+                      "quarter": "3",
+                      "amount": 60
+                    }
+                  ],
+                  "chart": {
+                    "type": "bar",
+                    "data": {
+                      "labels": [
+                        "Q3-1",
+                        "Q3-2",
+                        "Q3-3"
+                      ],
+                      "datasets": [
+                        {
+                          "label": "Q3 Sales Amount",
+                          "data": [
+                            40,
+                            50,
+                            60
+                          ]
+                        }
+                      ]
+                    },
+                    "options": {
+                      "title": {
+                        "display": true,
+                        "text": "Q3 Sales Amount Distribution"
+                      },
+                      "scales": {
+                        "yAxes": [
+                          {
+                            "ticks": {
+                              "beginAtZero": true
+                            }
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "insights": "Q3 sales revenue totals 150 units from 3 transactions. The amounts are fairly distributed with a slight increase from 40 to 60 units. This indicates steady sales performance in Q3."
+                },
+                "expected": {
+                  "revenue": 150,
+                  "rows": 3
+                },
+                "ratings": {
+                  "accuracy": 85,
+                  "completeness": 90,
+                  "clarity": 80,
+                  "performance": 85
+                }
+              },
+              "from": "coordinator",
+              "to": "evaluator_agent",
+              "timestamp": "2026-10-06T10:11:31.474767+00:00",
+              "id": "665569cd-1198-4434-81ed-b59268ca4908"
+            },
+            {
+              "status": "error",
+              "error": "ValueError: Invalid evaluator fields",
+              "result": null,
+              "metadata": {
+                "tools_used": 3,
+                "tool_names": [
+                  "comparison",
+                  "scoring",
+                  "quality_check"
+                ],
+                "seconds": 5.8064
+              },
+              "type": "result",
+              "task_id": "4742a6dd-fcbc-481b-905a-cd6ea7e95cb0:evaluator_agent",
+              "run_id": "8d251632-f2b0-495f-823a-d8d0cd138dac",
+              "worker": "evaluator_agent",
+              "from": "evaluator_agent",
+              "to": "coordinator:8d251632-f2b0-495f-823a-d8d0cd138dac",
+              "timestamp": "2026-10-06T10:11:37.281678+00:00",
+              "id": "a14b4acd-639e-4a94-bbd6-47831a211004"
+            }
+          ],
+          "latency_seconds": 25.994169622999834,
+          "metrics": {
+            "events": [
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 1.3589682559995708,
+                "tokens": {
+                  "input_tokens": 374,
+                  "output_tokens": 24,
+                  "total_tokens": 398
+                }
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "data_validation",
+                "status": "success",
+                "seconds": 0.001273818999834475,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 1.4865795770001569,
+                "tokens": {
+                  "input_tokens": 436,
+                  "output_tokens": 19,
+                  "total_tokens": 455
+                }
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "csv_parser",
+                "status": "success",
+                "seconds": 0.0009968670001399005,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 1.314026654999907,
+                "tokens": {
+                  "input_tokens": 538,
+                  "output_tokens": 29,
+                  "total_tokens": 567
+                }
+              },
+              {
+                "kind": "tool",
+                "worker": "data_agent",
+                "name": "pandas_analysis",
+                "status": "success",
+                "seconds": 0.0025153500000669737,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "data_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 3.7534133339995606,
+                "tokens": {
+                  "input_tokens": 597,
+                  "output_tokens": 237,
+                  "total_tokens": 834
+                }
+              },
+              {
+                "kind": "model",
+                "worker": "code_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 8.607768515000316,
+                "tokens": {
+                  "input_tokens": 622,
+                  "output_tokens": 535,
+                  "total_tokens": 1157
+                }
+              },
+              {
+                "kind": "tool",
+                "worker": "code_agent",
+                "name": "create_file",
+                "status": "success",
+                "seconds": 0.0012053939999532304,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "code_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 1.232478126999922,
+                "tokens": {
+                  "input_tokens": 1180,
+                  "output_tokens": 16,
+                  "total_tokens": 1196
+                }
+              },
+              {
+                "kind": "tool",
+                "worker": "code_agent",
+                "name": "run_script",
+                "status": "success",
+                "seconds": 1.020898658999613,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "code_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 1.3729494230001364,
+                "tokens": {
+                  "input_tokens": 1233,
+                  "output_tokens": 23,
+                  "total_tokens": 1256
+                }
+              },
+              {
+                "kind": "model",
+                "worker": "evaluator_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 2.710012556000038,
+                "tokens": {
+                  "input_tokens": 744,
+                  "output_tokens": 147,
+                  "total_tokens": 891
+                }
+              },
+              {
+                "kind": "tool",
+                "worker": "evaluator_agent",
+                "name": "comparison",
+                "status": "success",
+                "seconds": 0.0010179969995078864,
+                "tokens": null
+              },
+              {
+                "kind": "tool",
+                "worker": "evaluator_agent",
+                "name": "scoring",
+                "status": "success",
+                "seconds": 0.0007020329994702479,
+                "tokens": null
+              },
+              {
+                "kind": "tool",
+                "worker": "evaluator_agent",
+                "name": "quality_check",
+                "status": "success",
+                "seconds": 0.0004978759998266469,
+                "tokens": null
+              },
+              {
+                "kind": "model",
+                "worker": "evaluator_agent",
+                "name": "ainvoke",
+                "status": "success",
+                "seconds": 3.0909463010002582,
+                "tokens": {
+                  "input_tokens": 1014,
+                  "output_tokens": 221,
+                  "total_tokens": 1235
+                }
+              },
+              {
+                "kind": "tool",
+                "worker": "evaluator_agent",
+                "name": "report_generator",
+                "status": "error",
+                "seconds": 0.0018291309997948701,
+                "tokens": null
+              }
+            ],
+            "model_calls": 9,
+            "api_calls": 9,
+            "usage_complete": true,
+            "tokens": {
+              "input_tokens": 6738,
+              "output_tokens": 1251,
+              "total_tokens": 7989
+            },
+            "known_tokens": {
+              "input_tokens": 6738,
+              "output_tokens": 1251,
+              "total_tokens": 7989
+            },
+            "missing_usage_calls": 0
+          },
+          "iteration": 3,
+          "capacity": 1
+        }
+      ]
+    }
+  ],
+  "load": {
+    "summary": {
+      "name": "Concurrent data requests",
+      "requests": 10,
+      "successes": 4,
+      "min": 1.8494412890004241,
+      "max": 9.535439573000076,
+      "avg": 6.024711139300143,
+      "median": 5.589533705500344,
+      "p50": 5.589533705500344,
+      "p99": 9.5098710016701,
+      "wall_seconds": 9.612699277000502,
+      "throughput_per_minute": 62.41743164020221,
+      "error_rate": 0.6,
+      "usage_complete": true,
+      "known_tokens": {
+        "input_tokens": 11302,
+        "output_tokens": 599,
+        "total_tokens": 11901
+      },
+      "tokens": {
+        "input_tokens": 11302,
+        "output_tokens": 599,
+        "total_tokens": 11901
+      },
+      "tokens_per_100_requests": 119010.0,
+      "model_calls": 25,
+      "api_calls": 25,
+      "worker_utilization": {
+        "data_agent": 0.9005303945648284
+      },
+      "utilization_definition": "sum stage wall-time / (batch wall-time * max_concurrency); includes API waiting, not CPU usage"
+    },
+    "records": [
+      {
+        "request_id": "e193377f-21d7-45e7-8cb8-046fa03c6b3f",
+        "status": "error",
+        "data": [],
+        "code": [],
+        "evaluation": [],
+        "errors": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "error": "OperationalError: no such column: revenue"
+          }
+        ],
+        "stages": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "seconds": 1.8202056010004526
+          }
+        ],
+        "checks": {},
+        "validation_passed": false,
+        "communication": [
+          {
+            "type": "task",
+            "task_id": "e193377f-21d7-45e7-8cb8-046fa03c6b3f:data_agent",
+            "run_id": "4da7dfd9-ccb8-4c11-aa6f-f3caba24eabf",
+            "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+            "parameters": {
+              "database": "sales.db",
+              "csv": "sales.csv",
+              "chart": false
+            },
+            "from": "coordinator",
+            "to": "data_agent",
+            "timestamp": "2026-10-06T10:11:37.311730+00:00",
+            "id": "7c3a375b-d192-48cf-a938-705017464d74"
+          },
+          {
+            "status": "error",
+            "error": "OperationalError: no such column: revenue",
+            "result": null,
+            "metadata": {
+              "tools_used": 0,
+              "tool_names": [],
+              "seconds": 1.7717
+            },
+            "type": "result",
+            "task_id": "e193377f-21d7-45e7-8cb8-046fa03c6b3f:data_agent",
+            "run_id": "4da7dfd9-ccb8-4c11-aa6f-f3caba24eabf",
+            "worker": "data_agent",
+            "from": "data_agent",
+            "to": "coordinator:4da7dfd9-ccb8-4c11-aa6f-f3caba24eabf",
+            "timestamp": "2026-10-06T10:11:39.131700+00:00",
+            "id": "209d53f8-a3df-43f9-864d-553a6ef5acae"
+          }
+        ],
+        "latency_seconds": 1.8494412890004241,
+        "metrics": {
+          "events": [
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "success",
+              "seconds": 1.7696616050006924,
+              "tokens": {
+                "input_tokens": 371,
+                "output_tokens": 47,
+                "total_tokens": 418
+              }
+            },
+            {
+              "kind": "tool",
+              "worker": "data_agent",
+              "name": "query_database",
+              "status": "error",
+              "seconds": 0.0014502629992421134,
+              "tokens": null
+            }
+          ],
+          "model_calls": 1,
+          "api_calls": 1,
+          "usage_complete": true,
+          "tokens": {
+            "input_tokens": 371,
+            "output_tokens": 47,
+            "total_tokens": 418
+          },
+          "known_tokens": {
+            "input_tokens": 371,
+            "output_tokens": 47,
+            "total_tokens": 418
+          },
+          "missing_usage_calls": 0
+        },
+        "capacity": 4
+      },
+      {
+        "request_id": "660b96fa-3b7e-4250-a8cd-8d5935353f38",
+        "status": "error",
+        "data": [
+          "{\"revenue\": 150, \"rows\": 4}"
+        ],
+        "code": [],
+        "evaluation": [],
+        "errors": [],
+        "stages": [
+          {
+            "worker": "data_agent",
+            "status": "success",
+            "seconds": 4.254936910999277
+          }
+        ],
+        "checks": {
+          "sources_unchanged": true,
+          "data_numbers": false,
+          "data_tool_evidence": true
+        },
+        "validation_passed": false,
+        "communication": [
+          {
+            "type": "task",
+            "task_id": "660b96fa-3b7e-4250-a8cd-8d5935353f38:data_agent",
+            "run_id": "4023b52d-dea0-47c2-b731-8b249f5e848b",
+            "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+            "parameters": {
+              "database": "sales.db",
+              "csv": "sales.csv",
+              "chart": false
+            },
+            "from": "coordinator",
+            "to": "data_agent",
+            "timestamp": "2026-10-06T10:11:37.328334+00:00",
+            "id": "a9a0ae80-23da-4622-8dc2-b2179961aea1"
+          },
+          {
+            "status": "success",
+            "result": "{\"revenue\": 150, \"rows\": 4}",
+            "metadata": {
+              "tools_used": 2,
+              "tool_names": [
+                "csv_parser",
+                "pandas_analysis"
+              ],
+              "iterations": 3,
+              "seconds": 4.2217
+            },
+            "type": "result",
+            "task_id": "660b96fa-3b7e-4250-a8cd-8d5935353f38:data_agent",
+            "run_id": "4023b52d-dea0-47c2-b731-8b249f5e848b",
+            "worker": "data_agent",
+            "from": "data_agent",
+            "to": "coordinator:4023b52d-dea0-47c2-b731-8b249f5e848b",
+            "timestamp": "2026-10-06T10:11:41.582937+00:00",
+            "id": "afe03847-2b89-4ddf-8b02-6f76a83e89ea"
+          }
+        ],
+        "latency_seconds": 4.272009913999682,
+        "metrics": {
+          "events": [
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "success",
+              "seconds": 1.3502635020004163,
+              "tokens": {
+                "input_tokens": 371,
+                "output_tokens": 19,
+                "total_tokens": 390
+              }
+            },
+            {
+              "kind": "tool",
+              "worker": "data_agent",
+              "name": "csv_parser",
+              "status": "success",
+              "seconds": 0.003855678000036278,
+              "tokens": null
+            },
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "success",
+              "seconds": 1.494811316999403,
+              "tokens": {
+                "input_tokens": 473,
+                "output_tokens": 29,
+                "total_tokens": 502
+              }
+            },
+            {
+              "kind": "tool",
+              "worker": "data_agent",
+              "name": "pandas_analysis",
+              "status": "success",
+              "seconds": 0.0025076510000872076,
+              "tokens": null
+            },
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "success",
+              "seconds": 1.369524105999517,
+              "tokens": {
+                "input_tokens": 532,
+                "output_tokens": 14,
+                "total_tokens": 546
+              }
+            }
+          ],
+          "model_calls": 3,
+          "api_calls": 3,
+          "usage_complete": true,
+          "tokens": {
+            "input_tokens": 1376,
+            "output_tokens": 62,
+            "total_tokens": 1438
+          },
+          "known_tokens": {
+            "input_tokens": 1376,
+            "output_tokens": 62,
+            "total_tokens": 1438
+          },
+          "missing_usage_calls": 0
+        },
+        "capacity": 4
+      },
+      {
+        "request_id": "bfe366a2-9927-461d-8e65-4cc95584ddba",
+        "status": "error",
+        "data": [
+          "{\"revenue\": 150, \"rows\": 4}"
+        ],
+        "code": [],
+        "evaluation": [],
+        "errors": [],
+        "stages": [
+          {
+            "worker": "data_agent",
+            "status": "success",
+            "seconds": 4.149815890999889
+          }
+        ],
+        "checks": {
+          "sources_unchanged": true,
+          "data_numbers": false,
+          "data_tool_evidence": true
+        },
+        "validation_passed": false,
+        "communication": [
+          {
+            "type": "task",
+            "task_id": "bfe366a2-9927-461d-8e65-4cc95584ddba:data_agent",
+            "run_id": "0032b0fb-0e2c-4ee6-bbc8-a4449135ce49",
+            "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+            "parameters": {
+              "database": "sales.db",
+              "csv": "sales.csv",
+              "chart": false
+            },
+            "from": "coordinator",
+            "to": "data_agent",
+            "timestamp": "2026-10-06T10:11:37.344443+00:00",
+            "id": "7cddd4fb-1081-4ac7-904d-50d3aabc84da"
+          },
+          {
+            "status": "success",
+            "result": "{\"revenue\": 150, \"rows\": 4}",
+            "metadata": {
+              "tools_used": 2,
+              "tool_names": [
+                "csv_parser",
+                "pandas_analysis"
+              ],
+              "iterations": 3,
+              "seconds": 4.132
+            },
+            "type": "result",
+            "task_id": "bfe366a2-9927-461d-8e65-4cc95584ddba:data_agent",
+            "run_id": "0032b0fb-0e2c-4ee6-bbc8-a4449135ce49",
+            "worker": "data_agent",
+            "from": "data_agent",
+            "to": "coordinator:0032b0fb-0e2c-4ee6-bbc8-a4449135ce49",
+            "timestamp": "2026-10-06T10:11:41.493882+00:00",
+            "id": "5b5daf00-158a-4248-b926-ee9c1d593db3"
+          }
+        ],
+        "latency_seconds": 4.166151889000503,
+        "metrics": {
+          "events": [
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "success",
+              "seconds": 1.2763357089997953,
+              "tokens": {
+                "input_tokens": 371,
+                "output_tokens": 19,
+                "total_tokens": 390
+              }
+            },
+            {
+              "kind": "tool",
+              "worker": "data_agent",
+              "name": "csv_parser",
+              "status": "success",
+              "seconds": 0.0009286949998568161,
+              "tokens": null
+            },
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "success",
+              "seconds": 1.3694400940003106,
+              "tokens": {
+                "input_tokens": 473,
+                "output_tokens": 29,
+                "total_tokens": 502
+              }
+            },
+            {
+              "kind": "tool",
+              "worker": "data_agent",
+              "name": "pandas_analysis",
+              "status": "success",
+              "seconds": 0.0035255940001661656,
+              "tokens": null
+            },
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "success",
+              "seconds": 1.4807895449994248,
+              "tokens": {
+                "input_tokens": 532,
+                "output_tokens": 14,
+                "total_tokens": 546
+              }
+            }
+          ],
+          "model_calls": 3,
+          "api_calls": 3,
+          "usage_complete": true,
+          "tokens": {
+            "input_tokens": 1376,
+            "output_tokens": 62,
+            "total_tokens": 1438
+          },
+          "known_tokens": {
+            "input_tokens": 1376,
+            "output_tokens": 62,
+            "total_tokens": 1438
+          },
+          "missing_usage_calls": 0
+        },
+        "capacity": 4
+      },
+      {
+        "request_id": "f5b90d45-99db-4e9d-9e21-a7b22b59fc76",
+        "status": "error",
+        "data": [
+          "{\"revenue\": 150, \"rows\": 4}"
+        ],
+        "code": [],
+        "evaluation": [],
+        "errors": [],
+        "stages": [
+          {
+            "worker": "data_agent",
+            "status": "success",
+            "seconds": 4.09378532700066
+          }
+        ],
+        "checks": {
+          "sources_unchanged": true,
+          "data_numbers": false,
+          "data_tool_evidence": true
+        },
+        "validation_passed": false,
+        "communication": [
+          {
+            "type": "task",
+            "task_id": "f5b90d45-99db-4e9d-9e21-a7b22b59fc76:data_agent",
+            "run_id": "1ea96b40-6c67-4f93-8a58-46be64f2e8ac",
+            "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+            "parameters": {
+              "database": "sales.db",
+              "csv": "sales.csv",
+              "chart": false
+            },
+            "from": "coordinator",
+            "to": "data_agent",
+            "timestamp": "2026-10-06T10:11:37.359272+00:00",
+            "id": "4a453f22-a9b7-4a42-b781-0bacea0645d4"
+          },
+          {
+            "status": "success",
+            "result": "{\"revenue\": 150, \"rows\": 4}",
+            "metadata": {
+              "tools_used": 2,
+              "tool_names": [
+                "csv_parser",
+                "pandas_analysis"
+              ],
+              "iterations": 3,
+              "seconds": 4.0903
+            },
+            "type": "result",
+            "task_id": "f5b90d45-99db-4e9d-9e21-a7b22b59fc76:data_agent",
+            "run_id": "1ea96b40-6c67-4f93-8a58-46be64f2e8ac",
+            "worker": "data_agent",
+            "from": "data_agent",
+            "to": "coordinator:1ea96b40-6c67-4f93-8a58-46be64f2e8ac",
+            "timestamp": "2026-10-06T10:11:41.452804+00:00",
+            "id": "8f0c55ef-c6b7-412b-8ed0-2c7bf48b87b5"
+          }
+        ],
+        "latency_seconds": 4.108891578999646,
+        "metrics": {
+          "events": [
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "success",
+              "seconds": 1.3458818350000001,
+              "tokens": {
+                "input_tokens": 371,
+                "output_tokens": 19,
+                "total_tokens": 390
+              }
+            },
+            {
+              "kind": "tool",
+              "worker": "data_agent",
+              "name": "csv_parser",
+              "status": "success",
+              "seconds": 0.003008808000231511,
+              "tokens": null
+            },
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "success",
+              "seconds": 1.538055887000155,
+              "tokens": {
+                "input_tokens": 473,
+                "output_tokens": 29,
+                "total_tokens": 502
+              }
+            },
+            {
+              "kind": "tool",
+              "worker": "data_agent",
+              "name": "pandas_analysis",
+              "status": "success",
+              "seconds": 0.0019148759993186104,
+              "tokens": null
+            },
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "success",
+              "seconds": 1.2007634190003955,
+              "tokens": {
+                "input_tokens": 532,
+                "output_tokens": 14,
+                "total_tokens": 546
+              }
+            }
+          ],
+          "model_calls": 3,
+          "api_calls": 3,
+          "usage_complete": true,
+          "tokens": {
+            "input_tokens": 1376,
+            "output_tokens": 62,
+            "total_tokens": 1438
+          },
+          "known_tokens": {
+            "input_tokens": 1376,
+            "output_tokens": 62,
+            "total_tokens": 1438
+          },
+          "missing_usage_calls": 0
+        },
+        "capacity": 4
+      },
+      {
+        "request_id": "2ea3c269-be2e-442b-8117-9b5b67e43b19",
+        "status": "success",
+        "data": [
+          "{\"revenue\": 150, \"rows\": 3}"
+        ],
+        "code": [],
+        "evaluation": [],
+        "errors": [],
+        "stages": [
+          {
+            "worker": "data_agent",
+            "status": "success",
+            "seconds": 3.9102824419996978
+          }
+        ],
+        "checks": {
+          "sources_unchanged": true,
+          "data_numbers": true,
+          "data_tool_evidence": true
+        },
+        "validation_passed": true,
+        "communication": [
+          {
+            "type": "task",
+            "task_id": "2ea3c269-be2e-442b-8117-9b5b67e43b19:data_agent",
+            "run_id": "651d0670-d561-494b-a892-6a3922fcca43",
+            "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+            "parameters": {
+              "database": "sales.db",
+              "csv": "sales.csv",
+              "chart": false
+            },
+            "from": "coordinator",
+            "to": "data_agent",
+            "timestamp": "2026-10-06T10:11:39.151621+00:00",
+            "id": "59378b8a-cbea-46db-b98c-5f005cbe7329"
+          },
+          {
+            "status": "success",
+            "result": "{\"revenue\": 150, \"rows\": 3}",
+            "metadata": {
+              "tools_used": 2,
+              "tool_names": [
+                "csv_parser",
+                "pandas_analysis"
+              ],
+              "iterations": 3,
+              "seconds": 3.909
+            },
+            "type": "result",
+            "task_id": "2ea3c269-be2e-442b-8117-9b5b67e43b19:data_agent",
+            "run_id": "651d0670-d561-494b-a892-6a3922fcca43",
+            "worker": "data_agent",
+            "from": "data_agent",
+            "to": "coordinator:651d0670-d561-494b-a892-6a3922fcca43",
+            "timestamp": "2026-10-06T10:11:43.061597+00:00",
+            "id": "3535f95c-778d-42c2-9b47-c13329eaa3db"
+          }
+        ],
+        "latency_seconds": 5.70296370000051,
+        "metrics": {
+          "events": [
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "success",
+              "seconds": 1.5059368860001996,
+              "tokens": {
+                "input_tokens": 371,
+                "output_tokens": 19,
+                "total_tokens": 390
+              }
+            },
+            {
+              "kind": "tool",
+              "worker": "data_agent",
+              "name": "csv_parser",
+              "status": "success",
+              "seconds": 0.0011532529997566598,
+              "tokens": null
+            },
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "success",
+              "seconds": 1.300929138000356,
+              "tokens": {
+                "input_tokens": 473,
+                "output_tokens": 29,
+                "total_tokens": 502
+              }
+            },
+            {
+              "kind": "tool",
+              "worker": "data_agent",
+              "name": "pandas_analysis",
+              "status": "success",
+              "seconds": 0.0031946429999152315,
+              "tokens": null
+            },
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "success",
+              "seconds": 1.0969434950002324,
+              "tokens": {
+                "input_tokens": 532,
+                "output_tokens": 14,
+                "total_tokens": 546
+              }
+            }
+          ],
+          "model_calls": 3,
+          "api_calls": 3,
+          "usage_complete": true,
+          "tokens": {
+            "input_tokens": 1376,
+            "output_tokens": 62,
+            "total_tokens": 1438
+          },
+          "known_tokens": {
+            "input_tokens": 1376,
+            "output_tokens": 62,
+            "total_tokens": 1438
+          },
+          "missing_usage_calls": 0
+        },
+        "capacity": 4
+      },
+      {
+        "request_id": "1c4e557e-e8d0-4ccc-a10f-6b8b2c28f5b1",
+        "status": "error",
+        "data": [],
+        "code": [],
+        "evaluation": [],
+        "errors": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "error": "OperationalError: no such column: revenue"
+          }
+        ],
+        "stages": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "seconds": 1.348983589999989
+          }
+        ],
+        "checks": {},
+        "validation_passed": false,
+        "communication": [
+          {
+            "type": "task",
+            "task_id": "1c4e557e-e8d0-4ccc-a10f-6b8b2c28f5b1:data_agent",
+            "run_id": "174389d8-86f8-48e9-b6fa-90b80a627692",
+            "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+            "parameters": {
+              "database": "sales.db",
+              "csv": "sales.csv",
+              "chart": false
+            },
+            "from": "coordinator",
+            "to": "data_agent",
+            "timestamp": "2026-10-06T10:11:41.486384+00:00",
+            "id": "0c243b4b-fbfc-45ac-b411-c1212f195d2e"
+          },
+          {
+            "status": "error",
+            "error": "OperationalError: no such column: revenue",
+            "result": null,
+            "metadata": {
+              "tools_used": 0,
+              "tool_names": [],
+              "seconds": 1.3479
+            },
+            "type": "result",
+            "task_id": "1c4e557e-e8d0-4ccc-a10f-6b8b2c28f5b1:data_agent",
+            "run_id": "174389d8-86f8-48e9-b6fa-90b80a627692",
+            "worker": "data_agent",
+            "from": "data_agent",
+            "to": "coordinator:174389d8-86f8-48e9-b6fa-90b80a627692",
+            "timestamp": "2026-10-06T10:11:42.835102+00:00",
+            "id": "788fc3a8-8c75-4c30-977e-d9624df9b096"
+          }
+        ],
+        "latency_seconds": 5.476103711000178,
+        "metrics": {
+          "events": [
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "success",
+              "seconds": 1.3451143720003529,
+              "tokens": {
+                "input_tokens": 371,
+                "output_tokens": 47,
+                "total_tokens": 418
+              }
+            },
+            {
+              "kind": "tool",
+              "worker": "data_agent",
+              "name": "query_database",
+              "status": "error",
+              "seconds": 0.0021256089994494687,
+              "tokens": null
+            }
+          ],
+          "model_calls": 1,
+          "api_calls": 1,
+          "usage_complete": true,
+          "tokens": {
+            "input_tokens": 371,
+            "output_tokens": 47,
+            "total_tokens": 418
+          },
+          "known_tokens": {
+            "input_tokens": 371,
+            "output_tokens": 47,
+            "total_tokens": 418
+          },
+          "missing_usage_calls": 0
+        },
+        "capacity": 4
+      },
+      {
+        "request_id": "aae43992-6525-44dd-87f6-a7cbe927dc8b",
+        "status": "success",
+        "data": [
+          "{\"revenue\": 150, \"rows\": 3}"
+        ],
+        "code": [],
+        "evaluation": [],
+        "errors": [],
+        "stages": [
+          {
+            "worker": "data_agent",
+            "status": "success",
+            "seconds": 5.381482384000265
+          }
+        ],
+        "checks": {
+          "sources_unchanged": true,
+          "data_numbers": true,
+          "data_tool_evidence": true
+        },
+        "validation_passed": true,
+        "communication": [
+          {
+            "type": "task",
+            "task_id": "aae43992-6525-44dd-87f6-a7cbe927dc8b:data_agent",
+            "run_id": "04760a95-acba-45b8-ad73-3b2898ddbcbb",
+            "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+            "parameters": {
+              "database": "sales.db",
+              "csv": "sales.csv",
+              "chart": false
+            },
+            "from": "coordinator",
+            "to": "data_agent",
+            "timestamp": "2026-10-06T10:11:41.512929+00:00",
+            "id": "ce3002e7-95f2-4fc8-946d-cc686df13240"
+          },
+          {
+            "status": "success",
+            "result": "{\"revenue\": 150, \"rows\": 3}",
+            "metadata": {
+              "tools_used": 3,
+              "tool_names": [
+                "data_validation",
+                "csv_parser",
+                "pandas_analysis"
+              ],
+              "iterations": 4,
+              "seconds": 5.3798
+            },
+            "type": "result",
+            "task_id": "aae43992-6525-44dd-87f6-a7cbe927dc8b:data_agent",
+            "run_id": "04760a95-acba-45b8-ad73-3b2898ddbcbb",
+            "worker": "data_agent",
+            "from": "data_agent",
+            "to": "coordinator:04760a95-acba-45b8-ad73-3b2898ddbcbb",
+            "timestamp": "2026-10-06T10:11:46.894099+00:00",
+            "id": "9a6f8224-5001-4a50-bc3e-96faae2d2f0e"
+          }
+        ],
+        "latency_seconds": 9.535439573000076,
+        "metrics": {
+          "events": [
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "success",
+              "seconds": 1.5147828520002804,
+              "tokens": {
+                "input_tokens": 371,
+                "output_tokens": 24,
+                "total_tokens": 395
+              }
+            },
+            {
+              "kind": "tool",
+              "worker": "data_agent",
+              "name": "data_validation",
+              "status": "success",
+              "seconds": 0.001464475999455317,
+              "tokens": null
+            },
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "success",
+              "seconds": 1.482339958999546,
+              "tokens": {
+                "input_tokens": 433,
+                "output_tokens": 19,
+                "total_tokens": 452
+              }
+            },
+            {
+              "kind": "tool",
+              "worker": "data_agent",
+              "name": "csv_parser",
+              "status": "success",
+              "seconds": 0.0012484059998314478,
+              "tokens": null
+            },
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "success",
+              "seconds": 1.367767787000048,
+              "tokens": {
+                "input_tokens": 535,
+                "output_tokens": 29,
+                "total_tokens": 564
+              }
+            },
+            {
+              "kind": "tool",
+              "worker": "data_agent",
+              "name": "pandas_analysis",
+              "status": "success",
+              "seconds": 0.0033799040002122638,
+              "tokens": null
+            },
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "success",
+              "seconds": 1.0075479950000954,
+              "tokens": {
+                "input_tokens": 594,
+                "output_tokens": 14,
+                "total_tokens": 608
+              }
+            }
+          ],
+          "model_calls": 4,
+          "api_calls": 4,
+          "usage_complete": true,
+          "tokens": {
+            "input_tokens": 1933,
+            "output_tokens": 86,
+            "total_tokens": 2019
+          },
+          "known_tokens": {
+            "input_tokens": 1933,
+            "output_tokens": 86,
+            "total_tokens": 2019
+          },
+          "missing_usage_calls": 0
+        },
+        "capacity": 4
+      },
+      {
+        "request_id": "c3849ea9-889d-4140-a725-600302dbfdc7",
+        "status": "success",
+        "data": [
+          "{\"revenue\": 150, \"rows\": 3}"
+        ],
+        "code": [],
+        "evaluation": [],
+        "errors": [],
+        "stages": [
+          {
+            "worker": "data_agent",
+            "status": "success",
+            "seconds": 4.72316682499968
+          }
+        ],
+        "checks": {
+          "sources_unchanged": true,
+          "data_numbers": true,
+          "data_tool_evidence": true
+        },
+        "validation_passed": true,
+        "communication": [
+          {
+            "type": "task",
+            "task_id": "c3849ea9-889d-4140-a725-600302dbfdc7:data_agent",
+            "run_id": "abe16afd-ad86-499e-ab91-b965f34ae737",
+            "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+            "parameters": {
+              "database": "sales.db",
+              "csv": "sales.csv",
+              "chart": false
+            },
+            "from": "coordinator",
+            "to": "data_agent",
+            "timestamp": "2026-10-06T10:11:41.602220+00:00",
+            "id": "b615a2aa-5f3e-4fea-ad42-c4c9ecbf8b5f"
+          },
+          {
+            "status": "success",
+            "result": "{\"revenue\": 150, \"rows\": 3}",
+            "metadata": {
+              "tools_used": 2,
+              "tool_names": [
+                "csv_parser",
+                "pandas_analysis"
+              ],
+              "iterations": 3,
+              "seconds": 4.721
+            },
+            "type": "result",
+            "task_id": "c3849ea9-889d-4140-a725-600302dbfdc7:data_agent",
+            "run_id": "abe16afd-ad86-499e-ab91-b965f34ae737",
+            "worker": "data_agent",
+            "from": "data_agent",
+            "to": "coordinator:abe16afd-ad86-499e-ab91-b965f34ae737",
+            "timestamp": "2026-10-06T10:11:46.324787+00:00",
+            "id": "559cd3f5-d31b-4c1c-afae-3630089a703e"
+          }
+        ],
+        "latency_seconds": 8.966564989999824,
+        "metrics": {
+          "events": [
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "success",
+              "seconds": 1.003302815999632,
+              "tokens": {
+                "input_tokens": 371,
+                "output_tokens": 19,
+                "total_tokens": 390
+              }
+            },
+            {
+              "kind": "tool",
+              "worker": "data_agent",
+              "name": "csv_parser",
+              "status": "success",
+              "seconds": 0.0012028159999317722,
+              "tokens": null
+            },
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "success",
+              "seconds": 1.2723995970000033,
+              "tokens": {
+                "input_tokens": 473,
+                "output_tokens": 29,
+                "total_tokens": 502
+              }
+            },
+            {
+              "kind": "tool",
+              "worker": "data_agent",
+              "name": "pandas_analysis",
+              "status": "success",
+              "seconds": 0.002613812000163307,
+              "tokens": null
+            },
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "success",
+              "seconds": 2.44060921900018,
+              "tokens": {
+                "input_tokens": 532,
+                "output_tokens": 14,
+                "total_tokens": 546
+              }
+            }
+          ],
+          "model_calls": 3,
+          "api_calls": 3,
+          "usage_complete": true,
+          "tokens": {
+            "input_tokens": 1376,
+            "output_tokens": 62,
+            "total_tokens": 1438
+          },
+          "known_tokens": {
+            "input_tokens": 1376,
+            "output_tokens": 62,
+            "total_tokens": 1438
+          },
+          "missing_usage_calls": 0
+        },
+        "capacity": 4
+      },
+      {
+        "request_id": "0f991521-4c38-4355-a18b-23853c956dff",
+        "status": "error",
+        "data": [],
+        "code": [],
+        "evaluation": [],
+        "errors": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "error": "OperationalError: no such column: revenue"
+          }
+        ],
+        "stages": [
+          {
+            "worker": "data_agent",
+            "status": "error",
+            "seconds": 1.4143184850008765
+          }
+        ],
+        "checks": {},
+        "validation_passed": false,
+        "communication": [
+          {
+            "type": "task",
+            "task_id": "0f991521-4c38-4355-a18b-23853c956dff:data_agent",
+            "run_id": "6c7c7a98-7feb-48f1-a7c9-fb6aa04a1bf7",
+            "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+            "parameters": {
+              "database": "sales.db",
+              "csv": "sales.csv",
+              "chart": false
+            },
+            "from": "coordinator",
+            "to": "data_agent",
+            "timestamp": "2026-10-06T10:11:42.863141+00:00",
+            "id": "145f3259-8334-4f1a-868e-711883d2854e"
+          },
+          {
+            "status": "error",
+            "error": "OperationalError: no such column: revenue",
+            "result": null,
+            "metadata": {
+              "tools_used": 0,
+              "tool_names": [],
+              "seconds": 1.4134
+            },
+            "type": "result",
+            "task_id": "0f991521-4c38-4355-a18b-23853c956dff:data_agent",
+            "run_id": "6c7c7a98-7feb-48f1-a7c9-fb6aa04a1bf7",
+            "worker": "data_agent",
+            "from": "data_agent",
+            "to": "coordinator:6c7c7a98-7feb-48f1-a7c9-fb6aa04a1bf7",
+            "timestamp": "2026-10-06T10:11:44.277241+00:00",
+            "id": "5e65447e-3144-44a5-8a15-9fe421b4a344"
+          }
+        ],
+        "latency_seconds": 6.91820041200026,
+        "metrics": {
+          "events": [
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "success",
+              "seconds": 1.411529478000375,
+              "tokens": {
+                "input_tokens": 371,
+                "output_tokens": 47,
+                "total_tokens": 418
+              }
+            },
+            {
+              "kind": "tool",
+              "worker": "data_agent",
+              "name": "query_database",
+              "status": "error",
+              "seconds": 0.0013035420006417553,
+              "tokens": null
+            }
+          ],
+          "model_calls": 1,
+          "api_calls": 1,
+          "usage_complete": true,
+          "tokens": {
+            "input_tokens": 371,
+            "output_tokens": 47,
+            "total_tokens": 418
+          },
+          "known_tokens": {
+            "input_tokens": 371,
+            "output_tokens": 47,
+            "total_tokens": 418
+          },
+          "missing_usage_calls": 0
+        },
+        "capacity": 4
+      },
+      {
+        "request_id": "6eb56736-f96d-4dcd-bb53-129601762b7c",
+        "status": "success",
+        "data": [
+          "{\"revenue\": 150, \"rows\": 3}"
+        ],
+        "code": [],
+        "evaluation": [],
+        "errors": [],
+        "stages": [
+          {
+            "worker": "data_agent",
+            "status": "success",
+            "seconds": 3.5291340350004248
+          }
+        ],
+        "checks": {
+          "sources_unchanged": true,
+          "data_numbers": true,
+          "data_tool_evidence": true
+        },
+        "validation_passed": true,
+        "communication": [
+          {
+            "type": "task",
+            "task_id": "6eb56736-f96d-4dcd-bb53-129601762b7c:data_agent",
+            "run_id": "8a7072c7-7a13-4c65-a3f2-b90ab5ae89b0",
+            "content": "Calculate total Q3 revenue from sales data Use query_database or pandas_analysis to calculate Q3 only. Return only JSON with revenue and rows. Do not invent values.",
+            "parameters": {
+              "database": "sales.db",
+              "csv": "sales.csv",
+              "chart": false
+            },
+            "from": "coordinator",
+            "to": "data_agent",
+            "timestamp": "2026-10-06T10:11:43.081346+00:00",
+            "id": "a1892885-0be5-4ae4-96f5-ac8b57cf3ce9"
+          },
+          {
+            "status": "success",
+            "result": "{\"revenue\": 150, \"rows\": 3}",
+            "metadata": {
+              "tools_used": 2,
+              "tool_names": [
+                "csv_parser",
+                "pandas_analysis"
+              ],
+              "iterations": 3,
+              "seconds": 3.5277
+            },
+            "type": "result",
+            "task_id": "6eb56736-f96d-4dcd-bb53-129601762b7c:data_agent",
+            "run_id": "8a7072c7-7a13-4c65-a3f2-b90ab5ae89b0",
+            "worker": "data_agent",
+            "from": "data_agent",
+            "to": "coordinator:8a7072c7-7a13-4c65-a3f2-b90ab5ae89b0",
+            "timestamp": "2026-10-06T10:11:46.610153+00:00",
+            "id": "821b2616-f6e6-4bad-9ffc-e9a87d755938"
+          }
+        ],
+        "latency_seconds": 9.25134433600033,
+        "metrics": {
+          "events": [
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "success",
+              "seconds": 1.001306776999627,
+              "tokens": {
+                "input_tokens": 371,
+                "output_tokens": 19,
+                "total_tokens": 390
+              }
+            },
+            {
+              "kind": "tool",
+              "worker": "data_agent",
+              "name": "csv_parser",
+              "status": "success",
+              "seconds": 0.0009416490001967759,
+              "tokens": null
+            },
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "success",
+              "seconds": 1.3325227779996567,
+              "tokens": {
+                "input_tokens": 473,
+                "output_tokens": 29,
+                "total_tokens": 502
+              }
+            },
+            {
+              "kind": "tool",
+              "worker": "data_agent",
+              "name": "pandas_analysis",
+              "status": "success",
+              "seconds": 0.0034449169997969875,
+              "tokens": null
+            },
+            {
+              "kind": "model",
+              "worker": "data_agent",
+              "name": "ainvoke",
+              "status": "success",
+              "seconds": 1.1887801940001737,
+              "tokens": {
+                "input_tokens": 532,
+                "output_tokens": 14,
+                "total_tokens": 546
+              }
+            }
+          ],
+          "model_calls": 3,
+          "api_calls": 3,
+          "usage_complete": true,
+          "tokens": {
+            "input_tokens": 1376,
+            "output_tokens": 62,
+            "total_tokens": 1438
+          },
+          "known_tokens": {
+            "input_tokens": 1376,
+            "output_tokens": 62,
+            "total_tokens": 1438
+          },
+          "missing_usage_calls": 0
+        },
+        "capacity": 4
+      }
+    ]
+  },
+  "cost_usd": null,
+  "cost_note": "No verified YesScale tariff/invoice; no fabricated USD. API counts are logical model invocations, not SDK retries.",
+  "percentile_method": "linear interpolation at (n-1)*fraction; 3 iterations are not a reliable tail/SLO estimate",
+  "timestamp_utc": "2026-10-06T10:11:46.897296+00:00",
+  "model": "gpt-4.1-mini"
+}

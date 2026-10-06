@@ -1,0 +1,7 @@
+condition     role    technical  house rules  mean tokens  read a skill
+baseline      eval     13/18         0/12          40,212      0/3     
+baseline      learn    11/18         0/9           69,251      0/3     
+subagents     eval      7/18         0/12          42,265      0/3     
+subagents     learn     9/18         0/9           52,361      0/3     
+skills-auto   eval     18/18         0/12          50,065      0/3     
+skills-auto   learn    11/18         0/9           48,809      0/3     
