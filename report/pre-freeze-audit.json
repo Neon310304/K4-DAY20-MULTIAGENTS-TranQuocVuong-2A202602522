@@ -1,0 +1,8 @@
+{
+  "original_commit": "d982034",
+  "actual_key_scan_files": 118,
+  "credential_matches": 0,
+  "protected_files_unchanged": true,
+  "provided_ast_unchanged": true,
+  "evaluation_not_run_before_freeze": true
+}
