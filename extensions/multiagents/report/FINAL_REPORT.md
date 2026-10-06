@@ -232,3 +232,7 @@ Key SHA256 canonical JSON gồm request + trusted `scope` + `dataset_revision` +
 Hit **19/20 = 95%**, cache một entry/payload **195 bytes**. Mean giảm **94.77%**, logical invocations giảm **95%**; wall 0.360968s → 0.018920s (**19.08×**) do 19 hits bỏ fixture/model/tool execution. P99 vẫn chịu cold miss; hit P50 rất thấp không là live system P50. TTL/scope/revision còn bảo vệ reuse, không chỉ hash text rồi trả kết quả cũ.
 
 Offline cả hai nhánh zero paid API/token, nên **không tuyên bố tiết kiệm USD/token live hoặc 40→2 API calls thật**. Chạy uncached rồi cached trong một process có warm-up/order effects; một fixture và 20 mẫu chưa đo general cache hit rate, mixed load hoặc model noise. Không áp cache cho hai lỗi code/complex để che chúng. Bonus có code/tests/evidence và trade-offs; quyền công nhận +5 thuộc người chấm.
+
+## Cập nhật xuất bản — 2026-10-06
+
+Sau checkpoint bàn giao mục 10, người dùng yêu cầu push. Code, reports và benchmark evidence đã được xuất bản trong commit `09b6e16` lên https://github.com/Neon310304/K4-DAY20-MULTIAGENTS-TranQuocVuong-2A202602522; tag `freeze` giữ nguyên và đã push/đối chiếu hash remote. Trạng thái “chưa commit/push” ở checkpoint trước được thay bằng cập nhật này. Không chạy lại paid benchmark hoặc thay kết quả để xuất bản. Checklist hiện tại ở `../../../report/CHECKLIST.md`; **VLearn chưa xác nhận nộp link**.

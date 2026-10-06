@@ -1,6 +1,6 @@
 # Checklist kiểm tra bài Day20
 
-Đối chiếu README, GUIDE và RUBRIC; mọi dấu hoàn thành có artifact hoặc output thật. Dừng tại bước kiểm tra bài làm, chưa xuất bản/nộp.
+Đối chiếu README, GUIDE và RUBRIC; mọi dấu hoàn thành có artifact hoặc output thật. Đã xuất bản GitHub theo yêu cầu người dùng ngày 2026-10-06; chưa xác nhận nộp VLearn.
 
 - [x] Repo đúng tên cá nhân; đã đọc hướng dẫn và tạo IMPLEMENTATION_PROMPT.md.
 - [x] Môi trường Linux/Python >= 3.11 và Deep Agents 0.7.21; Docker hỗ trợ chạy trên Windows.
@@ -16,7 +16,7 @@
 - [x] verify_freeze: checked 6 runs of skill conditions: OK; table.md có ba condition/sáu task và tổng hợp.
 - [x] REPORT.md đủ 10 mục; tách token/quy ước/kỹ thuật, hạn chế body không đọc, overfitting/leakage/nhiễu có số thật.
 - [x] Audit Git/artifacts/history không phát hiện key; .env không được track, protected files/AST giữ nguyên.
-- [x] Tự kiểm cuối pass; dừng để người dùng xem bài, chưa push/nộp VLearn.
+- [x] Tự kiểm cuối pass; người dùng yêu cầu push sau khi nhận báo cáo, đã xuất bản GitHub; chưa xác nhận nộp VLearn.
 
 Mở rộng +5 của scaffold chính là tùy chọn, chưa chọn. Checklist gửi bổ sung có bonus 6c trong extension, đo/test riêng, không tự nhận điểm bonus hoặc trộn vào điều kiện chính. Không lấy các run CRLF thử nghiệm làm kết quả chính; không thay failed check bằng số đẹp hơn.
 
@@ -29,7 +29,7 @@ Mở rộng +5 của scaffold chính là tùy chọn, chưa chọn. Checklist g�
 - `table.md`, `check-breakdown.txt`, `statistics.json`: sinh trực tiếp từ results, không chọn lại score.
 - `REPORT.md`: kết quả evaluation baseline 0.4306, subagents 0.2121, skills-auto 0.5973; không task nào hoàn hảo, rules đều fail và không body skill được đọc.
 
-Việc **xuất bản** còn chờ người dùng duyệt: push commit kết quả/báo cáo và tag freeze tới origin, rồi người dùng nộp link VLearn. Đây không phải hạng mục đã thực hiện.
+Việc **xuất bản** đã thực hiện: commit `09b6e16` chứa kết quả/báo cáo/extension đã push tới `origin/main`, tag `freeze` giữ nguyên `19722e573b8d3ea8dcfd9c7968d068fdbba01b42`. Đã đối chiếu hash bằng `git ls-remote`. Repo: https://github.com/Neon310304/K4-DAY20-MULTIAGENTS-TranQuocVuong-2A202602522. Người dùng còn cần nộp link VLearn; chưa xác nhận bước này.
 
 ## Đối chiếu riêng Phần 0
 
@@ -69,7 +69,7 @@ Nhận xét này áp dụng Coordinator Phần 2/3; bonus 6c riêng được b�
 - [x] Coordinator tích hợp queue, correlation run_id/task_id/sender, song song giữa workers, tuần tự cùng worker, deadline/cancel/partial failure và bounded idempotent retry.
 - [x] Bốn test worker checkpoint pass (4 passed, 4 deselected); snapshot extension 57 passed sau Phần 5, hiện 68 sau Phần 6, bao gồm communication và integration với tools/artifact thật.
 - [x] Evidence thật ở extensions/multiagents/evidence/; fake model không dùng key, không chứng minh chất lượng LLM thật.
-- [ ] Commit/push phần mở rộng: dừng chờ người dùng kiểm tra, không thay tag freeze hoặc lịch sử thí nghiệm.
+- [x] Commit/push phần mở rộng theo yêu cầu người dùng; không thay tag freeze hoặc lịch sử thí nghiệm.
 
 Hướng dẫn chạy và các giới hạn concurrency/security ở extensions/multiagents/README.md. Bộ 57 test extension tách khỏi 29 test harness chính; không cộng test hoặc thành tích extension vào bảng thí nghiệm chính.
 
@@ -84,7 +84,7 @@ Hướng dẫn chạy và các giới hạn concurrency/security ở extensions/
 - [x] Checkpoint tests/test_04_tools.py: 4/4 pass; tool integration standalone 3/3; toàn bộ extension 43 pass, không gọi API.
 - [x] Tool log start/end/status/duration/error type không chứa query/code/content/key; demo evidence và artifacts riêng trong extensions/multiagents/evidence/.
 - [x] Dependency bổ sung chạy trong venv riêng của container, không thay Python/packages của runtime thí nghiệm chính; hướng dẫn ở README extension và REPRODUCE.md.
-- [ ] Commit/push phần mở rộng: chờ người dùng kiểm tra; giữ nguyên tag freeze và kết quả benchmark chính.
+- [x] Commit/push phần mở rộng theo yêu cầu người dùng; giữ nguyên tag freeze và kết quả benchmark chính.
 
 Điểm demo 85.5/B là phép tính từ ratings cung cấp, không là benchmark chất lượng LLM. Python subprocess có resource limits nhưng không cách ly filesystem/network trước mã độc; không chạy input không tin cậy.
 
@@ -100,7 +100,7 @@ Hướng dẫn chạy và các giới hạn concurrency/security ở extensions/
 - [x] Live cuối simple 3/3, code 2/3, complex 2/3, load 10/10 = 17/19; 45316 token metadata. Báo cáo hai lỗi còn lại và target latency/error chưa đạt.
 - [x] Mục 5–6 bổ sung ở extensions/multiagents/report/REPORT.md, liên kết từ REPORT.md chính; core 29 tests/18 runs/freeze không đổi.
 - [ ] Production SLO: chưa đạt error <1%, code/complex latency/throughput; không tuyên bố ổn định mọi workload từ mẫu nhỏ.
-- [ ] Commit/push: dừng chờ người dùng kiểm tra, không thay history/tag freeze.
+- [x] Commit/push theo yêu cầu người dùng, không thay history/tag freeze.
 
 ## Phần 6: Final report và bonus độc lập
 
@@ -119,8 +119,8 @@ Báo cáo đủ 10 mục tại [extensions/multiagents/report/FINAL_REPORT.md](.
 - [x] Bonus chọn 6c: opt-in readonly verified result cache, trusted scope/revision/namespace, TTL/LRU/payload limits, provenance/zero work hit; 11 tests mới pass.
 - [x] Bonus evidence: cached/uncached 20/20 mỗi nhánh, 19 hits, mean 17.998→0.942ms, scripted calls 40→2; không nhận live API/token/USD savings hoặc điểm +5 đã chấm.
 - [x] Commands/docs/evidence liên kết rõ, không ghi đè paid benchmarks; protected files/skills/freeze và secret audit kiểm riêng.
-- [ ] Commit báo cáo/kết quả/extension: chờ review, không tự chạy lệnh commit từ checklist mẫu.
-- [ ] Push các commit kết quả cuối và tag freeze lên GitHub: chưa thực hiện.
+- [x] Commit báo cáo/kết quả/extension: `09b6e16`, sau yêu cầu push của người dùng.
+- [x] Push các commit kết quả cuối và tag freeze lên GitHub; hash remote đã đối chiếu đúng.
 - [ ] Dán link repo lên VLearn: người dùng thực hiện sau khi duyệt; chưa xác nhận nộp.
 
 ## Tổng hợp checklist Phần 0–6
@@ -134,6 +134,6 @@ Báo cáo đủ 10 mục tại [extensions/multiagents/report/FINAL_REPORT.md](.
 | 4 | SQL/Python/file/scoring/validation/tools E2E | Checkpoint 4/4, demo 3/3; trusted subprocess có limits, không adversarial sandbox |
 | 5 | 23+ tests, benchmarks, bottlenecks, metrics/errors | Snapshot 57/57; offline 19/19/live 17/19; SLO chưa đạt nhưng phân tích/evidence đủ |
 | 6 | Báo cáo 10 mục, bonus có code/tests/measurement | 68/68, coverage 92.6650%; FINAL_REPORT.md + part6-cache/part6-resources/ |
-| Nộp | Commit/push GitHub và submit VLearn | **Chưa làm — dừng để người dùng kiểm tra** |
+| Nộp | Commit/push GitHub và submit VLearn | **Đã push GitHub/tag freeze; VLearn chưa xác nhận** |
 
 Evidence tự kiểm mới: `extensions/multiagents/evidence/part6-tests.txt`, `part6-coverage.json`, `part6-cache/cache_results.json`, `part6-resources/resource_results.json`, `report/offline-tests-part6.txt`, `report/freeze-check-part6.txt`, `report/final-audit.json`. Không cộng test extension vào số provided core hoặc thành tích cache vào bảng thí nghiệm chính.
